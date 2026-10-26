@@ -1,0 +1,27 @@
+\subsection{A.7 Boundary sensitivity}\label{app:cost-proofs}
+
+\leavevmode\phantomsection\label{l2.-the-baseline-minimizing-set-and-the-right-difference-quotient}
+\begin{proof}[Proof of the boundary expansion in Theorem~\ref{prop:boundary-sensitivity}] We first justify minimization over the boundary equality kernels. On the measures \(\Pi_\alpha\), the coordinate functional \(A_i(\alpha)=\int|d_i|d\Pi_\alpha+\|j_i\|_1\) is lower semicontinuous for vague convergence by \mbox{\hyperref[v21-limit-proof]{Appendix~A.5}}. On \(\{\mathcal V=0\}\), the efficiency inequality gives \(\mathcal C_0\ge\gamma J\), so \(\mathcal C_0=\gamma J\) is equivalent to \(\mathcal C_0\le\gamma J\). Hence
+\[
+\mathcal Z_0=\{\alpha:\mathcal V(\alpha)=0,\ \mathcal C_0(\alpha)\le\gamma J\}.
+\]
+By compactness and continuity of \(\mathcal V\) on cost sublevels (Appendix~A.5), \(\mathcal Z_0\) is compact. It is nonempty because it contains the background comparison kernel \(\alpha^{(3)}\) from \eqref{eq:legacy-D.1}. The lower semicontinuous functional \(A_3\) therefore attains its minimum \(a_{3,\star}=A_3(\alpha_\star)\). Since \(j_3=0\) on \(\mathcal Z_0\), this minimum is the least background displacement moment, and comparison with \(\alpha^{(3)}\) gives \(0\le\beta a_{3,\star}\le J\). For \(C_\eta=\mathcal C_{\boldsymbol\gamma(\eta)}\),
+\begin{equation}
+C_\eta=C_0+\eta\beta\gamma A_3.
+\tag{A.52}\label{eq:legacy-H.8}
+\end{equation}
+If \(\alpha_\eta\) minimizes the cost at zero risk difference, comparison with \(\alpha_\star\) gives
+\begin{equation}
+\gamma J\le C_0(\alpha_\eta)\le C_\eta(\alpha_\eta)
+=s^*(\boldsymbol\gamma(\eta))
+\le\gamma J+\eta\beta\gamma a_{3,\star}.
+\tag{A.53}\label{eq:legacy-H.9}
+\end{equation}
+For \(0<\eta\le1\), \eqref{eq:legacy-H.9} places every minimizer in the compact sublevel \(\{C_0\le2\gamma J\}\). Along any vaguely convergent subsequence as \(\eta\downarrow0\), continuity of \(\mathcal V\) gives \(\mathcal V(\bar\alpha)=0\), and lower semicontinuity gives \(C_0(\bar\alpha)\le\gamma J\). These two properties place \(\bar\alpha\) in \(\mathcal Z_0\). Using the added background cost in \eqref{eq:legacy-H.8}, we obtain
+\begin{equation}
+\beta\gamma A_3(\alpha_\eta)
+\le\frac{s^*(\boldsymbol\gamma(\eta))-\gamma J}{\eta}
+\le\beta\gamma a_{3,\star}.
+\tag{A.54}\label{eq:legacy-H.10}
+\end{equation}
+Along any vaguely convergent subsequence of minimizers, lower semicontinuity shows that the lower limit of the left side of \eqref{eq:legacy-H.10} is at least \(\beta\gamma A_3(\bar\alpha)\ge\beta\gamma a_{3,\star}\). The quotient therefore converges to \(\beta\gamma a_{3,\star}\), and every vague cluster point minimizes \(A_3\) on \(\mathcal Z_0\), without requiring uniqueness. Division by \(\gamma J\) gives the expansion with \(a_+\in[0,1]\). \end{proof}

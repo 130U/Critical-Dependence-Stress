@@ -1,0 +1,33 @@
+{
+  "all_requested_steps_passed": true,
+  "python": "3.13.12",
+  "dependencies": {
+    "numpy": "2.5.4",
+    "matplotlib": "3.11.2",
+    "sympy": "1.14.0"
+  },
+  "runs": [
+    {
+      "script": "code/generate_mechanism_figures.py",
+      "return_code": 0,
+      "elapsed_seconds": 2.888,
+      "log": "audit\\generate_mechanism_figures.log",
+      "source_sha256": "829743db139aeaba4e56e4ee515597a0b906740b9196add1c5dbd4195567fa0f"
+    },
+    {
+      "script": "new-computations/check_parameter_family.py",
+      "return_code": 0,
+      "elapsed_seconds": 1.277,
+      "log": "audit\\check_parameter_family.log",
+      "source_sha256": "2fc889d47b18d795f85caefd09fc6b2f02a54ee0f905061e583cbda7ea1fc324"
+    },
+    {
+      "script": "new-computations/plot_profiles_and_flows.py",
+      "return_code": 0,
+      "elapsed_seconds": 3.753,
+      "log": "audit\\plot_profiles_and_flows.log",
+      "source_sha256": "f839ef430334b76bf6ef9d6e0d4f70d86f262ab19eeca7e1c05d375e87f91cdd"
+    }
+  ],
+  "missing_outputs": []
+}

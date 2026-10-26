@@ -1,0 +1,251 @@
+\subsection{A.5 Proof of the variational limit}\label{v21-limit-proof}\label{appendix-b-proof-of-the-critical-variational-limit-under-full-marginal-constraints}
+
+\begin{proof}[Proof of Theorem~\ref{thm:critical-limit}]
+\phantomsection\label{b-l3-local-compactness-of-arbitrary-transport-plans-and-the-three-fluxes}
+We first establish vague compactness and the energy lower bound in part~(i). Let \(\pi_n\) be admissible plans from \(P_0\) to \(P_n\in\Pi\) along a subsequence realizing a finite energy liminf, with rescaled coordinates and lifts
+\begin{equation}
+u=\frac{B(X)-v}{\varepsilon_n},\qquad
+d=\frac{Y-X}{\varepsilon_n},\qquad
+\Pi_n=\mathscr T_{\varepsilon_n}\pi_n,
+\tag{A.19}\label{eq:legacy-B.9}
+\end{equation}
+and the bounded energies give
+\begin{equation}
+\int|d|_\gamma d\Pi_n=\mathcal E_{\varepsilon_n}(\Pi_n)\le M.
+\tag{A.20}\label{eq:legacy-B.11}
+\end{equation}
+\phantomsection\label{proof:full-source-kernel}
+Since \(X=(x,y,z_v(x,y)+\varepsilon_nu/\beta)\), their source densities are
+\begin{equation}
+w_n(x,y,u)=\frac1\beta f(x,y,z_v(x,y)+\varepsilon_nu/\beta)
+1_{\{\ell_3\le z_v(x,y)+\varepsilon_nu/\beta\le r_3\}}.
+\tag{A.21}\label{eq:legacy-B.10}
+\end{equation}
+By dominated convergence and the zero area of the section boundary, \(w_n\to f(\xi)1_\Omega/\beta\) in \(L^1\) on bounded \(u\)-windows. Because the source masses are uniformly bounded on each such window and \eqref{eq:legacy-B.11} bounds mass with \(|d|_\gamma>K\) by \(M/K\), we can extract a vague subsequential limit through compact exhaustion. To identify its full source as \(\nu=\sigma\,du\), we first test the source projection with a displacement cutoff and then let \(K\to\infty\). The limit consequently disintegrates into probability kernels \(\Pi_\alpha=\nu\alpha\), with
+\begin{equation}
+I(\alpha)\le\liminf_n\mathcal E_{\varepsilon_n}(\Pi_n).
+\tag{A.22}\label{eq:legacy-B.12}
+\end{equation}
+By Appendix A.3, the projected moments have densities \(j_i\in L^1(I_i)\). To include their marginal-restoration cost in the lower bound, we choose continuous cutoffs \(0\le\chi_R\uparrow1\), compactly supported in the interior surface and bounded \(u,d\)-windows.
+\phantomsection\label{b-l4-the-compensation-cost-forced-by-full-marginal-constraints}
+The coordinate CDF discrepancy of \(\pi_n^R=\chi_R\pi_n\) is
+\begin{equation}
+\Delta_{i,n}^R(q)=\int[1_{\{Y_i\le q\}}-1_{\{X_i\le q\}}]\,d\pi_n^R.
+\tag{A.23}\label{eq:legacy-B.16}
+\end{equation}
+Because the full plan preserves marginal \(i\), the complementary nonnegative plan has discrepancy \(-\Delta_{i,n}^R\). Its cost is bounded below by the one-dimensional crossing identity: for any nonnegative plan \(\lambda\),
+\[
+\int|Y_i-X_i|\,d\lambda
+=\int_{I_i}\int|1_{\{Y_i\le q\}}-1_{\{X_i\le q\}}|\,d\lambda\,dq
+\ge\int_{I_i}\left|\int(1_{\{Y_i\le q\}}-1_{\{X_i\le q\}})\,d\lambda\right|dq.
+\]
+Applying this to the complement and adding the local cost gives
+\begin{equation}
+\varepsilon_n^2\mathcal E_{\varepsilon_n}(\Pi_n)\ge
+\int|Y-X|_\gamma\,d\pi_n^R
++\sum_i\gamma_i\int_{I_i}|\Delta_{i,n}^R(q)|\,dq.
+\tag{A.24}\label{eq:legacy-B.17}
+\end{equation}
+For \(\varphi\in C(I_i)\), integration over the oriented interval from \(X_i\) to \(Y_i\) gives
+\begin{equation}
+\varepsilon_n^{-2}\int\varphi(q)\Delta_{i,n}^R(q)\,dq
+=-\int\chi_Rd_i\int_0^1\varphi(X_i+t\varepsilon_nd_i)\,dt\,d\Pi_n.
+\tag{A.25}\label{eq:legacy-B.18}
+\end{equation}
+On the cutoff support, \(X\to\xi\) uniformly and \(d\) is bounded. Thus local weak convergence identifies the projected moment \(j_i^Rdq=(\xi_i)_\#(\chi_Rd_i\,d\Pi_\alpha)\) through
+\begin{equation}
+\varepsilon_n^{-2}\Delta_{i,n}^R(q)\,dq
+\rightharpoonup-j_i^R(q)\,dq
+\quad\hbox{as finite signed measures.}
+\tag{A.26}\label{eq:legacy-B.19}
+\end{equation}
+Lower semicontinuity of total variation in \eqref{eq:legacy-B.17} now yields \(\liminf_n\mathcal E_{\varepsilon_n}(\Pi_n)\ge I_R+\sum_i\gamma_i\|j_i^R\|_1\), where \(I_R=\int\chi_R|d|_\gamma d\Pi_\alpha\). We remove the cutoff using
+\begin{equation}
+I_R\uparrow I,\qquad
+\sum_i\gamma_i\|j_i-j_i^R\|_1
+\le\int(1-\chi_R)|d|_\gamma d\Pi_\alpha\to0.
+\tag{A.27}\label{eq:legacy-B.20}
+\end{equation}
+Thus any vaguely convergent sequence \(\Lambda_n\to\Lambda\) with finite energy liminf has \(\Lambda=\Pi_\alpha\) and \(\mathcal C(\alpha)\le\liminf_n\mathcal E_{\varepsilon_n}(\Lambda_n)\). In particular, the liminf must be infinite when \(\mathcal E(\Lambda)=+\infty\), proving the \(\Gamma\)-lower bound on all of \(\mathscr X\). Choosing optimal plans gives the Wasserstein bound in \eqref{eq:legacy-4.5}.
+
+\phantomsection\label{lem:v21-coordinate-lsc}\label{l1.-lower-semicontinuity-of-the-combined-cost-of-one-coordinate}
+For later boundary sensitivity, we also need lower semicontinuity of \(A_i(\alpha)=M_i(\alpha)+\|j_i\|_1\), where \(M_i(\alpha)=\int|d_i|\,d\Pi_\alpha\). Retaining activity weighted by \(\chi_R\) and assigning the remainder to \(d=0\) defines \(\alpha^R\), for which projection contraction gives
+\begin{equation}
+\|j_i-j_i^R\|_1\le M_i-M_i^R,\qquad
+A_i(\alpha^R)\le A_i(\alpha),\qquad A_i(\alpha^R)\to A_i(\alpha).
+\tag{A.28}\label{eq:legacy-H.5}
+\end{equation}
+For fixed \(R\), local weak convergence implies convergence of \(M_i(\alpha_n^R)\) and every projected test \(\int\varphi(\xi_i)d_i\chi_R\,d\Pi_{\alpha_n}\). Lower semicontinuity of total variation followed by \eqref{eq:legacy-H.5} as \(R\to\infty\) gives
+\begin{equation}
+A_i(\alpha)\le\liminf_n A_i(\alpha_n),\qquad
+\mathcal C(\alpha)\le\liminf_n\mathcal C(\alpha_n).
+\tag{A.29}\label{eq:legacy-H.7}
+\end{equation}
+The same extraction with fixed source \(\nu\) makes cost sublevels compact in the vague topology, that is, convergence against \(C_c(Z)\). A countable compact exhaustion metrizes this topology on the sublevels.
+
+\paragraph{The risk limit}\label{b-l5-renormalization-of-the-common-term-and-identification-of-the-risk-difference}
+
+Although \(|\mathfrak q_c|\le\kappa_B|d|_\gamma\) makes each hinge integral finite, bounded moments alone do not imply uniform integrability. We therefore subtract the common increment and estimate \(r_c(\tau)=\mathfrak q_c(\tau)-\mathfrak q_0(0)\). For \(w=b\cdot d\), the function \(z\mapsto(z+w)_+-z_+\) is 1-Lipschitz, bounded in magnitude by \(|w|\), and constant on each exterior half-line determined by its breakpoints \(0\) and \(-w\). The two arguments defining \(r_c\), namely \(u+cH-\tau\) and \(u\), differ by at most \(A_T=\|H\|_\infty+T\) when \(|\tau|\le T\). If \(|u|>A_T+|w|\), both arguments lie on the same exterior half-line, so their increments agree. These observations give
+\begin{equation}
+|r_c(\tau)|\le A_T,\quad |r_c(\tau)|\le2|b\cdot d|,
+\quad r_c(\tau)\ne0\Longrightarrow |u|\le A_T+|b\cdot d|.
+\tag{A.30}\label{eq:legacy-B.21}
+\end{equation}
+When \(R>A_T\), a nonzero remainder outside \(\{|u|\le R,|d|_\gamma\le R\}\) requires \(|d|_\gamma>k_R=\min\{R,(R-A_T)/\kappa_B\}\). The first-moment bound for both the sequence and its limit gives
+\begin{equation}
+\int_{\{|u|>R\}\cup\{|d|_\gamma>R\}}|r_c(\tau)|\,d\Pi_n
+\le A_TM/k_R\longrightarrow0.
+\tag{A.31}\label{eq:legacy-B.22}
+\end{equation}
+On bounded windows, vague convergence and the common threshold-Lipschitz bound give uniform convergence in \(\tau\). Because the surface-boundary cutoff has vanishing source mass, we remove it first and then remove the other cutoffs using \eqref{eq:legacy-B.22}, obtaining
+\begin{equation}
+\int r_c(\tau)d\Pi_n\longrightarrow
+T_c^\alpha(\tau)-T_0^\alpha(0)
+\quad\hbox{uniformly on every bounded }\tau\hbox{ interval.}
+\tag{A.32}\label{eq:legacy-B.23}
+\end{equation}
+
+The exact target loss also contains \(c\varepsilon_n^2h\cdot d\), with \(h=(1,-1,0)\), whose rescaled integrated contribution is at most \(\varepsilon_n\kappa_H\int|d|_\gamma d\Pi_n=O(\varepsilon_n)\). Combining the transport identity with \(H(X)=H(\xi)=x-y\) and the uniform reference expansion \eqref{eq:legacy-B.2}, and writing \(Q_n=\int\mathfrak q_0(0)d\Pi_n\), gives
+\begin{equation}
+\frac p{\varepsilon_n^2}
+\{\mathscr E_{L_{c,\varepsilon_n}}(P_n;v+\varepsilon_n\tau)
+-ES_p^{P_0}(B)\}-Q_n
+=\frac g2\tau^2+c^2J+\int r_c(\tau)d\Pi_n+o(1).
+\tag{A.33}\label{eq:legacy-B.24}
+\end{equation}
+Lemma~\ref{b-l2-all-optimal-thresholds-under-a-budget-of-order-varepsilon2} and \(g\tau^2/2\le2\kappa_BI\) place all original and limiting minimizers in a common compact interval. The finite scalar \(Q_n\), with \(|Q_n|\le\kappa_BM\), translates both objectives equally and cancels from their difference of minima without needing to converge itself. Uniform convergence on that interval therefore yields
+\begin{equation}
+\Phi_{\varepsilon_n}(P_n)/\varepsilon_n^2\to\mathcal V(\alpha).
+\tag{A.34}\label{eq:legacy-B.25}
+\end{equation}
+Since plan cost bounds target distance, localization applies to every bounded-energy sequence in part (i). Optimal plans give the corresponding law-level limits in \eqref{eq:legacy-4.5}.
+
+\paragraph{Exact recovery by quantile restoration}\label{b-l6-nonnegative-preliminary-recovery-for-finite-smooth-kernels-and-a-uniform-cdf-expansion}
+
+For a fixed kernel \eqref{eq:legacy-B.26}, the preliminary plan of Appendix A.4 modifies \(O_\alpha(\varepsilon)\) source mass and has cost
+\begin{equation}
+\operatorname{cost}(P_0\to Q_\varepsilon)
+=\varepsilon^2\sum_k\int|d_k|_\gamma\alpha_k
+\frac{f_\varepsilon}{\beta}\,dx\,dy\,du
+=\varepsilon^2 I(\alpha)+o(\varepsilon^2).
+\tag{A.35}\label{eq:legacy-B.27}
+\end{equation}
+Threshold localization applies to \(Q_\varepsilon\) by this cost bound. At a translated source,
+\(L_{c,\varepsilon}(Z_\varepsilon+\varepsilon d_k)=v+\varepsilon(u+b\cdot d_k+cH)+c\varepsilon^2h\cdot d_k\).
+The layer volume \(\varepsilon\,dx\,dy\,du/\beta\), hinge homogeneity, and the reference expansion give
+\begin{equation}
+\frac p{\varepsilon^2}
+\{\mathscr E_{L_{c,\varepsilon}}(Q_\varepsilon;v+\varepsilon\tau)
+-ES_p^{P_0}(B)\}
+=c^2J+\frac g2\tau^2+T_c^\alpha(\tau)+o(1).
+\tag{A.36}\label{eq:legacy-B.31}
+\end{equation}
+The remainder is uniform on bounded threshold intervals, by continuity of \(f\) and boundedness of the branch displacements. Minimization on the common compact window gives
+\begin{equation}
+\Phi_\varepsilon(Q_\varepsilon)/\varepsilon^2\to\mathcal V(\alpha).
+\tag{A.37}\label{eq:legacy-B.32}
+\end{equation}
+
+\phantomsection\label{b-l7-exact-repair-of-all-three-marginals-repair-cost-and-cancellation-in-the-risk-difference}
+To restore the marginals, observe that their reference densities are bounded below by \(m_f=(\min_Sf)\min\{\Delta_I\Delta_3,\Delta_I^2\}>0\). Thus \(F_i^{-1}\) is \(m_f^{-1}\)-Lipschitz. Set
+\begin{equation}
+R_{i,\varepsilon}(q)=F_i^{-1}(F_{i,\varepsilon}(q)),\quad
+R_\varepsilon(z)=(R_{1,\varepsilon}(z_1),R_{2,\varepsilon}(z_2),R_{3,\varepsilon}(z_3)),
+\quad P_\varepsilon=(R_\varepsilon)_\#Q_\varepsilon.
+\tag{A.38}\label{eq:legacy-B.33}
+\end{equation}
+The preliminary CDFs are continuous, so \(F_{i,\varepsilon}(Z_i)\) is uniform for \(Z\sim Q_\varepsilon\) and every restored marginal is exactly \(\mu_i\). The uniform CDF expansion \eqref{eq:legacy-B.28} also gives
+\begin{equation}
+\max_i\sup_{q\in I_i}|R_{i,\varepsilon}(q)-q|=O_\alpha(\varepsilon^2).
+\tag{A.39}\label{eq:legacy-B.34}
+\end{equation}
+Because the monotone coordinate coupling is optimal in one dimension \cite[Chapter~2]{santambrogio2015}, Vallender's formula \cite{vallender1974} identifies its exact restoration cost:
+\begin{equation}
+\begin{aligned}
+E_{Q_\varepsilon}|R_\varepsilon Z-Z|_\gamma
+&=\sum_i\gamma_i\int_{I_i}|F_{i,\varepsilon}(q)-F_i(q)|\,dq\\
+&=\varepsilon^2\sum_i\gamma_i\|j_i\|_1+o(\varepsilon^2).
+\end{aligned}
+\tag{A.40}\label{eq:legacy-B.35}
+\end{equation}
+To show that restoration has no leading paired-risk effect, we estimate its effect uniformly over both minimizing thresholds. The preliminary and restored laws \(Q_\varepsilon,P_\varepsilon\) are within \(O_\alpha(\varepsilon^2)\) of \(P_0\), so Lemma~\ref{b-l2-all-optimal-thresholds-under-a-budget-of-order-varepsilon2} places all their minimizing thresholds in \([v-T_\alpha\varepsilon,v+T_\alpha\varepsilon]\). For any pair in this window, put \(\psi_{t_B,t_A}(z)=(B(z)-t_B)_+-(B(z)+\varepsilon H(z)-t_A)_+\). Away from a sufficiently wide band \(\mathcal B_\varepsilon=\{|B-v|\le K\varepsilon\}\), both hinges stay on the same affine branch along the restoration segment: the gradient of their difference is \(-\varepsilon h\) above both thresholds and zero below both. Inside the band we retain the uniform gradient bound, but only \(O_\alpha(\varepsilon)\) mass is affected. Indeed, the reference density of \(B\) is bounded by \(\Delta_I^2\max_Sf/\beta\) and the preliminary plan changes \(O_\alpha(\varepsilon)\) mass, so \(Q_\varepsilon(\mathcal B_\varepsilon)=O_\alpha(\varepsilon)\). Combining this small band mass and the extra factor \(\varepsilon\) outside the band with the \(O_\alpha(\varepsilon^2)\) restoration displacement in \eqref{eq:legacy-B.34} gives
+\begin{equation}
+\begin{aligned}
+|(E_{P_\varepsilon}-E_{Q_\varepsilon})\psi_{t_B,t_A}|
+&\le\varepsilon\kappa_HE_{Q_\varepsilon}|R_\varepsilon Z-Z|_\gamma\\
+&\quad+O_\alpha(\varepsilon^2)Q_\varepsilon(\mathcal B_\varepsilon)
+=O_\alpha(\varepsilon^3).
+\end{aligned}
+\tag{A.41}\label{eq:legacy-B.36}
+\end{equation}
+Choose \(t_B\) optimal under \(Q_\varepsilon\) and \(t_A\) under \(P_\varepsilon\). Separate minimization gives
+\[
+\Phi_\varepsilon(P_\varepsilon)-\Phi_\varepsilon(Q_\varepsilon)
+\le p^{-1}(E_{P_\varepsilon}-E_{Q_\varepsilon})\psi_{t_B,t_A}.
+\]
+The reversed choice gives the opposite inequality, hence
+\begin{equation}
+|\Phi_\varepsilon(P_\varepsilon)-\Phi_\varepsilon(Q_\varepsilon)|
+=O_\alpha(\varepsilon^3).
+\tag{A.42}\label{eq:legacy-B.37}
+\end{equation}
+
+With \(\widetilde\pi_\varepsilon\) denoting the preliminary translation plan, the coupling
+\[
+\bar\pi_\varepsilon=(\operatorname{id}_S,R_\varepsilon)_\#\widetilde\pi_\varepsilon
+\in\Gamma(P_0,P_\varepsilon)
+\]
+has cost at most the sum of \eqref{eq:legacy-B.27} and \eqref{eq:legacy-B.35}. Restoration leaves its source coordinates fixed and changes its lifted displacement by \(O_\alpha(\varepsilon)\), so the bounded source mass on compact windows and uniform continuity of test functions preserve the vague limit \(\Pi_\alpha\). Equations \eqref{eq:legacy-B.32} and \eqref{eq:legacy-B.37} give the paired-risk limit.
+
+For a general finite-\(I\) kernel, choose the approximants \(\alpha^{(m)}\) of Appendix A.4 and a metric \(d_{\rm v}\) for vague convergence. The fixed-kernel construction permits \(\varepsilon_m\downarrow0\) such that, for every \(0<\varepsilon\le\varepsilon_m\),
+\[
+\begin{aligned}
+\mathcal E_\varepsilon(\mathscr T_\varepsilon\bar\pi_\varepsilon^{(m)})
+&\le\mathcal C(\alpha^{(m)})+m^{-1},\\
+\left|\varepsilon^{-2}\Phi_\varepsilon(P_\varepsilon^{(m)})-\mathcal V(\alpha^{(m)})\right|
++d_{\rm v}(\mathscr T_\varepsilon\bar\pi_\varepsilon^{(m)},\Pi_{\alpha^{(m)}})
+&\le m^{-1}.
+\end{aligned}
+\]
+Using the \(m\)-th recovery for \(\varepsilon\in(\varepsilon_{m+1},\varepsilon_m]\) gives a full recovery family with exact marginals, vague limit \(\Pi_\alpha\), and the energy and risk limits in \eqref{eq:legacy-4.6}. Its risk error is \(o(\varepsilon^2)\), because the fixed-approximant cubic constants need not be uniform in \(m\).
+
+\paragraph{Optimizing over the budget}\label{completion-of-b-t-original-model-budgets-budget-boundaries-and-local-uniform-convergence}
+
+\label{b-l9-compact-cost-sublevel-sets-continuity-of-the-risk-difference-and-budget-attainment}
+Parts (i)--(ii) are now proved. For kernels with fixed source \(\nu\) and \(I\le M\), the same estimates \eqref{eq:legacy-B.21}--\eqref{eq:legacy-B.23} give uniform convergence of the relative objectives on a common compact interval containing every minimizer. Their common term cancels, so \(\mathcal V\) is continuous on compact cost sublevels and \(F\) is finite and attained, with \(F(0)=-J/p\). Mixing with the identity, \(\alpha^\theta=\theta\alpha+(1-\theta)\delta_0\), scales \(I,j_i,T_c\) linearly and gives
+\begin{equation}
+\mathcal C(\alpha^\theta)=\theta\mathcal C(\alpha),\quad
+|\mathcal V(\alpha^\theta)-\mathcal V(\alpha)|
+\le\frac{2\kappa_BI(\alpha)}p(1-\theta).
+\tag{A.43}\label{eq:legacy-B.44}
+\end{equation}
+Applied to a maximizer at \(t>s\), with \(\theta=s/t\), this yields
+\begin{equation}
+0\le F(t)-F(s)\le\frac{2\kappa_B}{p}(t-s),\qquad0\le s<t.
+\tag{A.44}\label{eq:legacy-B.45}
+\end{equation}
+
+\paragraph{Reflection at finite cost}\label{sec:reflection-construction}\label{proof:positive-witness}
+To obtain a positive value of \(F\) at finite cost, we reflect two normal bands over exchanged surface patches. The \(B\)-increments then cancel, and reversal of \(H\) makes the \(A_\varepsilon\)-increments add with negative sign without shifting the minimizing thresholds. Choose a compact positive-area patch \(E_+\Subset\Omega\cap\{H>h_0\}\), \(h_0>0\), and its exchanged image \(E_-\), of common mass \(m>0\). Set \(\Delta_E=\int_{E_+}H\,d\sigma-\int_{E_-}H\,d\sigma>0\). With \(U>\Delta_I\) and \(R>0\), use \(d=-2ue_1\) on \(E_+\times[U,U+R]\) and \(E_-\times[-U-R,-U]\), leaving other sources fixed. Integration gives
+\begin{equation}
+I=4\gamma_1m(UR+R^2/2),\qquad \mathcal C\le2I<\infty.
+\tag{A.45}\label{eq:legacy-B.46}
+\end{equation}
+Pairing the positive and negative bands cancels their normal-coordinate and threshold terms, giving, for \(|\tau|<U-\Delta_I\),
+\begin{equation}
+T_0(\tau)=0,\qquad T_1(\tau)=-\Delta_E R.
+\tag{A.46}\label{eq:legacy-B.47}
+\end{equation}
+The preceding formulas make both objectives stationary at zero, and Lemma~\ref{lem:threshold-convexity} makes them convex. Zero therefore minimizes both objectives, so choosing \(R>J/\Delta_E\) gives the positive paired value
+\begin{equation}
+\mathcal V=(-J+\Delta_E R)/p>0.
+\tag{A.47}\label{eq:legacy-B.48}
+\end{equation}
+
+For \(s>0\), let \(\alpha\) maximize \(F(s)\). The mixture \(\alpha^\theta\), \(0\le\theta<1\), has limiting cost \(\mathcal C(\alpha^\theta)=\theta\mathcal C(\alpha)<s\), so its recovered laws are eventually feasible at budget \(s\varepsilon^2\). Taking \(\varepsilon\downarrow0\) and then \(\theta\uparrow1\) in \eqref{eq:legacy-B.44} gives the lower bound \(F(s)\). Conversely, maximizing laws along a subsequence realizing the risk limsup admit, by the preceding compactness and risk-limit arguments, a limiting kernel of cost at most \(s\) with the same scaled risk, giving the upper bound. At zero the reference expansion applies directly. Finally, \eqref{eq:sharp-budget-continuity} gives
+\begin{equation}
+0\le D_\varepsilon(\rho_2)-D_\varepsilon(\rho_1)\le K(\rho_2-\rho_1).
+\tag{A.48}\label{eq:legacy-B.50}
+\end{equation}
+Here \(K=(2\kappa_B+\kappa_H)/p\) bounds \(\kappa_\varepsilon\) for \(0<\varepsilon<1\). The rescaled profiles therefore share a Lipschitz constant, so pointwise convergence extends by a finite fine grid to the compact-uniform convergence \eqref{eq:legacy-4.4}.
+\end{proof}

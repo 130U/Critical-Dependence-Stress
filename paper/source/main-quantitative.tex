@@ -1,0 +1,135 @@
+\keepproofstart{6\baselineskip}
+\section{5. Analytical illustrations and financial implications}\label{critical-cost-premia-background-dependence-and-finite-reallocations}\label{v21-quantitative}
+\subsection{5.1 Projection potentials and a uniform reference}\label{strict-premium-despite-equal-efficiency}
+
+By assigning a bounded shadow price \(\phi_i\) to each marginal flux, we can bound the strict premium without solving the full risk optimization. To derive the estimate, we first minimize the adjusted coordinate costs \(\gamma_i\pm\phi_i(\xi_i)\) for a prescribed normal displacement and then compare that minimum with the paired hinge gain.
+
+\resultnumber{5.1}\begin{proposition}[A projection-potential bound]\label{prop:projection-potential-bound}
+In the exchangeable box model, let \(b=(1,1,\beta)\) and let \(|\phi_i|\le\gamma_i\) be bounded measurable potentials on the coordinate intervals such that
+\(k_\pm(\xi)=\min_{1\le i\le3}(\gamma_i\pm\phi_i(\xi_i))/b_i\)
+are bounded below by a positive constant. For every finite-first-moment kernel, every \(\tau\in\arg\min G_1\), and every \(\lambda>0\),
+\begin{equation}
+\mathcal C(\alpha)\ge
+\lambda\left(J+p\mathcal V+\frac g2\tau^2\right)
+-\frac{\lambda}{2}\int_\Omega(H-\tau)^2
+\left(\frac{\lambda}{k(\xi,H-\tau)}-1\right)_+\,d\sigma,
+\tag{5.1}\label{eq:legacy-J.6}
+\end{equation}
+where \(k(\xi,h)=k_+(\xi)\) for \(h<0\) and \(k_-(\xi)\) for \(h>0\). The integrand is zero when \(h=0\).
+\end{proposition}
+
+The proof in \hyperref[app:potential-proof]{Appendix B.1} optimizes the hinge gain against the adjusted cost \(k_+w_++k_-(-w)_+\), where \(w=b\cdot d\). To quantify how far the reversal budget can exceed the initial-slope prediction, we use an analytically tractable reference with independent uniform losses on \([0,2]\), \(\beta=1\), \(p=1/2\), and \(\gamma=(\gamma_0,\gamma_0,2\gamma_0)\). Equal exposures and the median tail make the section invariant under central reflection, so \(v=3\), \(d\sigma=dx\,dy/8\), \(g=3/8\), and \(J=5/32\).
+
+In the cut representation of Theorem~\ref{thm:projected-flow}, the midpoint partition corresponds to \(\varphi(q)=1_{[0,1)}(q)-1_{(1,2]}(q)\). Scaling this potential by \(\gamma_0/2\) and using opposite signs on the two traded coordinates transfers the same partition to the marginal-flux penalty in Proposition~\ref{prop:projection-potential-bound}, giving the admissible two-level potentials
+\[
+\phi_1(x)=\frac{\gamma_0}{2}\operatorname{sgn}(1-x),\qquad
+\phi_2(y)=\frac{\gamma_0}{2}\operatorname{sgn}(y-1),\qquad \phi_3=0.
+\]
+Their signs distinguish low-loss from high-loss coordinate halves. At zero threshold shift, a positive paired hinge gain requires normal movement \(w=b\cdot d>0\) when \(x<y\), and \(w<0\) when \(x>y\). The amplitude \(\gamma_0/2\) gives effective cost \(k(\xi,H)=3\gamma_0/2\) in this direction across the midpoint and both directional costs \(\gamma_0/2\) on either same-side region. Choosing \(\lambda=3\gamma_0/2\) in \eqref{eq:legacy-J.6} therefore removes the cross-region penalty at zero threshold. By retaining the correction for shifted minimizing thresholds in the proof below, we obtain a bound valid without prescribing either ES threshold.
+
+\resultnumber{5.2}\begin{corollary}[Uniform reference with costly background displacement]\label{prop:uniform-variable-cost}
+For this uniform reference,
+\begin{equation}
+\frac{13}{64}\le\frac{s^*}{\gamma_0}\le\frac{29}{96},
+\qquad \frac{s^*}{\gamma_0J}\ge\frac{13}{10}.
+\tag{5.2}\label{eq:legacy-7.1}
+\end{equation}
+The initial linear profile holds on \(0\le s\le\gamma_0/96\).
+\end{corollary}
+
+\begin{proof}
+For \(1/2\le x\le1\), the negative-moment section has \(1-x<y<x\), so integrating \((x-y)^2/16\) over this interval gives \(\ell_-(x)=(2x-1)^3/48\). For \(0\le x\le1/2\), the section is empty and \(\ell_-(x)=0\). Reflection gives \(\ell_+(x)=\ell_-(2-x)\). On the lower half of \(I\), \(\ell_-\) is the smaller moment, which gives \(Q_{\rm bal}=2\int_{1/2}^1\ell_-(x)\,dx=1/192\). Using \(\int_I(\ell_-+\ell_+)\,dx=J\) then gives \(\|\ell_--\ell_+\|_1=J-2Q_{\rm bal}=7/48\), and Proposition~\ref{prop:balanced-linear-profile} yields \(s_{\rm lin}=\gamma_0/96\). The first-coordinate kernel \(\delta_{\zeta e_1}\) from \eqref{eq:legacy-D.1} reaches zero risk at cost \(\gamma_0(J+\|\ell_--\ell_+\|_1)=29\gamma_0/96\). For the lower bound, the midpoint potentials with \(\lambda=3\gamma_0/2\) give
+\[
+\frac{\mathcal C}{\gamma_0}\ge
+\begin{cases}
+\displaystyle \frac34\mathcal V+\frac{13}{64}
++\frac{\tau^2(6-\tau^2)}{64},& |\tau|\le1,\\[2pt]
+\displaystyle \frac12\mathcal V+\frac{11}{32},& |\tau|\ge1.
+\end{cases}
+\]
+For \(|\tau|\le1\), the section integrations in \hyperref[app:uniform-bound-proof]{Appendix B.2} give the first line. For \(|\tau|\ge1\), the efficiency decomposition \eqref{eq:legacy-E.5} gives the second. Every kernel with \(\mathcal V\ge0\) therefore costs at least \(13\gamma_0/64\), which is \(30\%\) above \(\gamma_0J\).
+\end{proof}
+
+\phantomsection\label{app:quantitative-benchmarks}
+Setting \(\gamma_0=1\), we obtain analytical envelopes for \(F(s)\) on \([0,U]\), where \(U=29/96\). The balanced kernel has cost \(s_0=1/96\), zero projected flux, and risk \(-7/24\), while the first-coordinate comparison kernel has cost \(U\) and risk zero. Their convex mixtures have affine paired risk because zero minimizes both threshold objectives for each kernel, and affine cost because the balanced kernel has zero flux. Joining these mixtures to the exact initial linear segment, we realize the lower envelope
+\[
+\underline F(s)=
+\begin{cases}
+2s-5/16,&0\le s\le1/96,\\
+s-29/96,&1/96\le s\le29/96.
+\end{cases}
+\]
+To bound \(F\) from above, we invert the two threshold estimates and combine them with the efficiency bound:
+\[
+\begin{aligned}
+F(s)&\le\min\left\{2s-\frac5{16},
+\max\left\{\frac43s-\frac{13}{48},2s-\frac{11}{16}\right\}\right\}
+\\
+&=\overline F(s):=\min\left\{2s-\frac5{16},\frac43s-\frac{13}{48}\right\}
+\qquad(0\le s\le U).
+\end{aligned}
+\]
+The last equality holds because the branches inside the maximum meet only at \(s=5/8>U\). Figure~\ref{fig:budget} plots the analytical envelopes \(\underline F\le F\le\overline F\) on \([0,U]\). The guaranteed linear segment \([0,s_{\rm lin}]\) covers one fifteenth of the tangent prediction \(J=5/32\), whereas the critical coefficient \(s^*\) lies between \(13/10\) and \(29/15\) times \(J\). Thus the initial slope is attained on a positive interval, yet the required reversal budget is at least \(30\%\) higher than its tangent prediction.
+\input{figure-budget.tex}
+
+\subsection{5.2 A dependence family with fixed marginal laws}\label{background-dependence-changes-substitutability-even-with-identical-marginals}
+
+Section~5.1 used an independent uniform reference with background displacement twice as costly as either traded direction. We now move to the equal-effective-cost boundary and ask how changing the reference dependence affects the required background share \(a_+\) and the budget derivative \(\gamma_0Ja_+\). Retaining uniform marginals, \(\beta=1\), and \(p=1/2\), we perturb the independent density by the product of the centered losses \(x+y-2\) and \(z-1\):
+\[
+f_\vartheta(x,y,z)=\frac{1+\vartheta(x+y-2)(z-1)}8,\qquad
+|\vartheta|<\frac12,\qquad
+E_\vartheta[(X_1+X_2-2)(X_3-1)]=\frac{2\vartheta}{9}.
+\]
+After rescaling the losses to \([0,1]\), this is a one-parameter subfamily of the trivariate Farlie--Gumbel--Morgenstern family \cite[Section~2]{otakimura2021}: the interactions between each traded coordinate and the background have parameter \(\vartheta\), with the other interaction parameters zero. Centering preserves every marginal, and the parameter restriction keeps the density strictly positive on the cube. Central reflection fixes \(v=3\), where the section density is \([1-\vartheta(x+y-2)^2]/8\), so increasing \(\vartheta\) reduces the section mass away from \(x+y=2\) even as covariance increases. On the unchanged half-section \(D\), let
+\(d\mu_\vartheta=w_{\sigma,\vartheta}(x,y)\,dx\,dy\), where
+\(w_{\sigma,\vartheta}(x,y)=(y-x)^2\{1-\vartheta(x+y-2)^2\}/16\).
+Set \(D_-=D\cap\{y<1\}\), \(D_+=D\cap\{x>1\}\), and denote the same-side masses by \(M_{\vartheta,\pm}=\mu_\vartheta(D_\pm)\).
+
+\resultnumber{5.3}\begin{proposition}[Background share along the dependence family]\label{prop:dependence-family}
+For \(|\vartheta|<1/2\), the boundary flow is attained and
+\begin{equation}
+J_\vartheta=\frac{75-14\vartheta}{480},\qquad
+M_{\vartheta,-}=M_{\vartheta,+}=\frac{3-2\vartheta}{1152},
+\qquad
+a_{+,\vartheta}
+=1-\frac{4(M_{\vartheta,-}+M_{\vartheta,+})}{J_\vartheta}.
+\tag{5.3}\label{eq:legacy-K.9}
+\end{equation}
+In particular,
+\[
+J_\vartheta a_{+,\vartheta}=\frac{195-22\vartheta}{1440},\qquad
+\frac{d a_{+,\vartheta}}{d\vartheta}
+=\frac{360}{(75-14\vartheta)^2}>0,\qquad
+\frac{d(J_\vartheta a_{+,\vartheta})}{d\vartheta}
+=-\frac{11}{720}.
+\]
+\end{proposition}
+
+To obtain the explicit value, we use all the mass in \(D_-\) and \(D_+\) and match their projections in two disjoint parts of the cross-region. The section inequalities in \hyperref[app:dependence-family-proof]{Appendix B.3} provide the required capacity throughout \(|\vartheta|<1/2\). Because the midpoint potential gives the same value in the dual problem, this feasible flow is optimal.
+
+As reference dependence varies through \(0<\vartheta<1/2\), the minimum background share and the corresponding unnormalized displacement moment change in opposite directions:
+\begin{equation}
+a_{+,\vartheta}-a_{+,0}
+=\frac{24\vartheta}{5(75-14\vartheta)}>0,\qquad
+J_\vartheta a_{+,\vartheta}-J_0a_{+,0}
+=-\frac{11\vartheta}{720}<0.
+\tag{5.4}\label{eq:legacy-7.2}
+\end{equation}
+The reason for this contrast is that, on the median plane \(x+y+z=3\), the centered factors satisfy \(z-1=-(x+y-2)\). Thus increasing \(\vartheta\) favors equal signs in the full box but reduces the section density away from \(x+y=2\) by the factor \(1-\vartheta(x+y-2)^2\). Across both exchanged half-sections, the traded-coordinate matching capacity is \(4(M_{\vartheta,-}+M_{\vartheta,+})\). By \eqref{eq:legacy-K.9}, \(J_\vartheta\) decreases faster in absolute units than this capacity, so their difference \(J_\vartheta a_{+,\vartheta}\) declines. The matching capacity nevertheless falls faster in proportion than \(J_\vartheta\) throughout \(0<\vartheta<1/2\), leaving a larger relative share for the background coordinate.
+
+Figure~\ref{fig:flow-shares} compares two examples: independence (\(\vartheta=0\), model U) and \(\vartheta=1/4\) (model D). Comparing the triples \((J_\vartheta,a_{+,\vartheta},J_\vartheta a_{+,\vartheta})\), namely \((5/32,13/15,13/96)\) and \((143/960,379/429,379/2880)\), we find that the minimum background share rises from about \(0.8667\) to \(0.8834\), while its unnormalized displacement moment falls from about \(0.1354\) to \(0.1316\).
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=\linewidth]{figures/optimal-flow-shares.pdf}
+\caption{An optimal allocation of normal displacement on the tail
+surface \(D\), at the equal-cost boundary, for
+\(\vartheta=0\) (U, top) and \(\vartheta=1/4\) (D, bottom).
+The panels evaluate the explicit shares \(a,b,1-a-b\) in
+\eqref{eq:legacy-K.7}; all use the same scale from zero to one.
+On each same-side section we allocate displacement to a rebalanced
+coordinate and match its projection using the cross-region.
+We allocate the remainder to the background coordinate.
+Blank regions lie outside \(D\).}
+\label{fig:flow-shares}
+\end{figure}

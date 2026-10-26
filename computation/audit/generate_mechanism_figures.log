@@ -1,0 +1,23 @@
+{
+  "scope": "Two schematic mechanism figures; no optimization or empirical data.",
+  "tail_layer": {
+    "thin_layer_halfwidth_illustration": 0.13,
+    "discrepancy_curve": "sin(2*pi*q)*sin(pi*q/2)**2",
+    "interpretation": "Illustrative signed local CDF discrepancy and its opposite; not a computed optimizer."
+  },
+  "corner": {
+    "support": "[0,2]^3",
+    "beta": 1.75,
+    "v": 3.75,
+    "delta": 0.35,
+    "a": 0.0,
+    "b_star": 2.0,
+    "lower_section_sum": 0.25,
+    "upper_section_sum": 3.75,
+    "hatched_triangles": "Bounding regions may extend outside Omega.",
+    "demand_order": "delta^2",
+    "capacity_order": "delta^4"
+  },
+  "numpy_version": "2.5.4",
+  "matplotlib_version": "3.11.2"
+}

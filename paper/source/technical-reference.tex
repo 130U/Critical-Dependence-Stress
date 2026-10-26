@@ -1,0 +1,34 @@
+\section{Appendix A. Analytic proofs}\label{app:reference-calculus}
+\subsection{A.1 Reference ES derivatives}
+The first-order formulas are the usual allocation and quantile derivatives \cite{scaillet2004,tasche2001}, and the conditional-variance second derivative appears in \cite[Section~3.2]{martin2011}. We give the section argument to verify that continuity of \(f\) on the compact box suffices without differentiating \(f\).
+\resultnumber{A.1}\begin{lemma}[First and second variations on a compact box]\label{lemma:general-variation}\label{lemma:reference-calculus}
+Let a reference law have a positive continuous density \(f\) on a product \(K\) of nondegenerate compact intervals in \(\mathbb R^n\). For \(B=b\cdot X\), \(b\ne0\), and \(H=h\cdot X\), let \(v\) be the upper-tail \(p\) threshold of \(B\), and set
+\[
+m_k(\eta,t)=\int_{K\cap\{B+\eta H=t\}}
+\frac{H(x)^k f(x)}{|b+\eta h|}\,d\mathcal H^{n-1}(x),
+\qquad k=0,1,2.
+\]
+For sufficiently small \(\eta\), the threshold \(t(\eta)\) of \(B+\eta H\) is unique and differentiable. Writing \(m_k=m_k(0,v)\) and
+\(T_H=E[H1_{\{B>v\}}]\), one has \(m_0>0\) and
+\[
+\begin{aligned}
+t(\eta)&=v+\frac{m_1}{m_0}\eta+o(\eta),\\
+ES_p(B+\eta H)-ES_p(B)
+&=\frac{T_H}{p}\eta+
+\frac1{2p}\left(m_2-\frac{m_1^2}{m_0}\right)\eta^2+o(\eta^2).
+\end{aligned}
+\]
+\end{lemma}
+\begin{proof}
+Fix \(j\) with \(b_j\ne0\) and eliminate \(x_j\) from \(B+\eta H=t\). The Jacobian \(|b_j+\eta h_j|^{-1}\) agrees with the coarea density because \(d\mathcal H^{n-1}=(|b+\eta h|/|b_j+\eta h_j|)\,dx_{-j}\). To apply dominated convergence as \((\eta,t)\) varies, we need to control where the solved coordinate enters or leaves its interval. If another component of \(b\) is nonzero, it remains nonzero after a sufficiently small perturbation, and at each fixed nearby parameter pair the boundary points lie on at most two affine hyperplanes of zero \(dx_{-j}\)-measure. Along any sequence converging to that pair, the section integrands therefore converge outside this null set. If \(b_j\) is the only nonzero component, the interior level \(v\) instead keeps the solved coordinate uniformly away from both endpoints throughout a small parameter neighborhood. Compactness of the base and the bound away from zero for \(|b_j+\eta h_j|\) provide a common integrable bound in either case, proving continuity of the section moments. Since an interior section contains a relatively open patch and \(f>0\), we also have \(m_0>0\).
+
+For \(Q(\eta,t)=P(B+\eta H\le t)\) and \(\Psi(\eta,t)=t+p^{-1}E(B+\eta H-t)_+\), differentiating the moving endpoint gives \(Q_t=m_0\), \(Q_\eta=-m_1\), \(\Psi_{tt}=m_0/p\), \(\Psi_{\eta t}=-m_1/p\), and \(\Psi_{\eta\eta}=m_2/p\), without differentiating \(f\). The implicit function theorem applied to \(Q(\eta,t(\eta))=1-p\) yields \(t'=m_1/m_0\). Along the optimizing threshold, \(\Psi_t(\eta,t(\eta))=0\), so
+\[
+\begin{aligned}
+\frac{d}{d\eta}ES_p(B+\eta H)&=p^{-1}E[H1_{\{B+\eta H>t(\eta)\}}],\\
+\frac{d^2}{d\eta^2}ES_p(B+\eta H)&=\left(\Psi_{\eta\eta}-\frac{\Psi_{\eta t}^2}{\Psi_{tt}}\right)(\eta,t(\eta))
+=\frac1p\left(m_2-\frac{m_1^2}{m_0}\right)(\eta,t(\eta)).
+\end{aligned}
+\]
+Taylor expansion at zero gives the stated variation formula.
+\end{proof}

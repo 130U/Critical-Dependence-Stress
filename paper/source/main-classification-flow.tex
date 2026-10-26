@@ -1,0 +1,231 @@
+\section{4. Efficiency premiums and projected flow duality}\label{background-substitutability-and-minimum-cost-feasibility}
+
+We now turn to the question of when the critical coefficient reaches the local-efficiency lower bound and when a strict marginal-restoration premium remains. Because a locally efficient displacement need not preserve the marginal projections, any unbalanced moment must be compensated elsewhere. We measure this obstruction by testing each projected flux against a bounded measurable coordinate potential, using the \(L^1\) dual representation of the restoration cost:
+\[
+\mathcal C(\alpha)-I(\alpha)
+=\sup_{|\phi_i|\le\gamma_i}\sum_i\int_{I_i}\phi_i(q)j_i(q)\,dq
+=\sup_{|\phi_i|\le\gamma_i}\int\sum_i\phi_i(\xi_i)d_i\,d\Pi_\alpha.
+\]
+Here \(\phi_i(q)\) acts as a dual shadow price for the projected displacement moment at coordinate level \(q\). Vanishing projections require opposite signed displacements to balance at each coordinate level, eliminating the leading restoration penalty. We first identify the pointwise displacement required for equality in the efficiency bound, then test its projections near an off-diagonal corner to rule out equality when only traded coordinates are cheapest. At equal effective costs, continuous potentials yield the flow--cut duality of Section~4.2. Allowing nonzero projected fluxes in the restoration-cost bound leads to the piecewise-constant potential estimates of Section~5.1.
+
+\subsection{4.1 Local efficiency and the zero-premium classification}\label{a-necessary-and-sufficient-condition-for-zero-premium}\label{v21-classification}
+
+With \(c_1=\gamma_1\), \(c_2=\gamma_2\), \(c_3=\gamma_3/\beta\), and \(c_{\min}=\min\{c_1,c_2,c_3\}\), Proposition~\ref{prop:nominal-benchmark} and Theorem~\ref{thm:critical-limit} already give \(F(s)\le-J/p+s/(pc_{\min})\). The key issue at zero risk difference is whether a kernel can satisfy the pointwise efficiency conditions while conserving every marginal projection. We characterize those simultaneous equality conditions below.
+
+Proposition~\ref{prop:nominal-benchmark} establishes initial efficiency at each fixed trade size under \eqref{eq:legacy-3.4}; when \(\gamma_1=c_{\min}\), Proposition~\ref{prop:balanced-linear-profile} separately realizes the limiting slope by matching opposite first-coordinate moments on each fiber. When only traded coordinates are cheapest, that matching cannot cover the whole tail section, although it suffices for the initial linear segment. If the background coordinate is cheapest, exchanging \(x,y\) and reversing \(u\) instead balances the required displacement on every background slice, sustaining the efficiency bound up to zero risk.
+
+\resultnumber{4.1}\begin{lemma}[Local-efficiency bound and critical-level optimality]\label{lem:efficiency-bound}\label{lem:v21-equality}\label{g.3-a-necessary-and-sufficient-condition-for-minimum-cost-feasibility}
+In the exchangeable box model of Section~2.2, every kernel with \(I(\alpha)<\infty\) satisfies \(p\mathcal V(\alpha)+J\le\mathcal C(\alpha)/c_{\min}\), so \(s^*\ge c_{\min}J\). Set \(b=(1,1,\beta)\) and \(\zeta=-(u+H)1_{\{u(u+H)<0\}}\). Then \(s^*=c_{\min}J\) if and only if there is a measurable probability kernel satisfying
+\begin{equation}
+\begin{aligned}
+b\cdot d=\zeta,\qquad |d|_\gamma=c_{\min}|\zeta|
+&\quad\Pi_\alpha\text{-almost everywhere},\\
+(\xi_i)_\#(d_i\,d\Pi_\alpha)=0
+&\quad i=1,2,3.
+\end{aligned}
+\tag{4.1}\label{eq:legacy-6.3}
+\end{equation}
+Such a kernel has \(\mathcal C=I=c_{\min}J\) and \(\mathcal V=0\); every kernel with \(\mathcal V\ge0\) and \(\mathcal C\le c_{\min}J\) satisfies these conditions.
+\end{lemma}
+
+\begin{proof}
+\input{technical-efficiency-identity.tex}
+
+To reach zero risk at the local-efficiency budget, none of these defects can remain. Indeed, if \(\mathcal V\ge0\) and \(\mathcal C\le c_{\min}J\), the left side of \eqref{eq:legacy-E.5} is nonpositive, so every nonnegative term must vanish and
+\begin{equation}
+\mathcal V=0,\qquad \mathcal C=I=c_{\min}J,\qquad
+\int|w|\,d\Pi_\alpha=J,\qquad j_i=0\quad(i=1,2,3).
+\tag{4.3}\label{eq:legacy-E.7}
+\end{equation}
+In addition, \(\arg\min G_1=\{0\}\) and \(0\in\arg\min G_0\). The vanishing metric defect
+\begin{equation}
+|d|_\gamma-c_{\min}|b\cdot d|
+=\sum_i(\gamma_i-c_{\min}b_i)|d_i|
++c_{\min}\left(\sum_i b_i|d_i|-\left|\sum_i b_id_i\right|\right)
+\tag{4.4}\label{eq:legacy-E.8}
+\end{equation}
+allows only cheapest coordinates, with all nonzero components having the sign of \(w\). At \(\tau_A=0\), equality in the hinge bound requires \(u\ge0\), \(u+H\le-w\) if \(w>0\), and \(u\le0\), \(u+H\ge-w\) if \(w<0\). Thus \(|w|\le K:=|u+H|1_{\{u(u+H)<0\}}\), with the sign of \(\zeta\) wherever \(w\ne0\). Since
+\begin{equation}
+\int_{\mathbb R}K\,du=H^2/2,\qquad
+\int_{\mathbb R}\zeta\,du=-H|H|/2,
+\tag{4.5}\label{eq:legacy-E.12}
+\end{equation}
+and every conditional kernel has mass one, \(\int K\,d\Pi_\alpha=J=\int|w|\,d\Pi_\alpha\). Saturation of this nonnegative bound forces
+\begin{equation}
+b\cdot d=\zeta\quad\Pi_\alpha\text{-almost everywhere},
+\tag{4.6}\label{eq:legacy-6.4}
+\end{equation}
+which, with the metric and flux equalities, proves necessity.
+
+For the converse, the threshold calculation depends only on the normal displacement \(w=\zeta\). We integrate over the disagreement wedge and use exchangeability to obtain
+\begin{equation}
+T_0(0)=J/2,\qquad T_1(0)=-J/2,\qquad
+\int_{H>0}H^2\,d\sigma=\int_{H<0}H^2\,d\sigma=J.
+\tag{4.7}\label{eq:legacy-D.2}
+\end{equation}
+Because the transformed \(B\)-loss retains its strict tail sign and places no atom at zero, we have \(G_0'(0)=0\). With \(m_\pm=\int(\pm H)_+\,d\sigma>0\), the mass placed at the \(A_\varepsilon\)-threshold kink gives
+\begin{equation}
+G_{1,-}'(0)=-m_-<0,\qquad G_{1,+}'(0)=m_+>0.
+\tag{4.8}\label{eq:legacy-D.3}
+\end{equation}
+By convexity, these strict one-sided inequalities make zero the unique minimizer of \(G_1\). For \(G_0\), the stationary regions \(\{H>0,u>0\}\) and \(\{H<0,u<0\}\) each have section mass \(g/2\), and their unchanged normal coordinates cover the positive and negative half-lines, respectively. Hence \(\lambda_0\ge(g/2)\,dt\) on \(\mathbb R\), and Lemma~\ref{lem:threshold-convexity} yields \(G_0(\tau)-G_0(0)\ge g\tau^2/4\), so zero is also the unique minimizer of \(G_0\). Combining these minima with \eqref{eq:legacy-D.2} gives \(\mathcal V=0\). Under \eqref{eq:legacy-6.3}, we have \(I=c_{\min}J\) and vanishing fluxes, so \(\mathcal C=c_{\min}J\). Together with attainment of the critical cost in Theorem~\ref{thm:strict-crossing}, this proves the equivalence.
+\end{proof}
+
+\resultnumber{4.2}\begin{theorem}[Zero-premium classification]\label{thm:zero-premium} For the exchangeable box model of \mbox{\hyperref[model:critical-box]{Section~2.2}} and every positive weight vector,
+\begin{equation}
+s^*=Jc_{\min}\quad\Longleftrightarrow\quad
+c_3\le\min\{\gamma_1,\gamma_2\}.
+\tag{4.9}\label{eq:legacy-6.1}
+\end{equation}
+If \(c_3=c_{\min}\), the profile is explicitly \(F(s)=-J/p+s/(pc_3)\) for \(0\le s\le c_3J\).
+
+If \(\gamma_2\ge\gamma_1\) and \(c_3>\gamma_1\), then
+\begin{equation}
+1<\frac{s^*}{\gamma_1J}\le\min\{1+\chi,c_3/\gamma_1\}<2,
+\tag{4.10}\label{eq:legacy-6.2}
+\end{equation}
+where \(\chi=\|\ell_--\ell_+\|_{L^1(I)}/J\in(0,1)\) is the projected imbalance of Section~3.3.
+\end{theorem}
+
+\keepproofstart{4\baselineskip}
+\textit{Proof of Theorem~\ref{thm:zero-premium}.}
+
+By Lemma~\ref{lem:efficiency-bound}, it suffices to allocate the prescribed displacement \(\zeta\) among cheapest coordinates while preserving every marginal projection. The background coordinate admits such a balance because exchanging the traded losses and reversing the normal coordinate leaves each background slice fixed and reverses the required displacement. For the traded coordinates, the corresponding balance must instead be found along each \(x\)- or \(y\)-fiber. Near an off-diagonal corner, the required moment is bounded below by a positive multiple of \(\delta^2\), whereas the opposite-side sources available at those coordinate levels have capacity only \(O(\delta^4)\). We prove the background construction first and then use this discrepancy to exclude even randomized splitting among the traded directions.
+
+\paragraph{Comparison kernels and the sufficient direction}\label{d.1-three-zero-risk-difference-kernels-scores-and-optimal-thresholds}\label{d.2-net-fluxes-total-costs-and-general-bounds}
+Assigning the prescribed displacement to one coordinate gives
+\begin{equation}
+\alpha^{(1)}=\delta_{\zeta e_1},\qquad
+\alpha^{(2)}=\delta_{\zeta e_2},\qquad
+\alpha^{(3)}=\delta_{(\zeta/\beta)e_3}
+\tag{4.11}\label{eq:legacy-D.1}
+\end{equation}
+with finite first moments and zero risk differences by the normal-displacement calculation \eqref{eq:legacy-D.2}--\eqref{eq:legacy-D.3} in Lemma~\ref{lem:efficiency-bound}. The first two kernels have respective fluxes \(j_1=\ell_+-\ell_-\) and \(j_2=\ell_--\ell_+\), all other fluxes being zero. To verify the background projection, we use the exchange \((x,y,u)\mapsto(y,x,-u)\), which preserves \(\nu,\xi_3\) and reverses \(\zeta\). Absolute integrability then allows us to test against every bounded measurable \(\varphi\), obtaining
+\begin{equation}
+\int\varphi(\xi_3)d_3^{(3)}d\nu
+=-\int\varphi(\xi_3)d_3^{(3)}d\nu=0.
+\tag{4.12}\label{eq:legacy-D.6}
+\end{equation}
+All three projections of \(\alpha^{(3)}\) vanish, yielding
+\begin{equation}
+\mathcal C(\alpha^{(1)})=\gamma_1J(1+\chi),\quad
+\mathcal C(\alpha^{(2)})=\gamma_2J(1+\chi),\quad
+\mathcal C(\alpha^{(3)})=c_3J.
+\tag{4.13}\label{eq:legacy-D.7}
+\end{equation}
+The background kernel proves sufficiency, including ties, and the least of these costs gives \(s^*\le J\min\{\gamma_1(1+\chi),\gamma_2(1+\chi),c_3\}\), which yields the upper bound in \eqref{eq:legacy-6.2} when \(\gamma_2\ge\gamma_1\) and \(c_3>\gamma_1\).
+
+When \(c_3=c_{\min}\), mix the background kernel \(\alpha^{(3)}\) with the identity using weight \(\theta=s/(c_3J)\in[0,1]\). Both kernels have zero projected flux and both threshold objectives attain their minima at zero, by \eqref{eq:legacy-D.2}--\eqref{eq:legacy-D.3} and \(G_c^{\delta_0}(\tau)=g\tau^2/2\), so cost and paired risk are affine along the mixture. Its cost is \(\theta c_3J=s\), and \eqref{eq:legacy-D.2} gives
+\begin{equation}
+\mathcal V=-(1-\theta)J/p.
+\tag{4.14}\label{eq:legacy-D.9}
+\end{equation}
+Thus the mixture attains the efficiency bound on the stated interval.
+
+\paragraph{The obstruction for arbitrary randomized kernels}\label{e.3-a-local-obstruction-to-zero-flux-in-the-two-asset-directions}
+For necessity, suppose \(c_3>c_{\min}\) and a kernel with \(\mathcal V\ge0\) attains cost \(c_{\min}J\). Lemma~\ref{lem:efficiency-bound} then requires \(d_3=0\), \(d_1+d_2=\zeta\), and both traded components to have the sign of \(\zeta\). Since the kernel has finite first moment, its averaged displacement fields \(m_i(x,y)=\int_{\mathbb R}\int d_i\,\alpha_{\xi,u}(dd)\,du\), \(i=1,2\), are integrable on the section and satisfy, by \eqref{eq:legacy-6.3},
+\begin{equation}
+\begin{aligned}
+&m_1+m_2=-H|H|/2,\qquad |m_i|\le H^2/2,\\
+&m_i\ge0\quad\text{for}\ x<y,\qquad
+m_i\le0\quad\text{for}\ x>y.
+\end{aligned}
+\tag{4.15}\label{eq:legacy-E.15}
+\end{equation}
+Projected conservation gives, for every pair of Borel sets \(A,B\subset I\),
+\begin{equation}
+\int_{\Omega\cap\{x\in A\}}m_1d\sigma=0,\qquad
+\int_{\Omega\cap\{y\in B\}}m_2d\sigma=0.
+\tag{4.16}\label{eq:legacy-E.16}
+\end{equation}
+We test \eqref{eq:legacy-E.15}--\eqref{eq:legacy-E.16} near the upper-left off-diagonal corner of \(\Omega\), where \(x\) is small, \(y\) is large, and the positive moment \((y-x)^2/2\) is bounded away from zero. Compensating this moment at the same coordinate levels requires negative moment from \(\{x>y\}\), where the small value of \(x\) or large value of \(y\) confines available sources to a small triangle near the diagonal (Figure~\ref{fig:corner}).
+
+\leavevmode\phantomsection\label{lem:v21-corner-geometry}
+The section base is the intersection of an open square with a diagonal strip, \(\Omega=(\ell,r)^2\cap\{q_-<x+y<q_+\}\), whose boundaries and coordinate projection endpoints are
+\[
+\begin{gathered}
+q_-=v-\beta r_3,\qquad q_+=v-\beta\ell_3,\\
+\xi_-=\max\{\ell,q_--r\},\qquad
+\xi_+=\min\{r,q_+-\ell\},\qquad \Delta=\xi_+-\xi_->0.
+\end{gathered}
+\]
+Both coordinate projections of \(\Omega\) equal \((\xi_-,\xi_+)\), and the interior diagonal point from \mbox{\hyperref[geometry:interior-diagonal]{Section~2.3}} satisfies \(\xi_-<x_*<\xi_+\), confirming \(\Delta>0\). Moreover, \(q_*:=\xi_-+\xi_+\in[q_-,q_+]\), so the corner \((\xi_-,\xi_+)\) lies in the closed strip, possibly on its boundary. The square diagonal through that corner runs parallel to the strip boundaries. On the corner square \((x,y)=(\xi_-+t,\xi_+-z)\), \(0<t,z<\delta\), the strip condition reads \(-(q_*-q_-)<t-z<q_+-q_*\). Because the two nonnegative slacks sum to \(\beta\Delta_3\), at least one is at least \(\beta\Delta_3/2\). Choosing \(\delta<\beta\Delta_3/2\) therefore includes one of the triangles \(z<t\) and \(t<z\). If we also choose \(\delta<\Delta/4\), we obtain
+\[
+E_\delta=\Omega\cap((\xi_-,\xi_-+\delta)\times(\xi_+-\delta,\xi_+)),
+\qquad |E_\delta|\ge\delta^2/2,
+\qquad y-x\ge\Delta/2\quad\hbox{on }E_\delta.
+\]
+Because \(f\) is bounded below on \(S\) and \(y-x\ge\Delta/2\) on this region, there is a constant \(c_\Omega>0\), independent of \(\delta\), such that
+\begin{equation}
+M_\delta:=\int_{E_\delta}(m_1+m_2)d\sigma
+\ge c_\Omega\delta^2.
+\tag{4.17}\label{eq:legacy-E.20}
+\end{equation}
+Testing \eqref{eq:legacy-E.16} on \(A_\delta=(\xi_-,\xi_-+\delta)\) and \(B_\delta=(\xi_+-\delta,\xi_+)\) requires \(M_\delta\le N_1+N_2\), where
+\[
+N_1=\int_{\Omega\cap\{x\in A_\delta,\ x>y\}}(-m_1)d\sigma,
+\qquad
+N_2=\int_{\Omega\cap\{y\in B_\delta,\ x>y\}}(-m_2)d\sigma.
+\]
+In \(N_1\), the conditions \(x\in A_\delta\) and \(y<x\) force \(\xi_-<y<x<\xi_-+\delta\); in \(N_2\), the sources similarly satisfy \(\xi_+-\delta<y<x<\xi_+\). Each triangle has area \(O(\delta^2)\), and \eqref{eq:legacy-E.15} bounds the corresponding displacement moment by \(-m_i\le H^2/2=(x-y)^2/2=O(\delta^2)\). Applying the upper density bound gives
+\begin{equation}
+N_1+N_2\le C_\Omega\int_0^\delta\int_0^x(x-y)^2\,dy\,dx
+=\frac{C_\Omega}{12}\delta^4.
+\tag{4.18}\label{eq:legacy-E.22}
+\end{equation}
+Here \(C_\Omega<\infty\) is independent of \(\delta\). For small \(\delta\), the bound contradicts \(c_\Omega\delta^2\le M_\delta\le N_1+N_2\). Attainment of the critical cost then implies \(s^*>Jc_{\min}\) when \(c_3>c_{\min}\), and \eqref{eq:legacy-D.7} gives \eqref{eq:legacy-6.2}. \unskip\nobreak\hfill\proofbox
+
+% V21_CORNER_FIGURE
+\input{figure-corner.tex}
+
+\subsection{4.2 Boundary sensitivity and the flow--cut representation}\label{required-background-share-and-the-boundary-response}\label{v21-flow}\label{variational-characterization-and-bounds-for-the-background-share}
+At equal effective costs, every efficient kernel has total required displacement \(J\). At this critical level, the equality conditions and total-moment saturation in Lemma~\ref{lem:efficiency-bound} fix \(b\cdot d=\zeta\) pointwise almost everywhere, so normal integration and exchange symmetrization reduce the remaining minimum-background allocation problem to shares on the two-dimensional half-section. Increasing only the background penalty selects, to first order, those kernels using the least background displacement. We can calculate this amount by assigning as much displacement as possible to the traded coordinates under their projected conservation law. On \(D=\Omega\cap\{x<y\}\), the measure \(d\mu=w\,d\sigma=w_\sigma(x,y)\,dx\,dy\), where \(w=(y-x)^2/2\), has mass \(J/2\) and a continuous density, positive in the interior.
+
+\resultnumber{4.3}\begin{theorem}[Boundary derivative and projected flow duality]\label{prop:boundary-sensitivity}\label{thm:projected-flow}
+Fix the reference model and \(p,\beta,\gamma\), and set
+\[
+\boldsymbol\gamma(\eta)=(\gamma,\gamma,\beta\gamma(1+\eta)),\quad
+\pi(\eta)=s^*(\boldsymbol\gamma(\eta))/(\gamma J)-1,\quad \eta\ge0.
+\]
+Let \(\mathcal C_0\) be the cost at \(\eta=0\), and let \(\mathcal Z_0=\{\alpha:I(\alpha)<\infty,\ \mathcal V(\alpha)=0,\ \mathcal C_0(\alpha)=\gamma J\}\). When kernels are identified with their measures \(\Pi_\alpha\), the set \(\mathcal Z_0\) is nonempty and compact in the vague topology on \(\mathscr X\) from Section~3.2. The following minimum is attained, and
+\begin{equation}
+\pi(\eta)=a_+\eta+o(\eta),\qquad
+a_+=\frac\beta J\min_{\alpha\in\mathcal Z_0}
+\int|d_3|\,d\Pi_\alpha\in[0,1].
+\tag{4.19}\label{eq:legacy-6.5}
+\end{equation}
+
+On \(D=\Omega\cap\{x<y\}\), equip the half-section with \(d\mu=\frac12(y-x)^2\,d\sigma\). For measurable shares \(a,b\), define
+\begin{equation*}
+\mathfrak F_\mu=\max\left\{\int_D(a+b)d\mu:
+a,b\ge0,\ a+b\le1,\ (x)_\#(a\mu)=(y)_\#(b\mu)\right\}.
+\end{equation*}
+The optimum is attained and satisfies \(0<\mathfrak F_\mu<J/2\). Moreover,
+\begin{equation}
+a_+=1-\frac{2\mathfrak F_\mu}{J}\in(0,1),\qquad
+\mathfrak F_\mu=\inf_{\substack{\varphi\text{ measurable}\\|\varphi|\le1}}
+\int_D\max\{0,1-\varphi(x),1+\varphi(y)\}\,d\mu.\tag{4.20}\label{eq:legacy-6.8}
+\end{equation}
+Equivalently, \(a_+\) is the supremum of the projected cut deficits
+\begin{equation}
+a_+=\frac2J\sup_{U\cap V=\varnothing}
+\left[\mu(D\cap(U\times V))-
+\mu\bigl(D\cap((V\times I)\cup(I\times U))\bigr)\right].\tag{4.21}\label{eq:legacy-6.9}
+\end{equation}
+Here \(U,V\subset I\) are disjoint measurable sets.
+
+\end{theorem}
+
+In words, \(2\mathfrak F_\mu\) is the largest normal-displacement moment that the traded coordinates can accommodate while balancing their marginal projections. The cut formula \eqref{eq:legacy-6.9} expresses \(a_+\) as the maximal deficit between the required moment on \(D\cap(U\times V)\) and the compensating capacity on \(D\cap((V\times I)\cup(I\times U))\), multiplied by \(2/J\).
+
+\textit{Proof sketch.} For \(\alpha\in\mathcal Z_0\), normal integration and exchange symmetrization yield shares satisfying \((x)_\#(a\mu)=(y)_\#(b\mu)\) and background amount \(\beta\int|d_3|\,d\Pi_\alpha=J-2\int_D(a+b)\,d\mu\). Conversely, every feasible pair of shares lifts to a kernel in \(\mathcal Z_0\), so the minimum background amount is \(J-2\mathfrak F_\mu\) (Appendix~\hyperref[app:flow-proof]{A.8}). Dividing by \(J\) gives \(a_+\), and Appendix~\hyperref[app:cost-proofs]{A.7} establishes \eqref{eq:legacy-6.5} by comparing perturbed minimizers with a least-background kernel. Sion's theorem with continuous coordinate potentials gives \eqref{eq:legacy-6.8}; signed layer-cake reduction then gives \eqref{eq:legacy-6.9}.
+
+\paragraph{Dependence on the transport weights}\label{d.4-weights-the-tail-surface-and-the-order-of-limits}
+Varying the positive transport weights leaves the finite-first-moment kernel class and \(\mathcal V\) unchanged. With \(A_i(\alpha)=\int|d_i|\,d\Pi_\alpha+\|j_i\|_1\), the coordinate cost including marginal restoration, we may therefore write
+\begin{equation}
+s^*(\gamma)=\inf_{\mathcal V(\alpha)\ge0}\sum_i\gamma_i A_i(\alpha).
+\tag{4.22}\label{eq:legacy-D.11}
+\end{equation}
+Because the feasible class is independent of \(\gamma\), this infimum of nonnegative linear functions is positively homogeneous, coordinatewise nondecreasing, and concave. In particular, \(r_-\gamma\le\widetilde\gamma\le r_+\gamma\), with \(0<r_-\le r_+\), implies \(r_-s^*(\gamma)\le s^*(\widetilde\gamma)\le r_+s^*(\gamma)\), ensuring stability under relative weight perturbations.
+
+The strict-premium classification also persists as long as the perturbed background cost remains above the cheapest traded cost. For example, equal effective costs \(\gamma=(1,1,\beta)\) lie on the zero-premium boundary. Starting instead from \(\beta=1\) and \(\gamma=(1,1,2)\), any perturbation with \(r_+<2r_-\) satisfies \(\widetilde\gamma_3>\max\{\widetilde\gamma_1,\widetilde\gamma_2\}\) and therefore retains a strict premium.

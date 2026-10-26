@@ -1,0 +1,25 @@
+{
+  "started_utc": "2026-10-26T17:26:40.521852+00:00",
+  "steps": [
+    {
+      "script": "code/reproduce.py",
+      "return_code": 0,
+      "elapsed_seconds": 9.272,
+      "log": "audit/reproduce_entry.log"
+    },
+    {
+      "script": "new-computations/check_simple_example.py",
+      "return_code": 0,
+      "elapsed_seconds": 0.108,
+      "log": "audit/check_simple_example_entry.log"
+    },
+    {
+      "script": "code/verify_outputs.py",
+      "return_code": 0,
+      "elapsed_seconds": 0.333,
+      "log": "audit/verify_outputs_entry.log"
+    }
+  ],
+  "all_passed": true,
+  "finished_utc": "2026-10-26T17:26:50.235170+00:00"
+}

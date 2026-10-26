@@ -1,0 +1,16 @@
+\label{rem:kernel-mixtures}
+Finite cost does not ensure stationary mass: the kernel
+\(\alpha_{\xi,u}=\delta_{\eta e^{-u^2}e_1}\), \(\eta>0\), moves every source and has
+\(I=\eta\gamma_1g\sqrt\pi<\infty\).
+Moreover, \(\mathcal V\) need not be concave along mixtures. To see this, choose a compact patch \(E\Subset\Omega\cap\{H\ge h>0\}\) and write
+\(R=E\times[-h/4,-h/8]\), \(m_R=\nu(R)>0\), and
+\(B_R=\int_R(u+H)\,d\nu>0\).
+For \(|\tau|\le h/16\), the sources in \(R\) satisfy \(u\le-h/8<\tau\) and \(u+H\ge3h/4>\tau\). Since \(H\le\Delta_I\), the shift \(-2\Delta_Ie_1\) places both rescaled losses below \(-h/16\). Thus the mixture
+\(\alpha^\theta=(1-\theta1_R)\delta_0+\theta1_R\delta_{-2\Delta_Ie_1}\)
+has
+\(T_0(\tau)=0\) and \(T_1(\tau)=\theta(m_R\tau-B_R)\).
+Since \(I(\alpha^\theta)=2\Delta_I\gamma_1\theta m_R\to0\), the bound \(g\tau^2/2\le2\kappa_BI\) following \eqref{eq:legacy-4.2} places every minimizer in this window for sufficiently small \(\theta>0\). Minimizing the two quadratic objectives gives
+\[
+\mathcal V(\alpha^\theta)=-J/p+\theta B_R/p+\theta^2m_R^2/(2gp).
+\]
+Here minimizing \(G_1\) lowers its value by a quadratic term, which enters \(\mathcal V\) with the opposite sign because the second minimum is subtracted. The resulting positive quadratic term rules out a concavity argument for mixtures, so the replacement proof compares the two minimized threshold objectives directly.

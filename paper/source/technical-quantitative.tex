@@ -1,0 +1,107 @@
+\keepproofstart{8\baselineskip}
+\section{Appendix B. Proofs for the analytical illustrations}\label{app:technical-quantitative}
+\subsection{B.1 The projection-potential estimate}\label{app:potential-proof}
+\begin{proof}[Proof of Proposition~\ref{prop:projection-potential-bound}]
+Fix any minimizing threshold \(\tau\in\arg\min G_1\). With \(w=b\cdot d\), \(\Delta_+(u,w)=(u+w)_+-u_+\), and \(B_h(u,w)=\Delta_+(u,w)-\Delta_+(u+h,w)\), evaluating \(G_0\) at zero and \(G_1\) at \(\tau\) gives
+\begin{equation}
+J+p\mathcal V+\frac g2\tau^2
+\le\int B_{H-\tau}(u,w)\,d\Pi_\alpha.
+\tag{B.1}\label{eq:legacy-J.3}
+\end{equation}
+Boundedness of the potentials and finiteness of the first moment permit Fubini's theorem, giving
+\[
+\mathcal C\ge\int\left(|d|_\gamma+\sum_i\phi_i(\xi_i)d_i\right)d\Pi_\alpha,
+\qquad
+\inf_{b\cdot d=w}\left(|d|_\gamma+\sum_i\phi_i d_i\right)
+=k_+w_++k_-(-w)_+.
+\]
+For \(w\ge0\), the positive parts of \(b_id_i\) sum to at least \(w\), and concentrating displacement in a coordinate of minimum effective cost attains \(k_+w\). Reversing signs gives \(k_-(-w)\) for \(w\le0\). It remains to maximize
+\(P_h(u)=\sup_w\{\lambda B_h(u,w)-k_+w_+-k_-(-w)_+\}\).
+If \(h<0\), then \(B_h(u,w)=r_h(u+w)-r_h(u)\) for the increasing ramp
+\(r_h(t)=\min\{\max\{t,0\},|h|\}\), so only positive \(w\) can improve on zero. With \(k=k_+\), we have \(P_h=0\) when \(\lambda\le k\). When \(\lambda>k\), the nonzero pieces are
+\(P_h(u)=[(\lambda-k)|h|+ku]_+\) for \(u<0\) and
+\(P_h(u)=(\lambda-k)(|h|-u)\) for \(0\le u<|h|\).
+Integrating these two triangles and reflecting when \(h>0\) gives
+\[
+\int_{\mathbb R}\sup_w\{\lambda B_h(u,w)-k_+w_+-k_-(-w)_+\}\,du
+=\frac{\lambda h^2}{2}\left(\frac{\lambda}{k(\xi,h)}-1\right)_+.
+\]
+The value is zero for \(h=0\). Since \(H\) is bounded and \(k_\pm\) are bounded away from zero, integrating this estimate over \(\Omega\) in \eqref{eq:legacy-J.3} proves \eqref{eq:legacy-J.6}.
+\end{proof}
+
+\subsection{B.2 The uniform midpoint-potential bound}\label{app:uniform-bound-proof}
+
+To establish the two threshold branches used for the lower bound in Corollary~\ref{prop:uniform-variable-cost}, we normalize costs and potentials by \(\gamma_0\), substitute the midpoint potentials of \hyperref[strict-premium-despite-equal-efficiency]{Section~5.1}, and take \(\lambda=3/2\) in these normalized units. We first evaluate the penalty on the same-side regions \(\{x<y<1\}\) and \(\{1<x<y\}\), intersected with \(\Omega\), together with their exchanged images. On these regions, both effective directional costs equal \(1/2\). Their total section mass is \(1/8\), their \(H^2\)-moment is \(1/48\), and their \(H\)-moment is zero. Their contribution to the integral of \((H-\tau)^2\) is consequently \(1/48+\tau^2/8\).
+
+On the cross-region, \(k(\xi,H)=3/2=\lambda\): the direction that increases the paired hinge gain has sign opposite to \(H\), so the penalty vanishes at \(\tau=0\). For \(0<|\tau|\le1\), a penalty appears only where the threshold shift reverses the sign of \(H-\tau\). In that triangular strip, the coordinates \(h=|H|\) and \(t=x+y\) satisfy \(0<h<|\tau|\), \(2-h<t<2+h\), and \(d\sigma=dt\,dh/16\). Thus the additional integral is
+\[
+\int_0^{|\tau|}(|\tau|-h)^2\frac h8\,dh=\frac{\tau^4}{96}.
+\]
+The penalty multiplier in \eqref{eq:legacy-J.6} is \(\frac\lambda2\{\lambda/(1/2)-1\}=3/2\). Substitution, with \(g=3/8\) and \(J=5/32\), yields
+\[
+\frac{\mathcal C}{\gamma_0}
+\ge\frac32\left(\frac5{32}+\frac12\mathcal V+\frac3{16}\tau^2\right)
+-\frac32\left(\frac1{48}+\frac{\tau^2}{8}+\frac{\tau^4}{96}\right)
+=\frac34\mathcal V+\frac{13}{64}+\frac{\tau^2(6-\tau^2)}{64}.
+\]
+For \(|\tau|\ge1\), the nonnegative terms in \eqref{eq:legacy-E.5} instead give \(\mathcal C/\gamma_0\ge\mathcal V/2+J+g/2=\mathcal V/2+11/32\). These estimates cover every minimizing threshold.
+
+\subsection{B.3 Proof of Proposition~\ref{prop:dependence-family}}\label{app:dependence-family-proof}
+
+\begin{proof}
+To use all the same-side mass, we draw matching projections from the disjoint regions
+\(E_A=\{x<1<y,\ x+y>2\}\cap D\) and
+\(E_B=\{x<1<y,\ x+y<2\}\cap D\). Define the required and available section masses by
+\[
+\begin{aligned}
+d_{\vartheta,-}(q)&=\int 1_{D_-}(x,q)w_{\sigma,\vartheta}(x,q)\,dx,&
+Q_{\vartheta,A}(q)&=\int1_{E_A}(q,y)w_{\sigma,\vartheta}(q,y)\,dy
+&& (q<1),\\
+d_{\vartheta,+}(q)&=\int1_{D_+}(q,y)w_{\sigma,\vartheta}(q,y)\,dy,&
+Q_{\vartheta,B}(q)&=\int1_{E_B}(x,q)w_{\sigma,\vartheta}(x,q)\,dx
+&& (q>1).
+\end{aligned}
+\]
+Integration on the lower half, with \(w=1-q\in[0,1/2]\), gives
+\[
+Q_{\vartheta,A}(q)-d_{\vartheta,-}(q)
+=w\left\{\frac3{16}-\frac{3w}{16}+\frac{w^2}{48}
++\vartheta\left(-\frac1{16}+\frac{w}{8}
+-\frac{w^3}{16}-\frac{w^4}{30}\right)\right\}.
+\]
+For every \(|\vartheta|<1/2\), the polynomial in braces is strictly decreasing on \([0,1/2]\) with a positive endpoint value. Since \(d_{\vartheta,-}=0\) below \(q=1/2\), we obtain \(Q_{\vartheta,A}\ge d_{\vartheta,-}\) throughout the lower half. Reflecting about \(q=1\) gives \(Q_{\vartheta,B}\ge d_{\vartheta,+}\) on the upper half. The disjoint matching allocation is therefore
+\begin{equation}
+(a,b)=
+\begin{cases}
+(0,1),&D_-,\\
+(1,0),&D_+,\\
+(d_{\vartheta,-}(x)/Q_{\vartheta,A}(x),0),&E_A,\\
+(0,d_{\vartheta,+}(y)/Q_{\vartheta,B}(y)),&E_B.
+\end{cases}\tag{B.2}\label{eq:legacy-K.7}
+\end{equation}
+The capacity inequalities and disjointness of \(E_A,E_B\) give \(a,b\ge0\), \(a+b\le1\), and
+\begin{equation}
+\int a(q,y)w_{\sigma,\vartheta}(q,y)\,dy
+=\int b(x,q)w_{\sigma,\vartheta}(x,q)\,dx
+=
+\begin{cases}
+d_{\vartheta,-}(q),&q<1,\\
+d_{\vartheta,+}(q),&q>1,
+\end{cases}
+\quad\text{for almost every }q.
+\tag{B.3}\label{eq:legacy-K.8}
+\end{equation}
+This projected equality gives a feasible flow of value \(2(M_{\vartheta,-}+M_{\vartheta,+})\), attained dually by \(\varphi=1_{[0,1)}-1_{(1,2]}\), whose integrand is \(2\) on \(D_-\cup D_+\) and zero elsewhere. Theorem~\ref{thm:projected-flow} then gives the background share. We evaluate \(J_\vartheta\) using exchange symmetry and reflection about \(t=2\), in coordinates \(t=x+y\), \(h=y-x>0\) with Jacobian \(1/2\). For the same-side masses, we use \(x\)-sections of \(D_-\) and \(u=2y-1\in(0,1)\). These integrations give
+\[
+\begin{aligned}
+J_\vartheta
+&=\frac18\int_1^2\int_0^t
+h^2\{1-\vartheta(t-2)^2\}\,dh\,dt
+=\frac{75-14\vartheta}{480},\\
+M_{\vartheta,-}=M_{\vartheta,+}
+&=\frac1{960}\int_0^1
+u^3\{10+\vartheta(-10+5u-u^2)\}\,du
+=\frac{3-2\vartheta}{1152}.
+\end{aligned}
+\]
+\end{proof}

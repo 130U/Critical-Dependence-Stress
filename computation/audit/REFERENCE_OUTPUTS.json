@@ -1,0 +1,157 @@
+{
+  "baseline": "FINANCIAL_MATH_V68_EN.pdf",
+  "baseline_pdf_sha256": "3ec15e8b5861275c54820f167432271dddc579856be4e5061e7824b571f7a5b9",
+  "scientific_files_sha256": {
+    "new-computations/profile-envelopes.csv": "a18e5615c24c89dabf43c362490c3ddd981fe79aaf7f2804e3df479590503233"
+  },
+  "array_contents": {
+    "new-computations/flow-shares-U.npz": {
+      "coordinate_axis": {
+        "shape": [
+          500
+        ],
+        "dtype": "<f8",
+        "sha256": "56856a0f9b15729bf6970afef692df95873f7543c8f4c39c28de1059e989f151"
+      },
+      "domain": {
+        "shape": [
+          500,
+          500
+        ],
+        "dtype": "|b1",
+        "sha256": "2c56b2756c984c1dbcd338f4b66d677103019925b52f1558de6d056d51567d6c"
+      },
+      "a": {
+        "shape": [
+          500,
+          500
+        ],
+        "dtype": "<f8",
+        "sha256": "fc3ace00b18423485dd9c9f31276fc229a6953df850a3bb885c1c6677b458643"
+      },
+      "b": {
+        "shape": [
+          500,
+          500
+        ],
+        "dtype": "<f8",
+        "sha256": "71cb00c82b1305c2ab8db576ee7b2a0ac3a9ce0385a868587d907a1bdbb6f9fd"
+      },
+      "background": {
+        "shape": [
+          500,
+          500
+        ],
+        "dtype": "<f8",
+        "sha256": "3ababb7dc080da06e6cbe2c343dc01e0ff6e940932d0c78f87d83d944cea7270"
+      }
+    },
+    "new-computations/flow-shares-D.npz": {
+      "coordinate_axis": {
+        "shape": [
+          500
+        ],
+        "dtype": "<f8",
+        "sha256": "56856a0f9b15729bf6970afef692df95873f7543c8f4c39c28de1059e989f151"
+      },
+      "domain": {
+        "shape": [
+          500,
+          500
+        ],
+        "dtype": "|b1",
+        "sha256": "2c56b2756c984c1dbcd338f4b66d677103019925b52f1558de6d056d51567d6c"
+      },
+      "a": {
+        "shape": [
+          500,
+          500
+        ],
+        "dtype": "<f8",
+        "sha256": "959bac5fd35f1add9bb66c5c4a2ac14ad39cfa12effcdf88ad514000c57485c2"
+      },
+      "b": {
+        "shape": [
+          500,
+          500
+        ],
+        "dtype": "<f8",
+        "sha256": "45ba3654e3c37416b5c40b7af8af3e8a4d2625e5d8d096f9e8f7705939689b33"
+      },
+      "background": {
+        "shape": [
+          500,
+          500
+        ],
+        "dtype": "<f8",
+        "sha256": "6762234cd1c56475cfedaca1b04174f11a8d027cfe936ab14f98737f17bf8c49"
+      }
+    }
+  },
+  "exact_json_fields": {
+    "new-computations/PARAMETER_FAMILY_CHECK.json": {
+      "parameter_interval": "-1/2 < vartheta < 1/2",
+      "marginal_densities": [
+        "1/2",
+        "1/2",
+        "1/2"
+      ],
+      "covariance": "2*t/9",
+      "same_side_section_demand": "-(2*y - 1)**3*(2*t*y**2 - 7*t*y + 8*t - 5)/240",
+      "capacity_minus_demand_at_x_1_minus_r": "-r*(8*r**4*t + 15*r**3*t - 5*r**2 - 30*r*t + 45*r + 15*t - 45)/240",
+      "capacity_gap_over_r_endpoint_lower_bounds": {
+        "-1/2": "3/32",
+        "1/2": "341/3840"
+      },
+      "manuscript_uniform_capacity_gap_over_r_lower": "1/16",
+      "J": "-(14*t - 75)/480",
+      "M_minus_equals_M_plus": "-(2*t - 3)/1152",
+      "J_a_plus": "-(22*t - 195)/1440",
+      "a_plus": "(22*t - 195)/(3*(14*t - 75))",
+      "a_plus_derivative": "360/(14*t - 75)**2",
+      "a_plus_minus_uniform": "-24*t/(5*(14*t - 75))",
+      "J_a_plus_minus_uniform": "-11*t/720",
+      "fixed_midpoint_amplitude": "1/2",
+      "fixed_two_level_lower_bound": "13/64",
+      "fixed_two_level_relative_premium": "3/10",
+      "small_threshold_remainder_lower": "5/64",
+      "large_threshold_cost_constant": "11/32",
+      "upper_envelope_slope": "4/3",
+      "balanced_moment": "1/192",
+      "s_lin_gamma0_1": "1/96",
+      "projected_imbalance": "7/48",
+      "pure_coordinate_upper": "29/96",
+      "two_level_same_side_mass": "1/8",
+      "two_level_same_side_H2": "1/48",
+      "two_level_shifted_cross_moment": "tau**4/96",
+      "all_checks_passed": true
+    },
+    "new-computations/SIMPLE_EXAMPLE_CHECKS.json": {
+      "J": "5/32",
+      "Q_bal": "1/192",
+      "s_lin_gamma0_1": "1/96",
+      "projected_imbalance_L1": "7/48",
+      "chi": "14/15",
+      "critical_lower_fixed_amplitude": "13/64",
+      "critical_upper_pure_first_coordinate": "29/96",
+      "guaranteed_relative_premium": "3/10",
+      "small_threshold_extra": "tau^2(6-tau^2)/64",
+      "large_threshold_cost_constant": "11/32",
+      "profile_lower": "2s-5/16 for 0<=s<=1/96; s-29/96 for 1/96<=s<=29/96",
+      "profile_upper": "min(2s-5/16, 4s/3-13/48), valid on 0<=s<=29/96",
+      "FGM_J": "(75-14theta)/480",
+      "FGM_M_each": "(3-2theta)/1152",
+      "FGM_J_a_plus": "(195-22theta)/1440",
+      "FGM_a_plus_derivative": "360/(75-14theta)^2",
+      "FGM_covariance": "2theta/9",
+      "FGM_Var_B": "1+4theta/9",
+      "all_checks_passed": true
+    }
+  },
+  "png_sha256": {
+    "source/en/figures/tail-layer-repair.png": "83d2c85deb3ee5cc670bb61d609b99323830218644d8754c73f5fb875ecca6e0",
+    "source/en/figures/corner-capacity.png": "208b2f88f3a40bd495f2c65a77262785059ddba8581d68422e05e044da8e6dbd",
+    "source/en/figures/budget-comparison.png": "1f05258c963223f1421aff597bed8c699eff69caec1c7ec08d6d24f19a517820",
+    "source/en/figures/optimal-flow-shares.png": "205e88a23bfcb0ecf5bd3e00df74aae72196356ddebbb6e601bb55125f192252"
+  }
+}

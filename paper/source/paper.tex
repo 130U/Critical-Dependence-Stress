@@ -1,0 +1,105 @@
+% Public reading edition. Mathematical body retained from the author's manuscript.
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1in,headheight=14pt,footskip=30pt]{geometry}
+\usepackage{fontspec}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,SmallCapsFont=lmromancaps10-regular.otf]
+\usepackage{amsmath,amsfonts,amssymb,mathtools,mathrsfs}
+\usepackage[amsmath,thmmarks,hyperref]{ntheorem}
+\usepackage{longtable,booktabs,array,calc,etoolbox,graphicx}
+\usepackage{xcolor}
+\usepackage[unicode=true,hypertexnames=false,colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,
+  bookmarksopen=false,bookmarksnumbered=false]{hyperref}
+\urlstyle{same}
+\newcommand{\proofbox}{\ensuremath{\square}}
+\hypersetup{pdfauthor={Letao Ouyang},
+  pdftitle={Critical Dependence Stress for Diversification Gains under Fixed Marginals},
+  pdfsubject={Author manuscript - public reading edition},
+  pdfcreator={XeLaTeX}}
+\makeatletter
+\renewtheoremstyle{plain}
+ {\item[\hskip\labelsep\theorem@headerfont ##1\ \textup{##2\theorem@separator}]}
+ {\item[\hskip\labelsep\theorem@headerfont ##1\ \textup{##2}]{\normalfont\bfseries\textup{(##3)\theorem@separator}}\ }
+\renewtheoremstyle{nonumberplain}
+ {\item[\hskip\labelsep\theorem@headerfont ##1\theorem@separator]}
+ {\item[\hskip\labelsep\theorem@headerfont ##3\theorem@separator]}
+\makeatother
+\theoremstyle{nonumberplain}
+\theoremheaderfont{\normalfont\itshape}
+\theorembodyfont{\normalfont}
+\theoremseparator{.}
+\theoremsymbol{\ensuremath{\square}}
+\newtheorem{proof}{Proof}
+\theoremstyle{plain}
+\theoremheaderfont{\normalfont\bfseries}
+\theorembodyfont{\normalfont\itshape}
+\theoremseparator{.}
+\theoremsymbol{}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theorembodyfont{\normalfont}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\resultnumber}[1]{\renewcommand{\thetheorem}{#1}}
+\newcommand{\keepproofstart}[1]{\par\begingroup
+  \dimen0=\pagegoal\advance\dimen0 by-\pagetotal
+  \ifdim\dimen0<#1\relax\newpage\fi\endgroup}
+\newenvironment{resultparts}{%
+  \begin{list}{(\roman{enumi})}{\usecounter{enumi}%
+    \setlength{\leftmargin}{2em}\setlength{\labelwidth}{1.7em}%
+    \setlength{\labelsep}{0.3em}\setlength{\itemsep}{0.4ex}}%
+}{\end{list}}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\providecommand{\passthrough}[1]{#1}
+\AtBeginEnvironment{thebibliography}{\phantomsection\addcontentsline{toc}{section}{References}}
+\setcounter{secnumdepth}{-1}
+\setcounter{tocdepth}{2}
+\allowdisplaybreaks[2]
+\setlength{\emergencystretch}{3em}
+\tolerance=2000
+\begin{document}
+\begin{center}
+\vspace*{12pt}
+{\LARGE Critical Dependence Stress for\\[5pt]
+Diversification Gains under Fixed Marginals\par}
+\vspace{18pt}
+{\large Letao Ouyang\par}
+\vspace{6pt}
+{\small Independent Researcher, Nashua, NH 03062, USA\par}
+\vspace{5pt}
+{\small \href{mailto:theodore.oy2025@gmail.com}{\textcolor{black}{theodore.oy2025@gmail.com}}
+\quad \href{mailto:10@alumni.duke.edu}{\textcolor{black}{10@alumni.duke.edu}}\par}
+\vspace{10pt}
+{\small Author manuscript\par}
+\end{center}
+\vspace{8pt}
+\begin{abstract}
+How much dependence uncertainty can a diversification benefit withstand when every marginal loss law is fixed? We study the smallest weighted $1$-Wasserstein perturbation that reverses the Expected Shortfall ranking of two nearby allocations evaluated under a common stressed law. For a positive continuous density on a compact box, exchangeability of the two traded positions eliminates the first-order gain, so the relevant stress radius is $\rho=s\varepsilon^2$ for trade size $\varepsilon$. At this scale, we establish a $\Gamma$-limit for the rescaled transport energies and prove convergence of the paired risk differences, with the two ES thresholds optimized separately. Coordinatewise quantile restoration incurs a marginal-flux cost, although its leading effects on the two ES values cancel in their difference. The limiting risk profile is continuous and strictly increasing, and its unique zero identifies the asymptotic critical budget. We call the excess over the local-efficiency lower bound the \emph{marginal-restoration premium}. This premium vanishes exactly when background displacement is cheapest per unit change in portfolio loss. Otherwise it is strictly positive, even when the profile is exactly linear on an initial interval. At equal effective costs, continuous maximum-flow/minimum-cut duality characterizes the right derivative of the critical budget with respect to the background penalty.
+\end{abstract}
+\begin{quote}\small
+\noindent\textbf{Keywords:} Expected Shortfall; dependence uncertainty; full marginal constraints; Wasserstein distance; critical stress budget
+
+\smallskip\noindent\textbf{MSC codes:} 91G70, 91G10, 49Q22.
+\end{quote}
+\newpage
+\tableofcontents
+\clearpage
+\input{main-introduction.tex}
+\input{main-model-benchmark.tex}
+\input{main-variational.tex}
+\input{main-crossing.tex}
+\input{main-classification-flow.tex}
+\input{main-quantitative.tex}
+\input{main-scope.tex}
+\input{technical-reference.tex}
+\input{technical-limit.tex}
+\input{technical-variational-proof.tex}
+\input{main-crossing-proof.tex}
+\input{technical-cost-proof.tex}
+\input{technical-flow-proof.tex}
+\input{technical-quantitative.tex}
+
+\input{declarations.tex}
+\input{references.tex}
+\end{document}

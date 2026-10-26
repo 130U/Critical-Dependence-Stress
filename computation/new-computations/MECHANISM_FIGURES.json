@@ -1,0 +1,31 @@
+{
+  "scope": "Two schematic mechanism figures; no optimization or empirical data.",
+  "tail_layer": {
+    "thin_layer_halfwidth_illustration": 0.13,
+    "discrepancy_curve": "sin(2*pi*q)*sin(pi*q/2)**2",
+    "interpretation": "Illustrative signed local CDF discrepancy and its opposite; not a computed optimizer."
+  },
+  "corner": {
+    "support": "[0,2]^3",
+    "beta": 1.75,
+    "v": 3.75,
+    "delta": 0.35,
+    "a": 0.0,
+    "b_star": 2.0,
+    "lower_section_sum": 0.25,
+    "upper_section_sum": 3.75,
+    "hatched_triangles": "Bounding regions may extend outside Omega.",
+    "demand_order": "delta^2",
+    "capacity_order": "delta^4"
+  },
+  "numpy_version": "2.5.4",
+  "matplotlib_version": "3.11.2",
+  "sha256": {
+    "source\\en\\figures\\tail-layer-repair.pdf": "d1d8812198c14c882bfde193372f6b10dcdbcbc3695da98f204cee8f3d6df6f8",
+    "source\\en\\figures\\tail-layer-repair.png": "83d2c85deb3ee5cc670bb61d609b99323830218644d8754c73f5fb875ecca6e0",
+    "source\\en\\figures\\tail-layer-repair.svg": "711291d439b28aefd9424cbc11f56512e22707dd76cf1e961f6cdf548ea23442",
+    "source\\en\\figures\\corner-capacity.pdf": "e190f3df32722ad5c661500cc7a59b9a7369835a69093cf235d20fb19b7ebecd",
+    "source\\en\\figures\\corner-capacity.png": "208b2f88f3a40bd495f2c65a77262785059ddba8581d68422e05e044da8e6dbd",
+    "source\\en\\figures\\corner-capacity.svg": "372a01be37ad641b8890ead9a379e17dad426e5e8b9ec62d82896ee61363cfa9"
+  }
+}

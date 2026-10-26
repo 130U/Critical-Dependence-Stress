@@ -1,0 +1,71 @@
+\subsection{A.8 Equality kernels and continuous flow duality}\label{app:flow-proof}
+
+\leavevmode\phantomsection\label{i.2.-from-arbitrary-randomized-kernels-in-mathcal-z_0-to-linear-fields-and-flows}
+\textit{Proof of the flow representation in Theorem~\ref{thm:projected-flow}.} We reduce the background-cost minimization over \(\mathcal Z_0\) to a flow on \(D=\Omega\cap\{x<y\}\) by integrating out the normal coordinate and then identifying the two exchanged surface halves. The sign condition in Lemma~\ref{lem:efficiency-bound} is essential: on each half, all nonzero coordinate displacements have the sign of \(\zeta\), so integration in \(u\) introduces no cancellation in the absolute background displacement. For \(\alpha\in\mathcal Z_0\), set \(m_i(x,y)=\int_{\mathbb R}\int d_i\,\alpha_{\xi,u}(dd)du\) and \(\mathbf m=(m_1,m_2,\beta m_3)\). On \(D\), \(\mathbf m_i\ge0\) and \(\sum_i \mathbf m_i=w\); on its exchanged half, the signs reverse and the sum is \(-w\). Thus \(\beta\int|d_3|d\Pi_\alpha=\int_\Omega|\mathbf m_3|d\sigma\). To express the allocation using shares on \(D\) alone, we average the field with its exchanged counterpart:
+\begin{equation}
+(\mathscr S\mathbf m)(x,y)=(-\mathbf m_2(y,x),-\mathbf m_1(y,x),-\mathbf m_3(y,x)),
+\qquad \bar{\mathbf m}=(\mathbf m+\mathscr S\mathbf m)/2.
+\tag{A.55}\label{eq:legacy-I.9}
+\end{equation}
+The exchange interchanges the first two zero projections and preserves \(\xi_3=(v-x-y)/\beta\), so symmetrization preserves all three constraints. It also preserves \(\int|\mathbf m_3|d\sigma\), because the two background components have the same sign on each half. The shares \(a=\bar{\mathbf m}_1/w\), \(b=\bar{\mathbf m}_2/w\), \(c=\bar{\mathbf m}_3/w\) on \(D\) are therefore measurable, nonnegative and sum to one. On the exchanged half the components are \(-wb(y,x),-wa(y,x),-wc(y,x)\). To recover the flow constraint, we test either of the first two projections against a bounded measurable \(\varphi\) and obtain \(\int_D\varphi(x)a\,d\mu=\int_D\varphi(y)b\,d\mu\). This feasible flow has background amount
+\begin{equation}
+\beta\int|d_3|d\Pi_\alpha
+=2\int_D(1-a-b)d\mu
+=J-2\int_D(a+b)d\mu.
+\tag{A.56}\label{eq:legacy-I.11}
+\end{equation}
+
+\paragraph{Lifting flows to probability kernels}\label{lem:v21-flow-lift}
+Conversely, for feasible shares set \(\boldsymbol\theta=(a,b,1-a-b)\) on \(D\) and use \((b(y,x),a(y,x),1-a(y,x)-b(y,x))\) on the exchanged half. Since \(w>0\) on \(D\), the shares also define a simplex-valued allocation \(\sigma\)-almost everywhere. The kernel
+\begin{equation}
+\alpha_{\xi,u}=\delta_{\zeta(\theta_1,\theta_2,\theta_3/\beta)}
+\tag{A.57}\label{eq:legacy-I.12}
+\end{equation}
+has finite first moment: its activity is confined to \(|u|\le\|H\|_\infty\), where \(|d|_1\le\max\{1,\beta^{-1}\}\|H\|_\infty\). Feasibility gives the first two zero projections, and exchange symmetry gives the third. Since its normal displacement is \(\zeta\) at minimum unit cost, Lemma~\ref{lem:efficiency-bound} places it in \(\mathcal Z_0\). Formula~\eqref{eq:legacy-I.11} then identifies the least background amount as \(J-2\mathfrak F_\mu\).
+
+\paragraph{Continuous duality and the cut representation}
+We enforce equality of the projected measures by testing their difference against a continuous function on \(I\). The allocation set \(\mathcal K=\{(a,b)\in L^\infty(\mu)^2:a,b\ge0,\ a+b\le1\}\) is convex and weak-star compact, being a weak-star closed subset of the product of two unit balls. For \(\varphi\in C(I)\), the corresponding Lagrangian is
+\[
+\mathscr H(a,b;\varphi)
+=\int_D[(1-\varphi(x))a+(1+\varphi(y))b]\,d\mu.
+\]
+Since \(\varphi(x),\varphi(y)\in L^1(\mu)\), the Lagrangian \(\mathscr H\) is affine and weak-star continuous in \((a,b)\), and affine and continuous in \(\varphi\) for the uniform norm. Because continuous tests determine finite signed measures on \(I\), the conservation constraint defines a weak-star closed feasible subset of \(\mathcal K\) on which the flow maximum is attained. If the projected difference is nonzero, scaling a separating continuous test gives \(\inf_\varphi\mathscr H=-\infty\); for a feasible allocation, the potential terms cancel and the infimum equals \(\int_D(a+b)d\mu\). Sion's minimax theorem \cite[Theorem 4.2]{sion1958} applied to the real-valued \(\mathscr H\) on \(\mathcal K\times C(I)\) therefore yields
+\[
+\mathfrak F_\mu
+=\sup_{(a,b)\in\mathcal K}\inf_{\varphi\in C(I)}\mathscr H(a,b;\varphi)
+=\inf_{\varphi\in C(I)}\max_{(a,b)\in\mathcal K}\mathscr H(a,b;\varphi).
+\]
+For \(\varphi\in C(I)\), the Borel sets
+\[
+\begin{aligned}
+E_a&=\{1-\varphi(x)>\max(0,1+\varphi(y))\},\\
+E_b&=\{1+\varphi(y)\ge\max(0,1-\varphi(x))\}
+      \cap\{1+\varphi(y)>0\}
+\end{aligned}
+\]
+are disjoint. Their indicators \((a,b)=(1_{E_a},1_{E_b})\) belong to \(\mathcal K\) and attain the pointwise maximum, giving
+\begin{equation}
+D_\mu(\varphi)=\int_D\max\{0,1-\varphi(x),1+\varphi(y)\}\,d\mu.
+\tag{A.58}\label{eq:legacy-I.13}
+\end{equation}
+For every bounded measurable potential, full projected equality still gives the weak-duality bound \(\int_D(a+b)d\mu\le D_\mu(\varphi)\). Enlarging the class of potentials therefore preserves the infimum obtained above. Truncation to \([-1,1]\) cannot increase the integrand, which proves \eqref{eq:legacy-6.8}.
+
+To obtain a cut formula, we must reduce general bounded potentials to three-valued ones without changing the dual infimum. We do this by expressing the objective as an average over signed level sets. Let \(h_t(z)=\operatorname{sgn}(z)1_{\{|z|\ge t\}}\), \(0<t<1\). Because each \(h_t\) is nondecreasing, the signed layer-cake identity \(z=\int_0^1h_t(z)\,dt\) on \([-1,1]\) commutes with the maximum of two arguments. Since \(\max\{0,1+z_1,1+z_2\}=1+\max(z_1,z_2)\) on that square, applying the identity with \(z_1=-\varphi(x)\), \(z_2=\varphi(y)\) and \(\psi_t=1_{\{\varphi\ge t\}}-1_{\{\varphi\le-t\}}\) yields
+\begin{equation}
+D_\mu(\varphi)=\int_0^1D_\mu(\psi_t)\,dt.
+\tag{A.59}\label{eq:legacy-I.23}
+\end{equation}
+Thus \(\inf_{0<t<1}D_\mu(\psi_t)\le D_\mu(\varphi)\), so the dual infimum is unchanged when restricted to \(\psi=1_U-1_V\) with \(U\cap V=\varnothing\). For these three-valued potentials, the integrand in \eqref{eq:legacy-I.13} has the explicit form
+\[
+\max\{0,1-\psi(x),1+\psi(y)\}
+=1-1_{U\times V}(x,y)+1_{(V\times I)\cup(I\times U)}(x,y).
+\]
+Integrating over \(D\) and using \(\mu(D)=J/2\) gives \(D_\mu(\psi)=J/2-\mu(D\cap(U\times V))+\mu(D\cap((V\times I)\cup(I\times U)))\). Substitution into \(a_+=1-2\mathfrak F_\mu/J\) proves \eqref{eq:legacy-6.9}.
+
+It remains to verify the strict flow bounds. For positivity, a two-step transfer \(K_1\to K_2\to K_3\) allows us to balance both projected measures on the middle interval \(K_2\). Choose three disjoint intervals \(K_1<K_2<K_3\) sufficiently close to the interior diagonal point from \hyperref[geometry:interior-diagonal]{Section~2.3} that the closed rectangles \(R_{12}=K_1\times K_2\), \(R_{23}=K_2\times K_3\) lie in \(D\). With \(\ell_{K,i}=|K_i|\), positivity and continuity of \(w_\sigma\) allow \(\kappa>0\) small enough that both densities
+\[
+bw_\sigma=\frac{\kappa}{\ell_{K,1}\ell_{K,2}}1_{R_{12}},
+\qquad aw_\sigma=\frac{\kappa}{\ell_{K,2}\ell_{K,3}}1_{R_{23}},
+\]
+are bounded by \(w_\sigma\). Their disjoint supports give \(a+b\le1\), and both projected densities equal \(\kappa1_{K_2}/\ell_{K,2}\), producing a feasible flow of value \(2\kappa>0\). At the other endpoint, \(\mathfrak F_\mu=J/2\) would lift through \eqref{eq:legacy-I.12} to an equality kernel with no background displacement. Raising \(c_3\) above \(\gamma\) would leave its cost at \(\gamma J\), contrary to Theorem~\ref{thm:zero-premium}. Hence \(0<\mathfrak F_\mu<J/2\), and \eqref{eq:legacy-I.11} gives \(a_+\in(0,1)\). \unskip\nobreak\hfill\proofbox
+

@@ -1,0 +1,69 @@
+{
+  "started_utc": "2026-10-26T17:26:40.644430+00:00",
+  "finished_utc": "2026-10-26T17:26:49.483960+00:00",
+  "python": "3.13.12",
+  "python_implementation": "CPython",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "dependencies": {
+    "numpy": "2.5.4",
+    "matplotlib": "3.11.2",
+    "sympy": "1.14.0"
+  },
+  "dependency_loading": {
+    "environment_pythonpath_supplied": true,
+    "script_injected_paths": false,
+    "note": "A normal installation uses code/requirements.txt. Workstation-specific dependency paths are omitted from this public record."
+  },
+  "runs": [
+    {
+      "script": "code/generate_mechanism_figures.py",
+      "return_code": 0,
+      "elapsed_seconds": 2.888,
+      "log": "audit\\generate_mechanism_figures.log",
+      "source_sha256": "829743db139aeaba4e56e4ee515597a0b906740b9196add1c5dbd4195567fa0f"
+    },
+    {
+      "script": "new-computations/check_parameter_family.py",
+      "return_code": 0,
+      "elapsed_seconds": 1.277,
+      "log": "audit\\check_parameter_family.log",
+      "source_sha256": "2fc889d47b18d795f85caefd09fc6b2f02a54ee0f905061e583cbda7ea1fc324"
+    },
+    {
+      "script": "new-computations/plot_profiles_and_flows.py",
+      "return_code": 0,
+      "elapsed_seconds": 3.753,
+      "log": "audit\\plot_profiles_and_flows.log",
+      "source_sha256": "f839ef430334b76bf6ef9d6e0d4f70d86f262ab19eeca7e1c05d375e87f91cdd"
+    }
+  ],
+  "all_requested_steps_passed": true,
+  "missing_outputs": [],
+  "scope": {
+    "figures_1_2": "Schematic mechanisms with stated geometry and analytic order bounds.",
+    "figure_3": "Proved piecewise-linear upper/lower envelopes and exact initial segment; no quadrature or parameter optimization.",
+    "figure_4": "Explicit optimal boundary-flow shares for the two representative reference laws.",
+    "polynomial_checks": "Exact SymPy integration and algebra for the full dependence parameter interval, fixed-amplitude lower bound, and pure-coordinate upper bound.",
+    "not_computed": "No full F(s) solver, no finite-epsilon worst-case optimization, and no inherited refined-bound certificate rerun."
+  },
+  "sha256": {
+    "source/en/figures/tail-layer-repair.pdf": "d1d8812198c14c882bfde193372f6b10dcdbcbc3695da98f204cee8f3d6df6f8",
+    "source/en/figures/tail-layer-repair.png": "83d2c85deb3ee5cc670bb61d609b99323830218644d8754c73f5fb875ecca6e0",
+    "source/en/figures/tail-layer-repair.svg": "711291d439b28aefd9424cbc11f56512e22707dd76cf1e961f6cdf548ea23442",
+    "source/en/figures/corner-capacity.pdf": "e190f3df32722ad5c661500cc7a59b9a7369835a69093cf235d20fb19b7ebecd",
+    "source/en/figures/corner-capacity.png": "208b2f88f3a40bd495f2c65a77262785059ddba8581d68422e05e044da8e6dbd",
+    "source/en/figures/corner-capacity.svg": "372a01be37ad641b8890ead9a379e17dad426e5e8b9ec62d82896ee61363cfa9",
+    "source/en/figures/budget-comparison.pdf": "9fc13857d4bf520cfc24cda753bc134f89d9c0969b6cb4abcabd1f4fb494f011",
+    "source/en/figures/budget-comparison.png": "1f05258c963223f1421aff597bed8c699eff69caec1c7ec08d6d24f19a517820",
+    "source/en/figures/budget-comparison.svg": "0ebe525a724465fd8dc2a6782336f8f4480bc629c8103672695587f0bc179a12",
+    "source/en/figures/optimal-flow-shares.pdf": "42124d3e3692688e3d912c8f84e270ae6aa4c358a20f383f7c0c95c82053e5bc",
+    "source/en/figures/optimal-flow-shares.png": "205e88a23bfcb0ecf5bd3e00df74aae72196356ddebbb6e601bb55125f192252",
+    "source/en/figures/optimal-flow-shares.svg": "63dbe4a5ce1f5790b495bf9db93f9ed03a6764a57a08c87ace0a170929609868",
+    "new-computations/MECHANISM_FIGURES.json": "3411e9ad9c923783d3f5b36470353e443fbdbcc262bb2369cc45b16ff9bf099e",
+    "new-computations/PARAMETER_FAMILY_CHECK.json": "9454d6aa4227e0efed5ee4098e4c13553677acc9866ea1ecca1f38f3ba2f97c5",
+    "new-computations/COMPUTATION_REPORT.json": "905898a92618797dbce6ce8a1ec0e7b282e82fb290a931c0e7f11215499d8656",
+    "new-computations/profile-envelopes.csv": "a18e5615c24c89dabf43c362490c3ddd981fe79aaf7f2804e3df479590503233",
+    "new-computations/flow-shares-U.npz": "a3c4a27f2fe1cef00bc77cc3fd4f2a3f8b387de4e0482b9985aae2600b80b3c5",
+    "new-computations/flow-shares-D.npz": "9048f413ede237ed403d46edf85330ba397895196497df428444e7bd37c38e29"
+  }
+}

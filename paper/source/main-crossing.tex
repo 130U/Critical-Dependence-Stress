@@ -1,0 +1,93 @@
+\subsection{3.3 Initial linearity and the critical budget}\label{sec:balanced-profile}
+\phantomsection\label{g.4-balanced-source-selection-and-the-limiting-linear-segment}
+At zero threshold shifts, the portfolios disagree on tail membership precisely on \(W=\{u(u+H)<0\}\). The displacement \(\zeta=-(u+H)1_W\) moves a source in this wedge to the limiting \(A_\varepsilon\)-boundary and attains the maximal paired hinge increment per unit of normal movement. When \(c_{\min}=\gamma_1\), we can assign movement along \(e_1\) provided its downward and upward moments balance on each \(x\)-fiber. On active sources in \(W\), \(\zeta<0\) for \(y<x\) and \(\zeta>0\) for \(y>x\), with \(\int\zeta\,du=-H|H|/2\). Writing \(k(x,y)=f(x,y,(v-x-y)/\beta)1_{\{\beta\ell_3<v-x-y<\beta r_3\}}\), the available fiber moments are
+\begin{equation}
+\ell_-(x)=\frac1{2\beta}\int_I(x-y)_+^2k(x,y)\,dy,\qquad
+\ell_+(x)=\frac1{2\beta}\int_I(y-x)_+^2k(x,y)\,dy.
+\tag{3.7}\label{eq:legacy-A.19}
+\end{equation}
+Although exchangeability gives \(\int_I\ell_-=\int_I\ell_+=J/2\), the two moments need not agree on each fiber. Matching their pointwise minimum cancels the projected flux, yielding the budget
+\[
+\begin{aligned}
+q_{\rm bal}(x)&=\min\{\ell_-(x),\ell_+(x)\},&
+Q_{\rm bal}&=\int_I q_{\rm bal}(x)\,dx,\\
+s_{\rm lin}&=2\gamma_1Q_{\rm bal}=\gamma_1J(1-\chi)>0,&
+\chi&=\|\ell_--\ell_+\|_{L^1(I)}/J.
+\end{aligned}
+\]
+\resultnumber{3.2}\begin{proposition}[Capacity of the initial linear segment]\label{prop:balanced-linear-profile} In the exchangeable box model of Section~2.2, suppose \(\gamma_1=\min\{\gamma_1,\gamma_2,\gamma_3/\beta\}\). With \(\ell_\pm\) as in \eqref{eq:legacy-A.19} and \(s_{\rm lin}=\gamma_1J(1-\chi)>0\) as above,
+\begin{equation*}
+F(s)=-J/p+s/(p\gamma_1),\qquad 0\le s\le s_{\rm lin}.
+\end{equation*}
+\end{proposition}
+
+\begin{proof}
+For \(W=\{u(u+H)<0\}\) and \(\zeta=-(u+H)1_W\), select the proportion
+\[
+a(\xi)=
+\begin{cases}
+q_{\rm bal}(x)/\ell_-(x),&H>0,\ \ell_-(x)>0,\\
+q_{\rm bal}(x)/\ell_+(x),&H<0,\ \ell_+(x)>0,\\
+0,&\text{otherwise},
+\end{cases}
+\]
+and define \(\alpha^\theta_{\xi,u}=\theta a(\xi)\delta_{\zeta e_1}+(1-\theta a(\xi))\delta_0\) for \(0\le\theta\le1\). Because \(0\le a\le1\) and the active sources satisfy \(|u|,|\zeta|\le\Delta_I\), this is a finite-first-moment probability kernel. Its opposite first-coordinate fluxes equal \(-\theta q_{\rm bal}(x)\) and \(\theta q_{\rm bal}(x)\), while the other coordinates remain fixed, so \(j_i=0\) for all \(i\) and \(I(\alpha^\theta)=\mathcal C(\alpha^\theta)=2\theta\gamma_1Q_{\rm bal}=\theta s_{\rm lin}\).
+
+Under this displacement, an active source has target normal losses \(-H\) for \(B\) and zero for \(A_\varepsilon\). Because \(\operatorname{sgn}u=\operatorname{sgn}(-H)\ne0\) on \(W\), its strict \(B\)-tail membership is unchanged and no mass is placed at the \(B\)-threshold. For \(A_\varepsilon\), however, the active sources from the two signs of \(H\) arrive at the kink itself. The resulting atom accounts for the jump between the one-sided derivatives: with \(\mathfrak m_\pm=\int_{\{\pm H>0\}}a(\xi)|H|\,d\sigma\),
+\[
+G'_{0,-}(0)=G'_{0,+}(0)=0,\qquad
+G'_{1,-}(0)=-\theta \mathfrak m_-\le0,\qquad
+G'_{1,+}(0)=\theta \mathfrak m_+\ge0.
+\]
+By Lemma~\ref{lem:threshold-convexity}, zero is globally optimal for both objectives. Evaluating the nonzero wedge integrals, \(H^2/2\) for \(B\) on \(H<0\) and \(-H^2/2\) for \(A_\varepsilon\) on \(H>0\), we obtain \(T_0(0)=\theta Q_{\rm bal}\) and \(T_1(0)=-\theta Q_{\rm bal}\), which yield \(\mathcal V(\alpha^\theta)=-J/p+\theta s_{\rm lin}/(p\gamma_1)\). Since \(0<\chi<1\) by Lemma~\ref{lem:projected-imbalance}, we may choose \(\theta=s/s_{\rm lin}\) to attain the upper bound inherited from Proposition~\ref{prop:nominal-benchmark}.
+\end{proof}
+
+\paragraph{Strict growth} To identify a common leading budget for a tie and a strict reversal, we improve every bounded-first-moment kernel at arbitrarily small additional cost. Mixing with a kernel of larger paired risk would give a direct route if the paired risk were concave in the kernel. The two threshold objectives are minimized separately, however, and their difference need not be concave along mixtures. Nor can we assume that a kernel leaves stationary mass available for an added displacement: an everywhere nonzero shift proportional to \(e^{-u^2}e_1\) already has finite first moment.
+
+We instead replace a small fraction of the existing kernel on two exchanged normal bands beyond the common threshold window. Reflecting \(u\) to \(-u\) crosses that window. Pairing the bands cancels their \(B\)-increments, while opposite signs of \(H\) produce a positive paired gain per unit replacement fraction, independent of the distance \(U\). After subtraction of the common baseline, the old kernel contributes only an \(O_M(U^{-1})\) remainder, because affecting the threshold window from those bands requires a large displacement. We first choose \(U\) so this remainder is smaller than the reflection gain, then reduce the replacement fraction to meet the additional budget. Appendix A.6 verifies the mixing obstruction and carries out this comparison uniformly over the original and modified minimizing thresholds.
+
+\resultnumber{3.3}\begin{theorem}[Strict improvement by local replacement and a common critical coefficient]\label{thm:strict-crossing} Consider the exchangeable box model of \mbox{\hyperref[model:critical-box]{Section~2.2}}. The limiting profile \(F\) is strictly increasing and has a unique zero \(s^*>0\), which gives the common leading coefficient of both pre-limit critical budgets at scale \(\varepsilon^2\). More precisely:\begin{resultparts}\item \emph{Quantitative local improvement.} For every \(0\le M<\infty\) there exists \(c_M>0\) such that every kernel satisfying \(I(\alpha)\le M\) and every \(0<\delta\le1\) admit a feasible kernel \(\widehat\alpha\) with
+
+\begin{equation}
+\mathcal C(\widehat\alpha)\le\mathcal C(\alpha)+\delta,\qquad
+\mathcal V(\widehat\alpha)\ge\mathcal V(\alpha)+c_M\delta.
+\tag{3.8}\label{eq:legacy-5.1}
+\end{equation}
+
+These kernels can be chosen as a family \((\widehat\alpha_\delta)_{0<\delta\le1}\) satisfying
+\[
+\int |d|_\gamma\,|\widehat\alpha_\delta-\alpha|(dd)\,d\nu
+\xrightarrow[\delta\downarrow0]{}0,
+\qquad
+\lim_{\delta\downarrow0}
+\frac{\mathcal V(\widehat\alpha_\delta)-\mathcal V(\alpha)}{\delta}
+\ge c_M>0.
+\]
+For every finite \(S_0>0\),
+
+\begin{equation}
+F(t)-F(s)\ge c_{S_0}(t-s)>0\qquad(0\le s<t\le S_0).
+\tag{3.9}\label{eq:legacy-5.2}
+\end{equation}
+
+\item \emph{Critical budgets.} Together with the continuity, negative initial value, and positive value at a finite budget in Theorem~\ref{thm:critical-limit}(iii), strict growth of \(F\) gives a unique zero \(s^*>0\). Over the finite-first-moment kernel class,
+
+\begin{equation}
+s^*=\min_{\alpha:\,\mathcal V(\alpha)\ge0}\mathcal C(\alpha)
+=\min_{\alpha:\,\mathcal V(\alpha)=0}\mathcal C(\alpha)
+=\inf_{\alpha:\,\mathcal V(\alpha)>0}\mathcal C(\alpha).
+\tag{3.10}\label{eq:legacy-5.3}
+\end{equation}
+The corresponding pre-limit critical budgets satisfy
+\begin{equation}
+\rho^-_\varepsilon=s^*\varepsilon^2+o(\varepsilon^2),\qquad
+\rho^+_\varepsilon=s^*\varepsilon^2+o(\varepsilon^2).
+\tag{3.11}\label{eq:legacy-5.4}
+\end{equation}
+
+The first two minima are attained, whereas the infimum over strictly positive risk values is not.
+\end{resultparts}\end{theorem}
+
+\paragraph{Execution costs}\label{cor:m-c1} A positive execution cost proportional to \(\varepsilon\) exceeds the second-order nominal gain for small trades. To retain a critical-budget comparison, suppose instead that the deterministic cost paid to implement the new allocation \(B\) satisfies \(c_{\mathrm{exec},\varepsilon}\ge0\) and \(c_{\mathrm{exec},\varepsilon}/\varepsilon^2\to\theta\in[0,J/p)\). With the stress class and metric fixed, cash invariance gives \(D^{\rm net}_\varepsilon=D_\varepsilon+c_{\mathrm{exec},\varepsilon}\), whose rescaled profile converges locally uniformly to \(F+\theta\).
+
+Applying the tie and strict-reversal definitions in \eqref{eq:legacy-2.3} to the net profile, we obtain by strict growth and local uniform convergence \(\rho^{\pm,\rm net}_\varepsilon=s_\theta\varepsilon^2+o(\varepsilon^2)\), where \(s_\theta\) is the unique solution of \(F(s_\theta)=-\theta\). As the rescaled execution cost \(\theta\) increases to \(J/p\), this solution decreases continuously from \(s^*\) to zero. For example, in the cheap-background case of Section~4.1, the explicit linear profile gives \(s_\theta=c_3(J-p\theta)\).

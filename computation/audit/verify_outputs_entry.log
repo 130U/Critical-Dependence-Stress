@@ -1,0 +1,6 @@
+{
+  "checked_utc": "2026-10-26T17:26:50.216584+00:00",
+  "all_scientific_checks_passed": true,
+  "all_png_bytes_match": true,
+  "scope": "Exact scalar expressions, saved numerical arrays and profile CSV; PNG identity is recorded separately and can depend on fonts or platform. No proof verification or full critical-profile optimization."
+}

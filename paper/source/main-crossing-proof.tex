@@ -1,0 +1,29 @@
+\subsection{A.6 Strict increase and critical-budget inversion}\label{app:strict-crossing-proof}\nopagebreak[4]
+\input{technical-mixture-obstruction.tex}
+
+\begin{proof}[Proof of Theorem~\ref{thm:strict-crossing}]\label{v21-crossing-proof}\label{appendix-c-strict-improvement-for-arbitrary-kernels-and-inversion-of-the-critical-budgets}
+We apply the reflection from \mbox{\hyperref[sec:reflection-construction]{Appendix~A.5}} to an existing kernel, so its contribution on the replacement bands must also be controlled. Fix \(M\), retain the same patches \(E_\pm\), and choose \([-T,T]\) to contain every minimizing threshold for \(I\le M+1\). With \(a_T=\|H\|_\infty+T\), place unit-width bands beyond this window at
+\(E=(E_+\times[U,U+1])\cup(E_-\times[-U-1,-U])\), \(U>a_T\).
+
+By \eqref{eq:legacy-B.46}--\eqref{eq:legacy-B.47} with \(R=1\), the reflection \(d^N=-2ue_1\) has moment \(I_N=4\gamma_1m(U+1/2)\) and hinge contribution \(N_c(\tau)=-c\Delta_E\) throughout \([-T,T]\). For any old kernel with \(I\le M\), denote its moment and hinge contribution on \(E\) by \(I_O\le M\) and \(O_c(\tau)\). Subtracting the common baseline \(k_O=O_0(0)\) leaves \(R_c(\tau)=O_c(\tau)-k_O\), whose integrand is bounded by \(a_T\) and can be nonzero only if \(|d|_\gamma\ge(U-a_T)/\kappa_B\). Thus the finite displacement moment gives the uniform estimate
+\begin{equation}
+\sup_{|\tau|\le T}|R_c(\tau)|\le\frac{a_T\kappa_BM}{U-a_T}. \tag{A.49}\label{eq:legacy-C.2}
+\end{equation}
+The reflected gain \(\Delta_E\) does not depend on the band location, so we can fix \(U\), depending only on \(M\) and the model, with \(I_N\ge1\) and \(\sup|R_c|\le\Delta_E/4\).
+
+For \(0<\delta\le1\), set \(\theta=\delta/(2I_N)\le1/2\), and replace the conditional kernel on \(E\) by \((1-\theta)\alpha+\theta\delta_{d^N}\), leaving it unchanged elsewhere. The resulting probability kernel \(\widehat\alpha_\delta=\alpha^\theta\) satisfies \(I(\widehat\alpha)=I(\alpha)+\theta(I_N-I_O)\) and \(j_i^{\widehat\alpha}=j_i^\alpha+\theta(j_i^N-j_i^O)\). Projection contraction bounds the old and new projected norms by \(I_O\) and \(I_N\), respectively, hence
+\begin{equation}
+\mathcal C(\widehat\alpha)-\mathcal C(\alpha)
+\le\theta(I_N-I_O)+\theta(I_N+I_O)=\delta. \tag{A.50}\label{eq:legacy-C.3}
+\end{equation}
+All original and modified minimizers remain in \([-T,T]\), since \(I(\widehat\alpha)\le M+\delta/2\). On this common interval, \(G_c^{\widehat\alpha}(\tau)=G_c^\alpha(\tau)+\theta[-c\Delta_E-k_O-R_c(\tau)]\). The constant \(k_O\) cancels from the difference of minima, leaving the reflection gain with an error at most \(2\theta\sup|R_c|\). Consequently \(\mathcal V(\widehat\alpha)-\mathcal V(\alpha)\ge\theta\Delta_E/(2p)=c_M\delta\), where \(c_M=\Delta_E/(4pI_N)>0\).
+
+Keeping these bands fixed as \(\delta\downarrow0\), we have \(\int|d|_\gamma|\alpha^\theta-\alpha|(dd)d\nu\le\theta(I_O+I_N)\to0\), implying convergence of the first moment, projected fluxes, and total cost. Since the objectives depend affinely on \(\theta\) on a common compact threshold interval, Danskin's formula \cite[Proposition~A.3.2(a)]{bertsekas2009}, with \(\mathcal M_c=\arg\min G_c^\alpha\), gives
+\begin{equation}
+\left.\frac d{d\theta}\mathcal V(\alpha^\theta)\right|_{0+}
+=\frac{\Delta_E+\max_{\mathcal M_1}R_1-\max_{\mathcal M_0}R_0}{p}\ge\frac{\Delta_E}{2p}>0. \tag{A.51}\label{eq:legacy-C.4}
+\end{equation}
+Rescaling by \(\theta=\delta/(2I_N)\) gives the stated right derivative in \(\delta\).
+
+Applying \eqref{eq:legacy-5.1} with \(M=S_0\) to a maximizer at budget \(s\), and subdividing if \(t-s>1\), proves \eqref{eq:legacy-5.2}. Together with continuity, \(F(0)<0\), and \eqref{eq:legacy-B.48}, this gives the unique zero \(s^*\). Its maximizing kernel uses cost \(s^*\), since smaller cost would give nonnegative risk below the zero. Local improvement produces positive values at costs decreasing to \(s^*\), while none can occur at \(s^*\) itself, proving the three characterizations and attainment assertions in \eqref{eq:legacy-5.3}. Finally, for \(0\le s_-<s^*<s_+\), compact-uniform convergence gives \(D_\varepsilon(s_-\varepsilon^2)<0<D_\varepsilon(s_+\varepsilon^2)\) for small \(\varepsilon\). Monotonicity in the budget places both critical budgets in \([s_-\varepsilon^2,s_+\varepsilon^2]\); letting \(s_\pm\to s^*\) proves \eqref{eq:legacy-5.4}.
+\end{proof}

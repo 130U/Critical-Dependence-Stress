@@ -1,0 +1,13 @@
+Set \(w=b\cdot d\), \(\Delta_+(t,w)=(t+w)_+-t_+\), and choose any \(\tau_A\in\arg\min G_1\). To compare the risk gain with its transport cost, we evaluate the \(B\)-objective at zero, bound the difference of hinge increments by \(|w|\), and use \(c_{\min}|w|\le |d|_\gamma\). Recording the loss in each comparison gives
+\begin{equation}
+\begin{aligned}
+\frac{\mathcal C}{c_{\min}}-(p\mathcal V+J)
+={}&\underbrace{\frac{\mathcal C-I}{c_{\min}}}_{\mathrm{I}}
++\underbrace{\left(\frac I {c_{\min}}-\int |w|\,d\Pi_\alpha\right)}_{\mathrm{II}}
++\underbrace{\frac g2\tau_A^2}_{\mathrm{III}}\\
+&+\underbrace{\int[|w|-\Delta_+(u,w)+\Delta_+(u+H-\tau_A,w)]\,d\Pi_\alpha}_{\mathrm{IV}}\\
+&+\underbrace{G_0(0)-\min_{\tau_B}G_0(\tau_B)}_{\mathrm{V}}.
+\end{aligned}
+\tag{4.2}\label{eq:legacy-E.5}
+\end{equation}
+The five terms (I)--(V) in \eqref{eq:legacy-E.5} have distinct roles: (I) the marginal-restoration penalty; (II) the excess transport cost over the cheapest normal movement, including cancellation between coordinate displacements; (III) the curvature cost of shifting the \(A_\varepsilon\)-threshold; (IV) the unsaturated hinge gain; and (V) the gap from evaluating the \(B\)-objective at zero instead of its minimum. For the fourth term, \(\Delta_+(t,w)\in[\min\{0,w\},\max\{0,w\}]\), an interval of length \(|w|\), so the difference of the two hinge increments cannot exceed \(|w|\). All five terms are consequently nonnegative, proving the efficiency bound. Since \(\tau_A\) was an arbitrary minimizer, equality forces each defect to vanish for every optimal \(A_\varepsilon\)-threshold.

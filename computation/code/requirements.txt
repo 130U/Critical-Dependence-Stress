@@ -1,0 +1,5 @@
+# Direct dependencies used for the recorded successful execution.
+# Tested with CPython 3.13.12.
+numpy==2.5.4
+matplotlib==3.11.2
+sympy==1.14.0

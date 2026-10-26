@@ -1,0 +1,107 @@
+\section{3. Variational limit and the critical profile}\label{critical-cost-and-recovery-under-full-marginal-constraints}
+
+Under the traded-coordinate condition of Proposition~\ref{prop:nominal-benchmark}, a local exchange attains the initial slope. We now hold \(s=\rho/\varepsilon^2\) fixed to determine how far that efficiency persists toward reversal.
+The limiting objects introduced below connect the stress profile to its reversal coefficient:
+\[
+\varepsilon^{-2}D_\varepsilon(s\varepsilon^2)
+\xrightarrow{\text{locally uniformly}}
+F(s)
+\xrightarrow{\text{unique zero}}
+s^*.
+\]
+The first passage follows from Theorem~\ref{thm:critical-limit}, which combines convergence of the transport energies with exact marginal recovery and convergence of the paired risk. Strict growth in Theorem~\ref{thm:strict-crossing} then identifies the common critical coefficient.
+
+\subsection{3.1 Local transport and marginal compensation}\label{sec:limit-geometry}
+An \(O(\varepsilon)\)-layer around \(\{B=v\}\) contains \(O(\varepsilon)\) reference mass, so displacements of order \(\varepsilon\) change both the transport cost and the paired hinge expectation at order \(\varepsilon^2\). We resolve this layer through the normal coordinate \(u=(B(X)-v)/\varepsilon\) and displacement \(d=(Y-X)/\varepsilon\), while retaining the cost of any transport outside bounded windows needed to restore the marginals.
+
+\paragraph{Definition (Marginal flux and effective energy)} On bounded \(u\)-windows the rescaled source converges to \(d\nu=d\sigma\,du\). We disintegrate a limiting plan with this source into a probability kernel \(\alpha_{\xi,u}(dd)\), specifying the rescaled displacement at surface point \(\xi\) and normal coordinate \(u\); stationary sources have kernel \(\delta_0\). Writing \(d\Pi_\alpha(\xi,u,d)=\alpha_{\xi,u}(dd)\,d\nu(\xi,u)\), we require a finite weighted displacement moment even though the source measure \(\nu=\sigma\otimes du\) has infinite total mass:
+\[
+I(\alpha)=\int|d|_\gamma\,d\Pi_\alpha<\infty,
+\qquad |d|_\gamma=\sum_i\gamma_i|d_i|.
+\]
+Across a coordinate cut \(\{X_i\le q\}\), upward movements remove mass from below the cut and downward movements add mass to it. The resulting signed flux has a Lebesgue density \(j_i\in L^1(I_i)\), as shown by the section formulas in Appendix A.3, and we define
+\begin{equation}
+j_i(q)dq=(\xi_i)_\#(d_i\,d\Pi_\alpha),\qquad
+\mathcal C(\alpha)=I(\alpha)+\sum_{i=1}^3\gamma_i\|j_i\|_{L^1(I_i)}.
+\tag{3.1}\label{eq:legacy-4.1}
+\end{equation}
+In words, \(j_i\) is the signed displacement moment projected onto the \(i\)-th coordinate, and its negative is the leading marginal CDF discrepancy produced by a regular local plan. Because the full plan preserves each marginal, transport outside a bounded normal and displacement window must compensate the discrepancy within it; the one-dimensional CDF formula for \(W_1\) \cite{vallender1974} gives the resulting cost lower bound. The energy \(\mathcal C\) includes this limiting restoration cost in addition to \(I\) (Figure~\ref{fig:tail-layer}). Projection contracts total variation, giving \(I\le\mathcal C\le2I\), with \(\mathcal C=I\) when all projected fluxes vanish and \(\mathcal C=2I\) when each \(d_i\) has a fixed sign \(\Pi_\alpha\)-almost everywhere, so that \(\|j_i\|_1=\int|d_i|\,d\Pi_\alpha\).
+
+\input{figure-tail-layer.tex}
+
+\subsection{3.2 The limiting risk and convergence theorem}\label{sec:limit-risk}
+Under the same local plan, each loss has its own minimizing threshold. At threshold \(v+\varepsilon\tau\), a displacement \(d\) changes the leading centered and rescaled loss of \(L_{c,\varepsilon}=B+c\varepsilon H\) from \(u+cH\) to \(u+b\cdot d+cH\). Denote the corresponding hinge increment by \(\mathfrak q_c(\tau)=(u+b\cdot d+cH-\tau)_+-(u+cH-\tau)_+\). We write \(T_c^\alpha(\tau)=\int\mathfrak q_c(\tau)\,d\Pi_\alpha\) for its integral.
+
+\paragraph{Definition (Limiting paired risk)} Moving the threshold away from \(v\) contributes the curvature term \(g\tau^2/2\) from \eqref{eq:legacy-B.2}. Adding the local transport increment gives the two limiting threshold objectives, which must still be minimized separately:
+\begin{equation}
+G_c^\alpha(\tau)=\frac g2\tau^2+T_c^\alpha(\tau),\qquad
+\mathcal V(\alpha)=-\frac Jp+
+\frac{\min_{\tau_B}G_0^\alpha(\tau_B)-\min_{\tau_A}G_1^\alpha(\tau_A)}p.
+\tag{3.2}\label{eq:legacy-4.2}
+\end{equation}
+
+The energy \(\mathcal C\) depends only on the absolute displacement moment and the signed coordinate projections, and is convex under mixtures of kernels. The paired risk also depends on how the displacements are distributed relative to the normal coordinate \(u\): each of the two hinge objectives must optimize its own threshold, so their difference need not be concave in the common kernel.
+
+We omit the superscript \(\alpha\) when the kernel is clear, and write \(\kappa_B=\max_i b_i/\gamma_i\), \(\kappa_H=\max\{\gamma_1^{-1},\gamma_2^{-1}\}\). Since \(|T_c^\alpha|\le\kappa_BI\), the quadratic term gives coercivity and confines every minimizer to \(g\tau^2/2\le2\kappa_BI\). Together with convexity from Lemma~\ref{lem:threshold-convexity}, these properties justify the threshold minimizations in \(\mathcal V\). We then optimize the paired value over the energy budget, with attainment established in Theorem~\ref{thm:critical-limit}:
+
+\begin{equation}
+F(s)=\max_{\mathcal C(\alpha)\le s}\mathcal V(\alpha),\qquad s\ge0.
+\tag{3.3}\label{eq:legacy-4.3}
+\end{equation}
+
+We use vague convergence on \(\mathscr X=\mathcal M^+_{\rm loc}(Z)\), testing against compactly supported continuous functions on \(Z=I^2\times\mathbb R\times\mathbb R^3\), so that compensation may occur outside bounded windows. We lift a plan \(\pi\) from \(P_0\) to a law in \(\Pi\) by
+\[
+\mathscr T_\varepsilon\pi=\varepsilon^{-1}
+\left(X_1,X_2,\frac{B(X)-v}{\varepsilon},\frac{Y-X}{\varepsilon}\right)_\#\pi.
+\]
+Here the factor \(\varepsilon^{-1}\) compensates for the thickness of the source layer. Because the lifted coordinates determine \((X,Y)\) for fixed \(\varepsilon\), we can retain the cost of the entire original plan in its rescaled energy:
+
+\[
+\begin{aligned}
+\mathcal E_\varepsilon(\Lambda)
+&=\begin{cases}
+\displaystyle\int |d|_\gamma\,d\Lambda
+=\varepsilon^{-2}\int c_\gamma\,d\pi,
+&\begin{gathered}\Lambda=\mathscr T_\varepsilon\pi,\\ \pi\in\Gamma(P_0,P),\ P\in\Pi,\end{gathered}\\
++\infty,&\text{otherwise},
+\end{cases}\\
+\mathcal E(\Lambda)
+&=\begin{cases}
+\mathcal C(\alpha),&\Lambda=\Pi_\alpha,\ I(\alpha)<\infty,\\
++\infty,&\text{otherwise}.
+\end{cases}
+\end{aligned}
+\]
+Here we identify \(\Pi_\alpha\) with a measure on \(Z\) through \((\xi,u,d)\mapsto(\xi_1,\xi_2,u,d)\), using \(\xi=(x,y,z_v(x,y))\) on \(\Omega\) and assigning zero measure to \((I^2\setminus\Omega)\times\mathbb R\times\mathbb R^3\). Because \(\mathcal E_\varepsilon\) includes the whole plan, including transport outside bounded normal windows, minimizing it over plans with target law \(P\) gives \(\varepsilon^{-2}W_\gamma(P,P_0)\). We formulate the following \(\Gamma\)-convergence statement in this vague topology \cite{dalmaso1993}.
+
+\keepproofstart{7\baselineskip}
+\resultnumber{3.1}\begin{theorem}[\(\Gamma\)-convergence and the critical risk profile]\label{thm:critical-limit} Consider the exchangeable box model of \mbox{\hyperref[model:critical-box]{Section~2.2}}.
+\begin{resultparts}
+\item \emph{Transport plans and compactness.} \(\mathcal E_\varepsilon\) \(\Gamma\)-converges to \(\mathcal E\) as \(\varepsilon\downarrow0\) in the vague topology on \(\mathscr X\). Every sequence \(\varepsilon_n\downarrow0\), \(\Pi_n\in\mathscr X\), with bounded \(\mathcal E_{\varepsilon_n}(\Pi_n)\) has a vaguely convergent subsequence. If \(\Pi_n=\mathscr T_{\varepsilon_n}\pi_n\to\Pi_\alpha\) has bounded energy and \(P_n\) is the target law of \(\pi_n\), then \(\Phi_{\varepsilon_n}(P_n)/\varepsilon_n^2\to\mathcal V(\alpha)\).
+
+\item \emph{Target laws and exact recovery.} For every sequence \(\varepsilon_n\downarrow0\) and every feasible sequence satisfying \(W_\gamma(P_n,P_0)=O(\varepsilon_n^2)\), there are a subsequence and a kernel with finite \(I\) such that
+
+\begin{equation}
+\mathcal C(\alpha)\le\liminf_n\frac{W_\gamma(P_n,P_0)}{\varepsilon_n^2},\qquad
+\frac{\Phi_{\varepsilon_n}(P_n)}{\varepsilon_n^2}\longrightarrow\mathcal V(\alpha).
+\tag{3.4}\label{eq:legacy-4.5}
+\end{equation}
+
+Conversely, every kernel with finite \(I\) admits a recovery sequence of distributions preserving the original three full marginals, with
+
+\begin{equation}
+\limsup_{\varepsilon\downarrow0}\frac{W_\gamma(P_\varepsilon,P_0)}{\varepsilon^2}\le\mathcal C(\alpha),\qquad
+\frac{\Phi_\varepsilon(P_\varepsilon)}{\varepsilon^2}\longrightarrow\mathcal V(\alpha).
+\tag{3.5}\label{eq:legacy-4.6}
+\end{equation}
+
+\item \emph{The stress profile.} The maximum in \eqref{eq:legacy-4.3} is attained. The function \(F\) is finite, continuous, and nondecreasing, with \(F(0)=-J/p\) and \(F>0\) at some finite budget. For every finite \(S_0\),
+
+\begin{equation}
+\sup_{0\le s\le S_0}\left|\frac{D_\varepsilon(s\varepsilon^2)}{\varepsilon^2}-F(s)\right|\longrightarrow0.
+\tag{3.6}\label{eq:legacy-4.4}
+\end{equation}
+\end{resultparts}
+\end{theorem}
+
+\input{main-variational-proof.tex}

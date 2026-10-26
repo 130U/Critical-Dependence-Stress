@@ -1,0 +1,180 @@
+\label{appendix-a.-initial-slope-and-tail-surface-capacity}
+\subsection{A.2 Threshold localization}\label{proof:threshold-localization}
+\input{technical-threshold-statement.tex}
+\textit{Proof.}
+For every \(P\) in Lemma~\ref{b-l2-all-optimal-thresholds-under-a-budget-of-order-varepsilon2}, the Lipschitz bound for the portfolio loss gives, uniformly in \(t\),
+
+\begin{equation}
+|\mathscr E_{L_{c,\varepsilon}}(P;t)
+-\mathscr E_{L_{c,\varepsilon}}(P_0;t)|
+\le\frac{\kappa_B+\varepsilon \kappa_H}{p}W_\gamma(P,P_0).
+\tag{A.2}\label{eq:legacy-B.7}
+\end{equation}
+
+Evaluating \eqref{eq:legacy-B.7} at any minimizer \(t\) under \(P\) and at a reference minimizer bounds the reference suboptimality at \(t\) by twice its right-hand side. By continuity of the section density in Lemma~\ref{lemma:general-variation}, \(m_0(c\varepsilon,t)\ge g/2\) on a fixed neighborhood of \(v\) for all sufficiently small \(\varepsilon\). The unique reference minimizers \(v_{c,\varepsilon}\), with \(v_{0,\varepsilon}=v\) and \(v_{1,\varepsilon}=t_\varepsilon\), converge to \(v\). Integrating the curvature bound within this neighborhood, we obtain
+\begin{equation}
+\mathscr E_{L_{c,\varepsilon}}(P_0;t)
+-ES_p^{P_0}(L_{c,\varepsilon})
+\ge\frac{g}{4p}|t-v_{c,\varepsilon}|^2.
+\tag{A.3}\label{eq:legacy-B.8}
+\end{equation}
+
+Every candidate minimizer lies in the compact loss range. Since \(v_{c,\varepsilon}\to v\), \eqref{eq:legacy-B.8} gives a positive reference suboptimality gap at the endpoints of a smaller fixed neighborhood of \(v\), uniformly for small \(\varepsilon\). Convexity extends this gap outside the neighborhood, contradicting the uniform \(O(\varepsilon^2)\) bound from \eqref{eq:legacy-B.7}. Applying \eqref{eq:legacy-B.8} inside gives \(|t-v_{c,\varepsilon}|=O_M(\varepsilon)\), and \eqref{eq:legacy-3.2} yields \eqref{eq:legacy-B.6} for every minimizing threshold.\unskip\nobreak\hfill\proofbox
+
+\subsection{A.3 Projections and threshold convexity}
+\label{a.4-source-fluxes-and-moving-optimal-thresholds}
+\label{a.5-strict-source-imbalance-on-an-exchangeable-tail-surface}
+For a finite-\(I\) kernel, the conditional mean \(e_i(\xi,u)=\int d_i\alpha_{\xi,u}(dd)\) belongs to \(L^1(\nu)\), so Fubini's theorem gives
+
+\begin{equation}
+j_1(q)=\int_{\mathbb R}\int_I
+\frac{f(q,y,z_v(q,y))}{\beta}1_\Omega(q,y)
+e_1((q,y,z_v(q,y)),u)\,dy\,du.
+\tag{A.4}\label{eq:legacy-B.13}
+\end{equation}
+
+Interchanging \(x,y\) gives the second-coordinate formula. For the third projection we parameterize the slice by \(y=v-\beta q-x\). The area Jacobian \(\beta\) cancels the factor \(1/\beta\) in \(\sigma\), yielding
+
+\begin{equation}
+j_3(q)=\int_{\mathbb R}\int_I
+f(x,v-\beta q-x,q)1_{\{\ell<v-\beta q-x<r\}}
+e_3((x,v-\beta q-x,q),u)\,dx\,du.
+\tag{A.5}\label{eq:legacy-B.14}
+\end{equation}
+
+Together with the second-coordinate formula, these identities give \(j_i\in L^1(I_i)\) and
+
+\begin{equation}
+\sum_i\gamma_i\|j_i\|_1\le I,\qquad I\le\mathcal C\le2I.
+\tag{A.6}\label{eq:legacy-B.15}
+\end{equation}
+
+The local plan need not balance internally: \(\int_{I_i}j_i(q)\,dq=\int d_i\,d\Pi_\alpha\) may be nonzero, with compensation supplied by the original plan outside the retained layer. For the directional moments \(\ell_-,\ell_+\) in \eqref{eq:legacy-A.19}, exchangeability equates their totals but not their distributions along the first coordinate.
+
+\resultnumber{A.3}\begin{lemma}[Positive imbalance on an exchangeable tail surface]\label{lem:projected-imbalance} The quantities in \eqref{eq:legacy-A.19},
+
+\begin{equation}
+J=\int_I(\ell_-+\ell_+)\,dx,\qquad
+\chi=\frac{\int_I|\ell_--\ell_+|\,dx}{J}
+\tag{A.7}\label{eq:legacy-A.24}
+\end{equation}
+
+satisfy \(J>0\) and \(0<\chi<1\), where \(J\) is the section moment in \eqref{eq:legacy-3.1}.
+\end{lemma}
+
+\begin{proof}
+Because exchangeability balances the total downward and upward moments, we test their difference against the coordinate \(x\) to detect fiberwise imbalance. Set
+\begin{equation*}
+M_j=\int_I\int_I|x-y|^j k(x,y)\,dy\,dx,\qquad
+\mathfrak b(x)=\ell_-(x)-\ell_+(x).
+\end{equation*}
+Then \(J=M_2/(2\beta)\) and
+\begin{equation*}
+\mathfrak b(x)=\frac1{2\beta}\int(x-y)|x-y|k(x,y)\,dy.
+\end{equation*}
+Antisymmetry gives zero total mass, but testing against the coordinate and using \(k(x,y)=k(y,x)\) yields
+\begin{equation}
+\int \mathfrak b(x)\,dx=0,\qquad
+\int x\,\mathfrak b(x)\,dx=\frac{M_3}{4\beta}.
+\tag{A.8}\label{eq:legacy-A.25}
+\end{equation}
+Centering the coordinate at \(m_I=(\ell+r)/2\) gives \(|x-m_I|\le \Delta_I/2\), and therefore
+\begin{equation}
+\int_I|\mathfrak b|\ge\frac2{\Delta_I}\int_I(x-m_I)\mathfrak b(x)\,dx=\frac{M_3}{2\beta \Delta_I},
+\qquad
+\chi\ge\frac{M_3}{\Delta_IM_2}>0.
+\tag{A.9}\label{eq:legacy-A.26}
+\end{equation}
+The interior diagonal point from \hyperref[geometry:interior-diagonal]{Section~2.3} has a neighborhood in \(\Omega\) where \(f>0\). Its off-diagonal part has positive area, so \(M_2,M_3>0\), proving \(J>0\) and \(\chi>0\).
+
+On a smaller central interval of \(x\)-values, each side \(y<x\) and \(y>x\) still contains a positive-length section inside \(\Omega\). Both \(\ell_-(x)\) and \(\ell_+(x)\) are therefore positive, giving
+\begin{equation}
+2\int\min(\ell_-,\ell_+)=J-\int|\ell_--\ell_+|=(1-\chi)J>0,
+\tag{A.10}\label{eq:legacy-A.27}
+\end{equation}
+and hence \(\chi<1\).
+\end{proof}
+
+\keepproofstart{9\baselineskip}
+\paragraph{Convexity of limiting threshold objectives}
+\label{b.0-model-objects-and-main-statement}
+For finite-cost kernels, convexity of \(G_c\) follows by identifying its distributional second derivative with the measure of transported rescaled losses.
+
+\resultnumber{A.4}\begin{lemma}[Threshold objectives of finite-cost kernels]\label{lem:threshold-convexity} For every kernel with finite \(I\) and every \(c\in\{0,1\}\), the transported rescaled loss \(u+b\cdot d+cH\) has a locally finite pushforward measure \(\lambda_c\), and
+
+\begin{equation}
+(G_c^\alpha)''=\lambda_c\ge0
+\quad\text{in the sense of distributions.}
+\tag{A.11}\label{eq:legacy-B.Z.1}
+\end{equation}
+
+Thus both threshold objectives are continuous and convex and attain their minima. For each objective, zero lying between its one-sided derivatives characterizes a globally optimal threshold.
+\end{lemma}
+
+\begin{proof}
+Fix \([-T,T]\) and \(R_0>T+\Delta_I\). The source mass on \(|u|\le R_0\) is finite, and any source outside it reaching this loss interval must satisfy \(\kappa_B|d|_\gamma\ge R_0-T-\Delta_I\). Its mass is at most \(\kappa_BI/(R_0-T-\Delta_I)\), proving local finiteness of \(\lambda_c\). Translation invariance in \(u\) gives the source rescaled-loss measure \(g\,dt\).
+
+For a smooth compactly supported test function \(\varphi\), we use \(\int(z-\tau)_+\varphi''(\tau)d\tau=\varphi(z)\). The bound \(|\mathfrak q_c|\le \kappa_B|d|_\gamma\) provides the integrable majorant \(\kappa_B|d|_\gamma\|\varphi''\|_1\), so Fubini's theorem gives
+\begin{equation}
+\langle (T_c^\alpha)'',\varphi\rangle
+=\int[\varphi(u+b\cdot d+cH)-\varphi(u+cH)]\,d\Pi_\alpha.
+\tag{A.12}\label{eq:legacy-B.Z.2}
+\end{equation}
+We obtain \((T_c^\alpha)''=\lambda_c-g\,dt\), so adding the quadratic derivative proves \eqref{eq:legacy-B.Z.1}. To conclude, dominated convergence of the hinge increments gives continuity, and \(|T_c|\le\kappa_BI\) gives coercivity of \(G_c\). Continuity and coercivity ensure attainment, and convexity gives the stated one-sided derivative criterion.
+\end{proof}
+
+\keepproofstart{9\baselineskip}
+\subsection{A.4 Preliminary laws and kernel approximation}\label{proof:preliminary-cdf}
+The recovery class \(\mathcal K_{\rm fin}^c\) introduced after Theorem~\ref{thm:critical-limit} has the explicit form, for finitely many fixed vectors \(d_k\),
+\begin{equation}
+\begin{aligned}
+&\alpha_k\in C_c(\Omega\times\mathbb R),\quad
+\alpha_k\ge0\ (1\le k\le N),\quad\sum_{k=1}^N\alpha_k\le1,\\
+&\alpha_{\xi,u}=\sum_{k=1}^N\alpha_k(\xi,u)\delta_{d_k}
++\left(1-\sum_{k=1}^N\alpha_k(\xi,u)\right)\delta_0.
+\end{aligned}
+\tag{A.13}\label{eq:legacy-B.26}
+\end{equation}
+For \(Z_\varepsilon=(x,y,z_v(x,y)+\varepsilon u/\beta)\) and \(f_\varepsilon=f(Z_\varepsilon)\), translate branch \(k\) to \(Z_\varepsilon+\varepsilon d_k\) and leave the remaining mass fixed. Compact interior activity keeps these sources and targets in \(S\) for small \(\varepsilon\), and translation of each subdensity gives an absolutely continuous law \(Q_\varepsilon\). The source volume is \(\varepsilon\,dx\,dy\,du/\beta\).
+
+Let \(F_i\) be the reference marginal CDF and \(F_{i,\varepsilon}\) that of \(Q_\varepsilon\). The fluxes are continuous with compact support, and we claim
+\begin{equation}
+\sup_{q\in I_i}
+\left|\frac{F_{i,\varepsilon}(q)-F_i(q)}{\varepsilon^2}+j_i(q)\right|\to0.
+\tag{A.14}\label{eq:legacy-B.28}
+\end{equation}
+For each branch, let \(a_{ik,\varepsilon}\) be the density of
+\((Z_{\varepsilon,i})_\#(\alpha_k f_\varepsilon\,dx\,dy\,du/\beta)\).
+The CDF change is the integral over the oriented interval crossed by that branch, hence
+\begin{equation}
+\frac{F_{i,\varepsilon}(q)-F_i(q)}{\varepsilon^2}
+=-\sum_kd_{ki}\int_0^1a_{ik,\varepsilon}(q-\varepsilon t d_{ki})\,dt.
+\tag{A.15}\label{eq:legacy-B.29}
+\end{equation}
+For \(i=1,2\), the densities are obtained by integrating \(\alpha_k f_\varepsilon/\beta\) over the other surface coordinate and \(u\). For \(i=3\), we use coordinates \((w,y)\), with \(w=z_v\), whose area Jacobian is \(\beta\). Since \(Z_{\varepsilon,3}=w+\varepsilon u/\beta\), evaluating the third-coordinate marginal at \(q-\varepsilon t d_{k3}\) in \eqref{eq:legacy-B.29} requires
+\begin{equation}
+w=q-\varepsilon u/\beta-\varepsilon t d_{k3},
+\tag{A.16}\label{eq:legacy-B.30}
+\end{equation}
+with weight \(\alpha_k(v-y-\beta w,y,u)f(v-y-\beta w,y,w+\varepsilon u/\beta)\), after cancellation of the two Jacobian factors. Compact interior support and uniform continuity give \(a_{ik,\varepsilon}\to a_{ik,0}\) uniformly, including the zero extensions at the endpoints. Since \(j_i=\sum_kd_{ki}a_{ik,0}\), \eqref{eq:legacy-B.29} proves \eqref{eq:legacy-B.28} for all three coordinates.
+
+\paragraph{Approximation by finite-branch kernels}
+\label{b-l8-bounded-measurable-kernels-arbitrary-finite-i-kernels-and-diagonal-recovery}
+To approximate a general finite-\(I\) kernel by kernels in \(\mathcal K_{\rm fin}^c\), we first retain activity on \(A_n=\{\xi\in\Omega_n,\ |u|\le n,\ |d|_\gamma\le n\}\), where \(\Omega_n\uparrow\Omega\) is a compact exhaustion, and return the omitted conditional probability to \(d=0\). With \(I_{\mathrm{tail},n}=\int_{A_n^c}|d|_\gamma\,d\Pi_\alpha\to0\), projection contraction and the displacement-Lipschitz bound for hinge increments give
+\begin{equation}
+|I_n-I|\le I_{\mathrm{tail},n},\qquad
+\sum_i\gamma_i\|j_i^n-j_i\|_1\le I_{\mathrm{tail},n},\qquad
+\sup_\tau|T_c^{\alpha_n}-T_c^\alpha|\le \kappa_BI_{\mathrm{tail},n}.
+\tag{A.17}\label{eq:legacy-B.40}
+\end{equation}
+In particular, \(\mathcal C(\alpha_n)\to\mathcal C(\alpha)\) and \(\mathcal V(\alpha_n)\to\mathcal V(\alpha)\). The loss of first moment bounds any increase of the projected norms, so also \(\mathcal C(\alpha_n)\le\mathcal C(\alpha)\).
+
+On a fixed truncated window with \(|u|\le U\), replace displacement cells of diameter at most \(\eta\) by representatives \(d_k\). Their conditional masses are measurable weights \(a_k\ge0\), \(\sum_k a_k\le1\), and the same bounds yield
+\begin{equation}
+|I_\eta-I|+\sum_i\gamma_i\|j_{i,\eta}-j_i\|_1
++\sum_{c=0}^1\sup_\tau|T_{c,\eta}(\tau)-T_c(\tau)|
+\le C\eta\,\nu(\Omega\times[-U,U]).
+\tag{A.18}\label{eq:legacy-B.38}
+\end{equation}
+To regularize the weights while preserving their simplex constraint, we extend them by zero, convolve with a common nonnegative approximate identity, and multiply by a common compact interior cutoff taking values in \([0,1]\). Since the section density is bounded, we have \(\sum_k\|a_k^{(m)}-a_k\|_{L^1(\nu)}\to0\). With the finite set of displacements fixed in this step, this convergence controls \(I\), all projected fluxes in \(L^1\), and \(T_0,T_1\) uniformly in the threshold. For a compactly supported Lipschitz test on \(Z\), the value at \(d=0\) contributes the same source-only integral to the original and approximating plans and cancels in their difference, leaving errors controlled by the preceding truncation, quantization, and smoothing bounds. Density of these tests on compact sets and successive choice of the three approximation parameters yield kernels \eqref{eq:legacy-B.26} converging in \(I,\mathcal C,\mathcal V\) and the vague plan topology.
+

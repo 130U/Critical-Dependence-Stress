@@ -23,7 +23,7 @@ Across a coordinate cut \(\{X_i\le q\}\), upward movements remove mass from belo
 \begin{equation}
 j_i(q)dq=(\xi_i)_\#(d_i\,d\Pi_\alpha),\qquad
 \mathcal C(\alpha)=I(\alpha)+\sum_{i=1}^3\gamma_i\|j_i\|_{L^1(I_i)}.
-\tag{3.1}\label{eq:legacy-4.1}
+\tag{3.1}\label{eq:3.1}
 \end{equation}
 In words, \(j_i\) is the signed displacement moment projected onto the \(i\)-th coordinate, and its negative is the leading marginal CDF discrepancy produced by a regular local plan. Because the full plan preserves each marginal, transport outside a bounded normal and displacement window must compensate the discrepancy within it; the one-dimensional CDF formula for \(W_1\) \cite{vallender1974} gives the resulting cost lower bound. The energy \(\mathcal C\) includes this limiting restoration cost in addition to \(I\) (Figure~\ref{fig:tail-layer}). Projection contracts total variation, giving \(I\le\mathcal C\le2I\), with \(\mathcal C=I\) when all projected fluxes vanish and \(\mathcal C=2I\) when each \(d_i\) has a fixed sign \(\Pi_\alpha\)-almost everywhere, so that \(\|j_i\|_1=\int|d_i|\,d\Pi_\alpha\).
 
@@ -32,12 +32,12 @@ In words, \(j_i\) is the signed displacement moment projected onto the \(i\)-th 
 \subsection{3.2 The limiting risk and convergence theorem}\label{sec:limit-risk}
 Under the same local plan, each loss has its own minimizing threshold. At threshold \(v+\varepsilon\tau\), a displacement \(d\) changes the leading centered and rescaled loss of \(L_{c,\varepsilon}=B+c\varepsilon H\) from \(u+cH\) to \(u+b\cdot d+cH\). Denote the corresponding hinge increment by \(\mathfrak q_c(\tau)=(u+b\cdot d+cH-\tau)_+-(u+cH-\tau)_+\). We write \(T_c^\alpha(\tau)=\int\mathfrak q_c(\tau)\,d\Pi_\alpha\) for its integral.
 
-\paragraph{Definition (Limiting paired risk)} Moving the threshold away from \(v\) contributes the curvature term \(g\tau^2/2\) from \eqref{eq:legacy-B.2}. Adding the local transport increment gives the two limiting threshold objectives, which must still be minimized separately:
+\paragraph{Definition (Limiting paired risk)} Moving the threshold away from \(v\) contributes the curvature term \(g\tau^2/2\) from \eqref{eq:2.7}. Adding the local transport increment gives the two limiting threshold objectives, which must still be minimized separately:
 \begin{equation}
 G_c^\alpha(\tau)=\frac g2\tau^2+T_c^\alpha(\tau),\qquad
 \mathcal V(\alpha)=-\frac Jp+
 \frac{\min_{\tau_B}G_0^\alpha(\tau_B)-\min_{\tau_A}G_1^\alpha(\tau_A)}p.
-\tag{3.2}\label{eq:legacy-4.2}
+\tag{3.2}\label{eq:3.2}
 \end{equation}
 
 The energy \(\mathcal C\) depends only on the absolute displacement moment and the signed coordinate projections, and is convex under mixtures of kernels. The paired risk also depends on how the displacements are distributed relative to the normal coordinate \(u\): each of the two hinge objectives must optimize its own threshold, so their difference need not be concave in the common kernel.
@@ -46,7 +46,7 @@ We omit the superscript \(\alpha\) when the kernel is clear, and write \(\kappa_
 
 \begin{equation}
 F(s)=\max_{\mathcal C(\alpha)\le s}\mathcal V(\alpha),\qquad s\ge0.
-\tag{3.3}\label{eq:legacy-4.3}
+\tag{3.3}\label{eq:3.3}
 \end{equation}
 
 We use vague convergence on \(\mathscr X=\mathcal M^+_{\rm loc}(Z)\), testing against compactly supported continuous functions on \(Z=I^2\times\mathbb R\times\mathbb R^3\), so that compensation may occur outside bounded windows. We lift a plan \(\pi\) from \(P_0\) to a law in \(\Pi\) by
@@ -84,7 +84,7 @@ Here we identify \(\Pi_\alpha\) with a measure on \(Z\) through \((\xi,u,d)\maps
 \begin{equation}
 \mathcal C(\alpha)\le\liminf_n\frac{W_\gamma(P_n,P_0)}{\varepsilon_n^2},\qquad
 \frac{\Phi_{\varepsilon_n}(P_n)}{\varepsilon_n^2}\longrightarrow\mathcal V(\alpha).
-\tag{3.4}\label{eq:legacy-4.5}
+\tag{3.4}\label{eq:3.4}
 \end{equation}
 
 Conversely, every kernel with finite \(I\) admits a recovery sequence of distributions preserving the original three full marginals, with
@@ -92,14 +92,14 @@ Conversely, every kernel with finite \(I\) admits a recovery sequence of distrib
 \begin{equation}
 \limsup_{\varepsilon\downarrow0}\frac{W_\gamma(P_\varepsilon,P_0)}{\varepsilon^2}\le\mathcal C(\alpha),\qquad
 \frac{\Phi_\varepsilon(P_\varepsilon)}{\varepsilon^2}\longrightarrow\mathcal V(\alpha).
-\tag{3.5}\label{eq:legacy-4.6}
+\tag{3.5}\label{eq:3.5}
 \end{equation}
 
-\item \emph{The stress profile.} The maximum in \eqref{eq:legacy-4.3} is attained. The function \(F\) is finite, continuous, and nondecreasing, with \(F(0)=-J/p\) and \(F>0\) at some finite budget. For every finite \(S_0\),
+\item \emph{The stress profile.} The maximum in \eqref{eq:3.3} is attained. The function \(F\) is finite, continuous, and nondecreasing, with \(F(0)=-J/p\) and \(F>0\) at some finite budget. For every finite \(S_0\),
 
 \begin{equation}
 \sup_{0\le s\le S_0}\left|\frac{D_\varepsilon(s\varepsilon^2)}{\varepsilon^2}-F(s)\right|\longrightarrow0.
-\tag{3.6}\label{eq:legacy-4.4}
+\tag{3.6}\label{eq:3.6}
 \end{equation}
 \end{resultparts}
 \end{theorem}

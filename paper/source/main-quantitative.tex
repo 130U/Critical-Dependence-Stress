@@ -13,7 +13,7 @@ are bounded below by a positive constant. For every finite-first-moment kernel, 
 \lambda\left(J+p\mathcal V+\frac g2\tau^2\right)
 -\frac{\lambda}{2}\int_\Omega(H-\tau)^2
 \left(\frac{\lambda}{k(\xi,H-\tau)}-1\right)_+\,d\sigma,
-\tag{5.1}\label{eq:legacy-J.6}
+\tag{5.1}\label{eq:5.1}
 \end{equation}
 where \(k(\xi,h)=k_+(\xi)\) for \(h<0\) and \(k_-(\xi)\) for \(h>0\). The integrand is zero when \(h=0\).
 \end{proposition}
@@ -25,20 +25,20 @@ In the cut representation of Theorem~\ref{thm:projected-flow}, the midpoint part
 \phi_1(x)=\frac{\gamma_0}{2}\operatorname{sgn}(1-x),\qquad
 \phi_2(y)=\frac{\gamma_0}{2}\operatorname{sgn}(y-1),\qquad \phi_3=0.
 \]
-Their signs distinguish low-loss from high-loss coordinate halves. At zero threshold shift, a positive paired hinge gain requires normal movement \(w=b\cdot d>0\) when \(x<y\), and \(w<0\) when \(x>y\). The amplitude \(\gamma_0/2\) gives effective cost \(k(\xi,H)=3\gamma_0/2\) in this direction across the midpoint and both directional costs \(\gamma_0/2\) on either same-side region. Choosing \(\lambda=3\gamma_0/2\) in \eqref{eq:legacy-J.6} therefore removes the cross-region penalty at zero threshold. By retaining the correction for shifted minimizing thresholds in the proof below, we obtain a bound valid without prescribing either ES threshold.
+Their signs distinguish low-loss from high-loss coordinate halves. At zero threshold shift, a positive paired hinge gain requires normal movement \(w=b\cdot d>0\) when \(x<y\), and \(w<0\) when \(x>y\). The amplitude \(\gamma_0/2\) gives effective cost \(k(\xi,H)=3\gamma_0/2\) in this direction across the midpoint and both directional costs \(\gamma_0/2\) on either same-side region. Choosing \(\lambda=3\gamma_0/2\) in \eqref{eq:5.1} therefore removes the cross-region penalty at zero threshold. By retaining the correction for shifted minimizing thresholds in the proof below, we obtain a bound valid without prescribing either ES threshold.
 
 \resultnumber{5.2}\begin{corollary}[Uniform reference with costly background displacement]\label{prop:uniform-variable-cost}
 For this uniform reference,
 \begin{equation}
 \frac{13}{64}\le\frac{s^*}{\gamma_0}\le\frac{29}{96},
 \qquad \frac{s^*}{\gamma_0J}\ge\frac{13}{10}.
-\tag{5.2}\label{eq:legacy-7.1}
+\tag{5.2}\label{eq:5.2}
 \end{equation}
 The initial linear profile holds on \(0\le s\le\gamma_0/96\).
 \end{corollary}
 
 \begin{proof}
-For \(1/2\le x\le1\), the negative-moment section has \(1-x<y<x\), so integrating \((x-y)^2/16\) over this interval gives \(\ell_-(x)=(2x-1)^3/48\). For \(0\le x\le1/2\), the section is empty and \(\ell_-(x)=0\). Reflection gives \(\ell_+(x)=\ell_-(2-x)\). On the lower half of \(I\), \(\ell_-\) is the smaller moment, which gives \(Q_{\rm bal}=2\int_{1/2}^1\ell_-(x)\,dx=1/192\). Using \(\int_I(\ell_-+\ell_+)\,dx=J\) then gives \(\|\ell_--\ell_+\|_1=J-2Q_{\rm bal}=7/48\), and Proposition~\ref{prop:balanced-linear-profile} yields \(s_{\rm lin}=\gamma_0/96\). The first-coordinate kernel \(\delta_{\zeta e_1}\) from \eqref{eq:legacy-D.1} reaches zero risk at cost \(\gamma_0(J+\|\ell_--\ell_+\|_1)=29\gamma_0/96\). For the lower bound, the midpoint potentials with \(\lambda=3\gamma_0/2\) give
+For \(1/2\le x\le1\), the negative-moment section has \(1-x<y<x\), so integrating \((x-y)^2/16\) over this interval gives \(\ell_-(x)=(2x-1)^3/48\). For \(0\le x\le1/2\), the section is empty and \(\ell_-(x)=0\). Reflection gives \(\ell_+(x)=\ell_-(2-x)\). On the lower half of \(I\), \(\ell_-\) is the smaller moment, which gives \(Q_{\rm bal}=2\int_{1/2}^1\ell_-(x)\,dx=1/192\). Using \(\int_I(\ell_-+\ell_+)\,dx=J\) then gives \(\|\ell_--\ell_+\|_1=J-2Q_{\rm bal}=7/48\), and Proposition~\ref{prop:balanced-linear-profile} yields \(s_{\rm lin}=\gamma_0/96\). The first-coordinate kernel \(\delta_{\zeta e_1}\) from \eqref{eq:4.11} reaches zero risk at cost \(\gamma_0(J+\|\ell_--\ell_+\|_1)=29\gamma_0/96\). For the lower bound, the midpoint potentials with \(\lambda=3\gamma_0/2\) give
 \[
 \frac{\mathcal C}{\gamma_0}\ge
 \begin{cases}
@@ -47,7 +47,7 @@ For \(1/2\le x\le1\), the negative-moment section has \(1-x<y<x\), so integratin
 \displaystyle \frac12\mathcal V+\frac{11}{32},& |\tau|\ge1.
 \end{cases}
 \]
-For \(|\tau|\le1\), the section integrations in \hyperref[app:uniform-bound-proof]{Appendix B.2} give the first line. For \(|\tau|\ge1\), the efficiency decomposition \eqref{eq:legacy-E.5} gives the second. Every kernel with \(\mathcal V\ge0\) therefore costs at least \(13\gamma_0/64\), which is \(30\%\) above \(\gamma_0J\).
+For \(|\tau|\le1\), the section integrations in \hyperref[app:uniform-bound-proof]{Appendix B.2} give the first line. For \(|\tau|\ge1\), the efficiency decomposition \eqref{eq:4.2} gives the second. Every kernel with \(\mathcal V\ge0\) therefore costs at least \(13\gamma_0/64\), which is \(30\%\) above \(\gamma_0J\).
 \end{proof}
 
 \phantomsection\label{app:quantitative-benchmarks}
@@ -93,7 +93,7 @@ M_{\vartheta,-}=M_{\vartheta,+}=\frac{3-2\vartheta}{1152},
 \qquad
 a_{+,\vartheta}
 =1-\frac{4(M_{\vartheta,-}+M_{\vartheta,+})}{J_\vartheta}.
-\tag{5.3}\label{eq:legacy-K.9}
+\tag{5.3}\label{eq:5.3}
 \end{equation}
 In particular,
 \[
@@ -113,9 +113,9 @@ a_{+,\vartheta}-a_{+,0}
 =\frac{24\vartheta}{5(75-14\vartheta)}>0,\qquad
 J_\vartheta a_{+,\vartheta}-J_0a_{+,0}
 =-\frac{11\vartheta}{720}<0.
-\tag{5.4}\label{eq:legacy-7.2}
+\tag{5.4}\label{eq:5.4}
 \end{equation}
-The reason for this contrast is that, on the median plane \(x+y+z=3\), the centered factors satisfy \(z-1=-(x+y-2)\). Thus increasing \(\vartheta\) favors equal signs in the full box but reduces the section density away from \(x+y=2\) by the factor \(1-\vartheta(x+y-2)^2\). Across both exchanged half-sections, the traded-coordinate matching capacity is \(4(M_{\vartheta,-}+M_{\vartheta,+})\). By \eqref{eq:legacy-K.9}, \(J_\vartheta\) decreases faster in absolute units than this capacity, so their difference \(J_\vartheta a_{+,\vartheta}\) declines. The matching capacity nevertheless falls faster in proportion than \(J_\vartheta\) throughout \(0<\vartheta<1/2\), leaving a larger relative share for the background coordinate.
+The reason for this contrast is that, on the median plane \(x+y+z=3\), the centered factors satisfy \(z-1=-(x+y-2)\). Thus increasing \(\vartheta\) favors equal signs in the full box but reduces the section density away from \(x+y=2\) by the factor \(1-\vartheta(x+y-2)^2\). Across both exchanged half-sections, the traded-coordinate matching capacity is \(4(M_{\vartheta,-}+M_{\vartheta,+})\). By \eqref{eq:5.3}, \(J_\vartheta\) decreases faster in absolute units than this capacity, so their difference \(J_\vartheta a_{+,\vartheta}\) declines. The matching capacity nevertheless falls faster in proportion than \(J_\vartheta\) throughout \(0<\vartheta<1/2\), leaving a larger relative share for the background coordinate.
 
 Figure~\ref{fig:flow-shares} compares two examples: independence (\(\vartheta=0\), model U) and \(\vartheta=1/4\) (model D). Comparing the triples \((J_\vartheta,a_{+,\vartheta},J_\vartheta a_{+,\vartheta})\), namely \((5/32,13/15,13/96)\) and \((143/960,379/429,379/2880)\), we find that the minimum background share rises from about \(0.8667\) to \(0.8834\), while its unnormalized displacement moment falls from about \(0.1354\) to \(0.1316\).
 
@@ -126,7 +126,7 @@ Figure~\ref{fig:flow-shares} compares two examples: independence (\(\vartheta=0\
 surface \(D\), at the equal-cost boundary, for
 \(\vartheta=0\) (U, top) and \(\vartheta=1/4\) (D, bottom).
 The panels evaluate the explicit shares \(a,b,1-a-b\) in
-\eqref{eq:legacy-K.7}; all use the same scale from zero to one.
+\eqref{eq:B.2}; all use the same scale from zero to one.
 On each same-side section we allocate displacement to a rebalanced
 coordinate and match its projection using the cross-region.
 We allocate the remainder to the background coordinate.

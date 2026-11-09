@@ -4,7 +4,7 @@ At zero threshold shifts, the portfolios disagree on tail membership precisely o
 \begin{equation}
 \ell_-(x)=\frac1{2\beta}\int_I(x-y)_+^2k(x,y)\,dy,\qquad
 \ell_+(x)=\frac1{2\beta}\int_I(y-x)_+^2k(x,y)\,dy.
-\tag{3.7}\label{eq:legacy-A.19}
+\tag{3.7}\label{eq:3.7}
 \end{equation}
 Although exchangeability gives \(\int_I\ell_-=\int_I\ell_+=J/2\), the two moments need not agree on each fiber. Matching their pointwise minimum cancels the projected flux, yielding the budget
 \[
@@ -15,7 +15,7 @@ s_{\rm lin}&=2\gamma_1Q_{\rm bal}=\gamma_1J(1-\chi)>0,&
 \chi&=\|\ell_--\ell_+\|_{L^1(I)}/J.
 \end{aligned}
 \]
-\resultnumber{3.2}\begin{proposition}[Capacity of the initial linear segment]\label{prop:balanced-linear-profile} In the exchangeable box model of Section~2.2, suppose \(\gamma_1=\min\{\gamma_1,\gamma_2,\gamma_3/\beta\}\). With \(\ell_\pm\) as in \eqref{eq:legacy-A.19} and \(s_{\rm lin}=\gamma_1J(1-\chi)>0\) as above,
+\resultnumber{3.2}\begin{proposition}[Capacity of the initial linear segment]\label{prop:balanced-linear-profile} In the exchangeable box model of Section~2.2, suppose \(\gamma_1=\min\{\gamma_1,\gamma_2,\gamma_3/\beta\}\). With \(\ell_\pm\) as in \eqref{eq:3.7} and \(s_{\rm lin}=\gamma_1J(1-\chi)>0\) as above,
 \begin{equation*}
 F(s)=-J/p+s/(p\gamma_1),\qquad 0\le s\le s_{\rm lin}.
 \end{equation*}
@@ -51,7 +51,7 @@ We instead replace a small fraction of the existing kernel on two exchanged norm
 \begin{equation}
 \mathcal C(\widehat\alpha)\le\mathcal C(\alpha)+\delta,\qquad
 \mathcal V(\widehat\alpha)\ge\mathcal V(\alpha)+c_M\delta.
-\tag{3.8}\label{eq:legacy-5.1}
+\tag{3.8}\label{eq:3.8}
 \end{equation}
 
 These kernels can be chosen as a family \((\widehat\alpha_\delta)_{0<\delta\le1}\) satisfying
@@ -67,7 +67,7 @@ For every finite \(S_0>0\),
 
 \begin{equation}
 F(t)-F(s)\ge c_{S_0}(t-s)>0\qquad(0\le s<t\le S_0).
-\tag{3.9}\label{eq:legacy-5.2}
+\tag{3.9}\label{eq:3.9}
 \end{equation}
 
 \item \emph{Critical budgets.} Together with the continuity, negative initial value, and positive value at a finite budget in Theorem~\ref{thm:critical-limit}(iii), strict growth of \(F\) gives a unique zero \(s^*>0\). Over the finite-first-moment kernel class,
@@ -76,13 +76,13 @@ F(t)-F(s)\ge c_{S_0}(t-s)>0\qquad(0\le s<t\le S_0).
 s^*=\min_{\alpha:\,\mathcal V(\alpha)\ge0}\mathcal C(\alpha)
 =\min_{\alpha:\,\mathcal V(\alpha)=0}\mathcal C(\alpha)
 =\inf_{\alpha:\,\mathcal V(\alpha)>0}\mathcal C(\alpha).
-\tag{3.10}\label{eq:legacy-5.3}
+\tag{3.10}\label{eq:3.10}
 \end{equation}
 The corresponding pre-limit critical budgets satisfy
 \begin{equation}
 \rho^-_\varepsilon=s^*\varepsilon^2+o(\varepsilon^2),\qquad
 \rho^+_\varepsilon=s^*\varepsilon^2+o(\varepsilon^2).
-\tag{3.11}\label{eq:legacy-5.4}
+\tag{3.11}\label{eq:3.11}
 \end{equation}
 
 The first two minima are attained, whereas the infimum over strictly positive risk values is not.
@@ -90,4 +90,4 @@ The first two minima are attained, whereas the infimum over strictly positive ri
 
 \paragraph{Execution costs}\label{cor:m-c1} A positive execution cost proportional to \(\varepsilon\) exceeds the second-order nominal gain for small trades. To retain a critical-budget comparison, suppose instead that the deterministic cost paid to implement the new allocation \(B\) satisfies \(c_{\mathrm{exec},\varepsilon}\ge0\) and \(c_{\mathrm{exec},\varepsilon}/\varepsilon^2\to\theta\in[0,J/p)\). With the stress class and metric fixed, cash invariance gives \(D^{\rm net}_\varepsilon=D_\varepsilon+c_{\mathrm{exec},\varepsilon}\), whose rescaled profile converges locally uniformly to \(F+\theta\).
 
-Applying the tie and strict-reversal definitions in \eqref{eq:legacy-2.3} to the net profile, we obtain by strict growth and local uniform convergence \(\rho^{\pm,\rm net}_\varepsilon=s_\theta\varepsilon^2+o(\varepsilon^2)\), where \(s_\theta\) is the unique solution of \(F(s_\theta)=-\theta\). As the rescaled execution cost \(\theta\) increases to \(J/p\), this solution decreases continuously from \(s^*\) to zero. For example, in the cheap-background case of Section~4.1, the explicit linear profile gives \(s_\theta=c_3(J-p\theta)\).
+Applying the tie and strict-reversal definitions in \eqref{eq:2.4} to the net profile, we obtain by strict growth and local uniform convergence \(\rho^{\pm,\rm net}_\varepsilon=s_\theta\varepsilon^2+o(\varepsilon^2)\), where \(s_\theta\) is the unique solution of \(F(s_\theta)=-\theta\). As the rescaled execution cost \(\theta\) increases to \(J/p\), this solution decreases continuously from \(s^*\) to zero. For example, in the cheap-background case of Section~4.1, the explicit linear profile gives \(s_\theta=c_3(J-p\theta)\).

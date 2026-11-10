@@ -18,12 +18,22 @@ permissions:
 jobs:
   reproduce:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - cpu: native
+            disable_cpu: ''
+          - cpu: baseline
+            disable_cpu: 'X86_V3,X86_V4'
+    name: reproduce (${{ matrix.cpu }})
     timeout-minutes: 10
     defaults:
       run:
         working-directory: computation
     env:
       MPLBACKEND: Agg
+      NPY_DISABLE_CPU_FEATURES: ${{ matrix.disable_cpu }}
     steps:
       - name: Check out the research companion
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
@@ -36,7 +46,9 @@ jobs:
       - name: Install the recorded dependencies
         run: python -m pip install -r requirements-lock.txt
       - name: Regenerate figures and verify scientific outputs
-        run: python code/run_all.py
+        run: |
+          python -c "import numpy; numpy.show_runtime()"
+          python code/run_all.py
       - name: Install numerical-study optimizer
         run: python -m pip install -r numerical-requirements.txt
       - name: Check transport formulation and exact initial segment

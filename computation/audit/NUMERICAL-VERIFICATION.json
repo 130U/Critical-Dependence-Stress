@@ -1,0 +1,45 @@
+{
+  "checked_client_date": "2026-11-09",
+  "environment": {
+    "python": "3.13.12",
+    "scipy": "1.18.1",
+    "numpy": "2.5.4"
+  },
+  "all_record_consistency_checks_passed": true,
+  "finite_epsilon_instances": 39,
+  "finite_global_scope": "exact discrete marginal laws; every admissible A threshold enumerated",
+  "finite_max_primal_dual_gap": 5.316927453868914e-15,
+  "finite_max_constraint_violation": 3.6444100775384625e-14,
+  "finite_max_direct_es_difference": 2.0915560949852363e-12,
+  "limiting_mesh_instances": 16,
+  "limiting_window_instances": 16,
+  "limiting_mesh_all_within_analytical_envelopes": true,
+  "restricted_zero_instances": 8,
+  "restricted_zero_max_primal_dual_gap": 8.326672684688674e-15,
+  "restricted_zero_max_absolute_risk_readback": 1.2545520178264269e-14,
+  "mesh_max_threshold_readback_difference": 1.4155343563970746e-14,
+  "U4_U6_max_profile_difference_at_fixed_n_and_du": 5.551115123125783e-17,
+  "exact_continuous_nominal_values": {
+    "0.2": -0.3116319444444444,
+    "0.1": -0.3122895622895623,
+    "0.05": -0.31244778613199664,
+    "0.025": -0.3124869710235564
+  },
+  "continuous_global_certificate": false,
+  "finite_epsilon_convergence_established": false,
+  "sha256": {
+    "new-computations/finite-epsilon-study.json": "df65aae7045afd8524213b5d2cf553ee3e05b9e5de7aea21d0dfcb2d591d3e76",
+    "new-computations/finite-n24-e01.json": "6f3eb8278628486e458695cf16f3fbb98687825c3e0e1c7f9688ab7da2232d9e",
+    "new-computations/mesh-study.json": "9e9982ea00c300d0100c4faed43c2bb228b90e4985cb50b718c4e456400e6426",
+    "new-computations/window-study.json": "9eb2cae731361e13488b1f957aa8f2a0a40ad2e493fa928030150408ef4bdcad",
+    "new-computations/restricted-zero-study.json": "bc9327aeca68fa2d4ac716f72c8f50480e7f29e4554641a328ddeec974f96485",
+    "new-computations/threshold-scan.json": "19a913ea9d9836258d2f33776fe1c302a9e609bd21421a10b03a28d555d11d95",
+    "new-computations/threshold-readback-n16.json": "7d393ea6ca058899ab83a9c7105ce83de94a5bbe77fe5e0d2db2cd2c5050a7ba",
+    "new-computations/threshold-readback-n24.json": "fc3670c853b7d40ce88759fb2d326a118ea4c75bee1616c3df14e104532f31be",
+    "code/numerical_profiles.py": "7245764cd0d1878c08ed098300c19cf417480cd417dd56f63376496484e98275",
+    "code/run_numerical_study.py": "e90bb30b1594b5d247f49a16e24d11aa173b50b6cc7e7181d3b39871eeacae2b",
+    "code/scan_thresholds.py": "ff598e74c61e81be2d8f7eb4ec2e4a75f085c8ef61cb1151a153b944a8025fd6",
+    "code/check_numerical_profiles.py": "1e792f2f5f8931c6a0fc4371c672669cc2b8bf65c8c00ae4727f6e7b13d84a76",
+    "code/verify_numerical_study.py": "c3644365dde6edd18ef8a16c3995fc95131a19f346af9cece7d6c24061b7dd00"
+  }
+}

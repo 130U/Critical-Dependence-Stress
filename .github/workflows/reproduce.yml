@@ -37,6 +37,12 @@ jobs:
         run: python -m pip install -r requirements-lock.txt
       - name: Regenerate figures and verify scientific outputs
         run: python code/run_all.py
+      - name: Install numerical-study optimizer
+        run: python -m pip install -r numerical-requirements.txt
+      - name: Check transport formulation and exact initial segment
+        run: python code/check_numerical_profiles.py
+      - name: Validate recorded mesh and window results
+        run: python code/verify_numerical_study.py
       - name: Show verification record
         run: |
           python -c "from pathlib import Path; print(Path('audit/RUN_ALL.json').read_text()); print(Path('audit/OUTPUT_READBACK.json').read_text())"

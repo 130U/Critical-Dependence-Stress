@@ -42,3 +42,9 @@ The public companion was rerun on **26 October 2026**. All three entry-point sta
 The runner recomputes the figures and formulas before comparing them with the frozen reference. It checks exact scalar expressions, numerical array contents and the profile CSV; PNG identity is recorded separately because fonts and platforms can affect rendering. The 500-by-500 midpoint sums are numerical diagnostics of analytically established flow formulas. The continuous existence, conservation, optimality and critical-budget statements are proved in the [paper](../paper/paper.pdf).
 
 The budget plot evaluates proved envelopes, rather than a numerical solution of the full profile. The accompanying source keeps the analytical and computational roles explicit. Subsequent runs overwrite generated figures, data and execution reports.
+
+## Numerical profile study
+
+The [numerical study](NUMERICAL-STUDY.md) adds finite-epsilon transport optimizations and a discretized family of limiting kernels. It records solver gaps, mesh refinement, normal-window sensitivity and separate ES-threshold checks. The limiting calculation gives a restricted-kernel candidate near `0.23`; the unrestricted coefficient retains the proved interval above. The finite-epsilon runs retain the loss of the quadratic signal on coarse grids, including cases that have not converged.
+
+Install the optional optimizer with `python -m pip install -r numerical-requirements.txt`, then run `python code/check_numerical_profiles.py` for the small independent checks. The full study and output files are described in its methods note.

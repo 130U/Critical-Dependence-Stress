@@ -1,0 +1,50 @@
+[
+  {
+    "n": 24,
+    "epsilon": 0.1,
+    "s": 0.0,
+    "scaled_value": -0.29031635802259087,
+    "thresholds_enumerated": 1,
+    "threshold_stride": 1,
+    "lp_max_primal_dual_gap": 0.0,
+    "lp_max_constraint_violation": 0.0,
+    "seconds": 2.7626525999512523,
+    "threshold_A": 3.0,
+    "threshold_B": 2.9583333333333335,
+    "direct_risk": -0.0029031635802467815,
+    "used_transport": 0.0,
+    "target_minimum_mass": 7.233796296296296e-05
+  },
+  {
+    "n": 24,
+    "epsilon": 0.1,
+    "s": 0.1,
+    "scaled_value": -0.1718769290104786,
+    "thresholds_enumerated": 19,
+    "threshold_stride": 1,
+    "lp_max_primal_dual_gap": 2.4730651554394356e-15,
+    "lp_max_constraint_violation": 1.0259940683501889e-14,
+    "seconds": 97.02921499998774,
+    "threshold_A": 3.0,
+    "threshold_B": 2.9583333333333335,
+    "direct_risk": -0.001718769290125599,
+    "used_transport": 0.0009999999999978785,
+    "target_minimum_mass": 0.0
+  },
+  {
+    "n": 24,
+    "epsilon": 0.1,
+    "s": 0.25,
+    "scaled_value": -0.015885416664791586,
+    "thresholds_enumerated": 29,
+    "threshold_stride": 1,
+    "lp_max_primal_dual_gap": 5.316927453868914e-15,
+    "lp_max_constraint_violation": 3.6444100775384625e-14,
+    "seconds": 163.8194308000384,
+    "threshold_A": 3.0,
+    "threshold_B": 2.9583333333333335,
+    "direct_risk": -0.00015885416666883145,
+    "used_transport": 0.002499999999999991,
+    "target_minimum_mass": 0.0
+  }
+]

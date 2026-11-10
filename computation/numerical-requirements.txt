@@ -1,0 +1,2 @@
+# Optional numerical-optimization study, in addition to requirements.txt.
+scipy==1.18.1

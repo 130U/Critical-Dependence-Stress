@@ -1,0 +1,102 @@
+{
+  "previous_commit": "0e498b640991edbf6547e09473739acb7aa05981",
+  "reason": "Native X86_V4 CI changed six flow arrays by at most 2^-53; baseline CPU dispatch matched. Exact integrated polynomial evaluation and explicit cubes remove vector-power and quadrature dependencies from the frozen fields.",
+  "changes": [
+    {
+      "file": "new-computations/flow-shares-U.npz",
+      "array": "a",
+      "old_sha256": "fc3ace00b18423485dd9c9f31276fc229a6953df850a3bb885c1c6677b458643",
+      "new_sha256": "e3bbddb10ffcdccd2c82a5b23dbbcd80fa86fe540b49181d72b60f5351fa8739",
+      "changed_elements": 16934,
+      "maximum_absolute_change": 8.881784197001252e-16
+    },
+    {
+      "file": "new-computations/flow-shares-U.npz",
+      "array": "b",
+      "old_sha256": "71cb00c82b1305c2ab8db576ee7b2a0ac3a9ce0385a868587d907a1bdbb6f9fd",
+      "new_sha256": "cdf21047e2c9fa0c88a40251ed9860ef6df1ed7e07e2c1d425cc984704a49c7e",
+      "changed_elements": 17254,
+      "maximum_absolute_change": 8.881784197001252e-16
+    },
+    {
+      "file": "new-computations/flow-shares-U.npz",
+      "array": "background",
+      "old_sha256": "3ababb7dc080da06e6cbe2c343dc01e0ff6e940932d0c78f87d83d944cea7270",
+      "new_sha256": "df2a55d19694b0abc5080edf9d5ad7e841c3e28a3d496f85838216be8821fc25",
+      "changed_elements": 13003,
+      "maximum_absolute_change": 8.881784197001252e-16
+    },
+    {
+      "file": "new-computations/flow-shares-D.npz",
+      "array": "a",
+      "old_sha256": "959bac5fd35f1add9bb66c5c4a2ac14ad39cfa12effcdf88ad514000c57485c2",
+      "new_sha256": "55db37ecfced4724fa3fe04f23b95a78cbc7242f18d24ba061b96c5137702e4d",
+      "changed_elements": 14765,
+      "maximum_absolute_change": 6.661338147750939e-16
+    },
+    {
+      "file": "new-computations/flow-shares-D.npz",
+      "array": "b",
+      "old_sha256": "45ba3654e3c37416b5c40b7af8af3e8a4d2625e5d8d096f9e8f7705939689b33",
+      "new_sha256": "e5094c88c88d259b5debeeddad76cb53f3b7051216799a2a5ba21ac6cd97cca8",
+      "changed_elements": 16276,
+      "maximum_absolute_change": 6.661338147750939e-16
+    },
+    {
+      "file": "new-computations/flow-shares-D.npz",
+      "array": "background",
+      "old_sha256": "6762234cd1c56475cfedaca1b04174f11a8d027cfe936ab14f98737f17bf8c49",
+      "new_sha256": "519d292c4f45ca523e6ce77691c8f724d6b8257c67645878658f9c284c4d3cb6",
+      "changed_elements": 12349,
+      "maximum_absolute_change": 6.661338147750939e-16
+    }
+  ],
+  "png_exact_matches": {
+    "source/en/figures/tail-layer-repair.png": true,
+    "source/en/figures/corner-capacity.png": true,
+    "source/en/figures/budget-comparison.png": true,
+    "source/en/figures/optimal-flow-shares.png": true
+  },
+  "old_flow_checks": {
+    "U": {
+      "J_exact": "5/32",
+      "a_plus_exact": "13/15",
+      "same_side_mass_quadrature": 0.0026041666666666635,
+      "a_plus_section_quadrature": 0.8666666666666668,
+      "a_plus_midpoint_heatmap_diagnostic": 0.8666669647759926,
+      "heatmap_resolution_each_axis": 500,
+      "max_share_sum_excess": 0.0
+    },
+    "D": {
+      "J_exact": "143/960",
+      "a_plus_exact": "379/429",
+      "same_side_mass_quadrature": 0.0021701388888888855,
+      "a_plus_section_quadrature": 0.8834498834498836,
+      "a_plus_midpoint_heatmap_diagnostic": 0.8834505403320781,
+      "heatmap_resolution_each_axis": 500,
+      "max_share_sum_excess": 0.0
+    }
+  },
+  "new_flow_checks": {
+    "U": {
+      "J_exact": "5/32",
+      "a_plus_exact": "13/15",
+      "same_side_mass_quadrature": 0.0026041666666666635,
+      "a_plus_section_quadrature": 0.8666666666666668,
+      "a_plus_midpoint_heatmap_diagnostic": 0.8666669647759926,
+      "heatmap_resolution_each_axis": 500,
+      "max_share_sum_excess": 0.0
+    },
+    "D": {
+      "J_exact": "143/960",
+      "a_plus_exact": "379/429",
+      "same_side_mass_quadrature": 0.0021701388888888855,
+      "a_plus_section_quadrature": 0.8834498834498836,
+      "a_plus_midpoint_heatmap_diagnostic": 0.8834505403320781,
+      "heatmap_resolution_each_axis": 500,
+      "max_share_sum_excess": 0.0
+    }
+  },
+  "acceptance": "All 60 original scientific checks, including exact array hashes, retained. Only the six mathematically verified flow-field hashes were regenerated.",
+  "diagnostic_run": "https://github.com/130U/Critical-Dependence-Stress/actions/runs/42734509293"
+}

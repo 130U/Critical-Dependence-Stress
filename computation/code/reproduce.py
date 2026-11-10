@@ -20,6 +20,7 @@ AUDIT.mkdir(parents=True, exist_ok=True)
 TASKS = [
     "code/generate_mechanism_figures.py",
     "new-computations/check_parameter_family.py",
+    "new-computations/check_flow_formulas.py",
     "new-computations/plot_profiles_and_flows.py",
 ]
 started = datetime.now(timezone.utc).isoformat()

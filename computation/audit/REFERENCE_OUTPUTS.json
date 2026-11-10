@@ -27,7 +27,7 @@
           500
         ],
         "dtype": "<f8",
-        "sha256": "fc3ace00b18423485dd9c9f31276fc229a6953df850a3bb885c1c6677b458643"
+        "sha256": "e3bbddb10ffcdccd2c82a5b23dbbcd80fa86fe540b49181d72b60f5351fa8739"
       },
       "b": {
         "shape": [
@@ -35,7 +35,7 @@
           500
         ],
         "dtype": "<f8",
-        "sha256": "71cb00c82b1305c2ab8db576ee7b2a0ac3a9ce0385a868587d907a1bdbb6f9fd"
+        "sha256": "cdf21047e2c9fa0c88a40251ed9860ef6df1ed7e07e2c1d425cc984704a49c7e"
       },
       "background": {
         "shape": [
@@ -43,7 +43,7 @@
           500
         ],
         "dtype": "<f8",
-        "sha256": "3ababb7dc080da06e6cbe2c343dc01e0ff6e940932d0c78f87d83d944cea7270"
+        "sha256": "df2a55d19694b0abc5080edf9d5ad7e841c3e28a3d496f85838216be8821fc25"
       }
     },
     "new-computations/flow-shares-D.npz": {
@@ -68,7 +68,7 @@
           500
         ],
         "dtype": "<f8",
-        "sha256": "959bac5fd35f1add9bb66c5c4a2ac14ad39cfa12effcdf88ad514000c57485c2"
+        "sha256": "55db37ecfced4724fa3fe04f23b95a78cbc7242f18d24ba061b96c5137702e4d"
       },
       "b": {
         "shape": [
@@ -76,7 +76,7 @@
           500
         ],
         "dtype": "<f8",
-        "sha256": "45ba3654e3c37416b5c40b7af8af3e8a4d2625e5d8d096f9e8f7705939689b33"
+        "sha256": "e5094c88c88d259b5debeeddad76cb53f3b7051216799a2a5ba21ac6cd97cca8"
       },
       "background": {
         "shape": [
@@ -84,7 +84,7 @@
           500
         ],
         "dtype": "<f8",
-        "sha256": "6762234cd1c56475cfedaca1b04174f11a8d027cfe936ab14f98737f17bf8c49"
+        "sha256": "519d292c4f45ca523e6ce77691c8f724d6b8257c67645878658f9c284c4d3cb6"
       }
     }
   },
@@ -153,5 +153,11 @@
     "source/en/figures/corner-capacity.png": "208b2f88f3a40bd495f2c65a77262785059ddba8581d68422e05e044da8e6dbd",
     "source/en/figures/budget-comparison.png": "1f05258c963223f1421aff597bed8c699eff69caec1c7ec08d6d24f19a517820",
     "source/en/figures/optimal-flow-shares.png": "205e88a23bfcb0ecf5bd3e00df74aae72196356ddebbb6e601bb55125f192252"
-  }
+  },
+  "flow_array_evaluation": {
+    "method": "Exact integrated section polynomials in r=1-x; explicit cube multiplication.",
+    "verification": "audit/FLOW-FORMULA-CHECK.json",
+    "migration": "audit/FLOW-EVALUATION-UPDATE.json"
+  },
+  "baseline_role": "The PDF identifies the mathematical source. Flow-array hashes were updated for the exact polynomial evaluator; all other reference entries retain their original baseline."
 }

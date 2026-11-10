@@ -41,6 +41,8 @@ The public companion was rerun on **26 October 2026**. All three entry-point sta
 
 The runner recomputes the figures and formulas before comparing them with the frozen reference. It checks exact scalar expressions, numerical array contents and the profile CSV; PNG identity is recorded separately because fonts and platforms can affect rendering. The 500-by-500 midpoint sums are numerical diagnostics of analytically established flow formulas. The continuous existence, conservation, optimality and critical-budget statements are proved in the [paper](../paper/paper.pdf).
 
+The flow evaluator was updated on **9 November 2026** after CI found CPU-dependent array differences of at most `1.11e-16`. It evaluates the exact integrated section polynomials in `r = 1-x` and forms cubes by multiplication. Symbolic integration verifies both polynomial identities; exact rational arithmetic checks the actual plotting coordinates. The new arrays differ from the prior arrays by at most `8.89e-16`, while all four reference PNGs and the reported flow diagnostics are unchanged. The [formula checks](audit/FLOW-FORMULA-CHECK.json) and [baseline migration record](audit/FLOW-EVALUATION-UPDATE.json) record this change. Array acceptance still requires exact byte hashes. CI exercises native and baseline NumPy CPU dispatch.
+
 The budget plot evaluates proved envelopes, rather than a numerical solution of the full profile. The accompanying source keeps the analytical and computational roles explicit. Subsequent runs overwrite generated figures, data and execution reports.
 
 ## Numerical profile study

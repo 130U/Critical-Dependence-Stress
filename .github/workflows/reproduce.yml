@@ -49,6 +49,13 @@ jobs:
         run: |
           python -c "import numpy; numpy.show_runtime()"
           python code/run_all.py
+      - name: Recheck native dispatch on the baseline runner
+        if: matrix.cpu == 'baseline'
+        env:
+          NPY_DISABLE_CPU_FEATURES: ''
+        run: |
+          python -c "import numpy; numpy.show_runtime()"
+          python code/run_all.py
       - name: Install numerical-study optimizer
         run: python -m pip install -r numerical-requirements.txt
       - name: Check transport formulation and exact initial segment

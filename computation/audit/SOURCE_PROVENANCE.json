@@ -1,56 +1,68 @@
 {
-  "source": "Scientific companion to the author manuscript dated 24 October 2026",
-  "source_manuscript_filename": "Critical_Dependence_Stress_for_Diversification_Gains_under_Fixed_Marginals.pdf",
-  "source_manuscript_sha256": "0b60ae2786023a2801b2ce9a3bc364494c7d100218e3d590ec09d11863ba68a8",
-  "public_companion_date": "2026-10-26",
+  "schema": "current_companion_source_identities",
+  "publication": "V_202611",
+  "manuscript": {
+    "path": "paper/paper.pdf",
+    "sha256": "2b3fd327ac3812679cab34ba36e5ac450df14b60cd3867c2d162684e676e00e6"
+  },
   "files": [
     {
+      "path": "code/check_numerical_profiles.py",
+      "sha256": "1e792f2f5f8931c6a0fc4371c672669cc2b8bf65c8c00ae4727f6e7b13d84a76"
+    },
+    {
       "path": "code/generate_mechanism_figures.py",
-      "sha256": "829743db139aeaba4e56e4ee515597a0b906740b9196add1c5dbd4195567fa0f",
-      "source_sha256": "829743db139aeaba4e56e4ee515597a0b906740b9196add1c5dbd4195567fa0f",
-      "identical_to_source": true
+      "sha256": "829743db139aeaba4e56e4ee515597a0b906740b9196add1c5dbd4195567fa0f"
+    },
+    {
+      "path": "code/numerical_profiles.py",
+      "sha256": "7245764cd0d1878c08ed098300c19cf417480cd417dd56f63376496484e98275"
     },
     {
       "path": "code/reproduce.py",
-      "sha256": "2f8504546498a60c8109656e855b119d83a7a3322dffb6669652bcf42a44c0eb",
-      "source_sha256": "3b613e2ee662f600e87d995b905377a8745177155deb4d5f43107e7380d37af2",
-      "identical_to_source": false
+      "sha256": "33a582d5e8c88dc2efc3409ad4ebace32f3c4572966953175e753a4589be5e1c"
     },
     {
       "path": "code/run_all.py",
-      "sha256": "e0550f203ab571ae180defd863f48c32331430d1b068c94afab7797b0f551d5a",
-      "source_sha256": "e0550f203ab571ae180defd863f48c32331430d1b068c94afab7797b0f551d5a",
-      "identical_to_source": true
+      "sha256": "e0550f203ab571ae180defd863f48c32331430d1b068c94afab7797b0f551d5a"
+    },
+    {
+      "path": "code/run_numerical_study.py",
+      "sha256": "e90bb30b1594b5d247f49a16e24d11aa173b50b6cc7e7181d3b39871eeacae2b"
+    },
+    {
+      "path": "code/scan_thresholds.py",
+      "sha256": "ff598e74c61e81be2d8f7eb4ec2e4a75f085c8ef61cb1151a153b944a8025fd6"
+    },
+    {
+      "path": "code/verify_numerical_study.py",
+      "sha256": "c3644365dde6edd18ef8a16c3995fc95131a19f346af9cece7d6c24061b7dd00"
     },
     {
       "path": "code/verify_outputs.py",
-      "sha256": "e88184e970ee0f0baa634e5cc59c2d93804c707b37487f947da69388041dc6af",
-      "source_sha256": "e88184e970ee0f0baa634e5cc59c2d93804c707b37487f947da69388041dc6af",
-      "identical_to_source": true
+      "sha256": "514d57a9e25a48a11de7c8505374ca57db1de6f7a2d4da2d4a18ab5b7baa5503"
+    },
+    {
+      "path": "new-computations/check_flow_formulas.py",
+      "sha256": "436320a209293ebc485de086d662500e71a91055bcf510065ded4c968ff33634"
     },
     {
       "path": "new-computations/check_parameter_family.py",
-      "sha256": "2fc889d47b18d795f85caefd09fc6b2f02a54ee0f905061e583cbda7ea1fc324",
-      "source_sha256": "2fc889d47b18d795f85caefd09fc6b2f02a54ee0f905061e583cbda7ea1fc324",
-      "identical_to_source": true
+      "sha256": "2fc889d47b18d795f85caefd09fc6b2f02a54ee0f905061e583cbda7ea1fc324"
     },
     {
       "path": "new-computations/check_simple_example.py",
-      "sha256": "a5bd2cac92d13e690a9619c1ccd64c27d35aaea1812c6225ee79b8e470c45d50",
-      "source_sha256": "9b10e0a2c588e708b8c83e7b3f7c0397ad79b93951a7cefac2f0d3709b5e66af",
-      "identical_to_source": false
+      "sha256": "a5bd2cac92d13e690a9619c1ccd64c27d35aaea1812c6225ee79b8e470c45d50"
+    },
+    {
+      "path": "new-computations/flow_formulas.py",
+      "sha256": "42e1d539a26873c570487bbc453cd632b77f639dbf4d7528580a6732bd261a30"
     },
     {
       "path": "new-computations/plot_profiles_and_flows.py",
-      "sha256": "f839ef430334b76bf6ef9d6e0d4f70d86f262ab19eeca7e1c05d375e87f91cdd",
-      "source_sha256": "f839ef430334b76bf6ef9d6e0d4f70d86f262ab19eeca7e1c05d375e87f91cdd",
-      "identical_to_source": true
+      "sha256": "533a33eb5f46110f31b8ea977ecc3d2bdb7c9b7114f462bd963fb819697b6e2b"
     }
   ],
-  "documentation_changes": {
-    "code/reproduce.py": "Public execution record reports interpreter implementation and whether PYTHONPATH was supplied, omitting private workstation paths. Computational steps are unchanged.",
-    "new-computations/check_simple_example.py": "Docstring and report description now point to Section 5 and Appendix B of the manuscript. Calculations are unchanged."
-  },
-  "reference": "audit/REFERENCE_OUTPUTS.json retains the historical baseline identifier. Its scientific reference fields are unchanged.",
-  "verification": "audit/RUN_ALL.json and audit/OUTPUT_READBACK.json describe a fresh run of this public companion."
+  "verification": "audit/RUN_ALL.json and audit/OUTPUT_READBACK.json record execution and scientific comparisons.",
+  "byte_source": "Published Git file contents"
 }

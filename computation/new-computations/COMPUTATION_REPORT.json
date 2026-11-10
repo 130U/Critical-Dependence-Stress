@@ -40,13 +40,14 @@
   },
   "sha256": {
     "new-computations\\profile-envelopes.csv": "a18e5615c24c89dabf43c362490c3ddd981fe79aaf7f2804e3df479590503233",
-    "new-computations\\flow-shares-U.npz": "a3c4a27f2fe1cef00bc77cc3fd4f2a3f8b387de4e0482b9985aae2600b80b3c5",
-    "new-computations\\flow-shares-D.npz": "9048f413ede237ed403d46edf85330ba397895196497df428444e7bd37c38e29",
+    "new-computations\\flow-shares-U.npz": "31851dc0340aa0ae424d5ad51a94d2f87a5b2201b3552aae6cc98512d0036e61",
+    "new-computations\\flow-shares-D.npz": "86fea5314e9084b8240fcfb723abcd7c12b3138be94af060206d0afc04bbf5b9",
     "source\\en\\figures\\budget-comparison.pdf": "9fc13857d4bf520cfc24cda753bc134f89d9c0969b6cb4abcabd1f4fb494f011",
     "source\\en\\figures\\budget-comparison.png": "1f05258c963223f1421aff597bed8c699eff69caec1c7ec08d6d24f19a517820",
     "source\\en\\figures\\budget-comparison.svg": "0ebe525a724465fd8dc2a6782336f8f4480bc629c8103672695587f0bc179a12",
     "source\\en\\figures\\optimal-flow-shares.pdf": "42124d3e3692688e3d912c8f84e270ae6aa4c358a20f383f7c0c95c82053e5bc",
     "source\\en\\figures\\optimal-flow-shares.png": "205e88a23bfcb0ecf5bd3e00df74aae72196356ddebbb6e601bb55125f192252",
     "source\\en\\figures\\optimal-flow-shares.svg": "63dbe4a5ce1f5790b495bf9db93f9ed03a6764a57a08c87ace0a170929609868"
-  }
+  },
+  "figure4_evaluation": "Exact integrated section polynomials in r=1-x and explicit cube multiplication; the independent scalar same-side diagnostic retains quadrature."
 }

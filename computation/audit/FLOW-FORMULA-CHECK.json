@@ -1,0 +1,23 @@
+{
+  "capacity_integrals_exact": [
+    "x*(7*x**2 - 18*x + 12)/48",
+    "-x*(8*x**4 - 25*x**3 - 120*x**2 + 360*x - 240)/960"
+  ],
+  "rational_comparison": "Exact Fraction values at the actual binary64 plotting coordinates, rounded once to binary64.",
+  "coordinate_count": 420,
+  "maximum_absolute_error": {
+    "U": {
+      "capacity": 1.3877787807814457e-17,
+      "demand": 3.469446951953614e-18,
+      "ratio": 1.1102230246251565e-16
+    },
+    "D": {
+      "capacity": 1.3877787807814457e-17,
+      "demand": 3.469446951953614e-18,
+      "ratio": 3.3306690738754696e-16
+    }
+  },
+  "independent_check_tolerance": 3.552713678800501e-15,
+  "frozen_array_acceptance": "Unchanged: exact shape, dtype and byte hash.",
+  "all_checks_passed": true
+}

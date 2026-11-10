@@ -13,6 +13,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.ticker import MultipleLocator
+from flow_formulas import qdensity, demand, ratio
 
 HERE = ROOT / "new-computations"
 OUT = ROOT / "source/en/figures"
@@ -107,35 +108,6 @@ for ext in ("pdf", "png", "svg"):
 plt.close(fig)
 
 
-def qdensity(x, y, dependent=False):
-    q = (y-x)**2/16
-    if dependent:
-        q = q*(1-(x+y-2)**2/4)
-    return q
-
-
-def demand(x, dependent=False):
-    r = np.maximum(2*np.asarray(x)-1, 0)
-    if dependent:
-        return r**3*(30+5*r-r*r)/1920
-    return r**3/48
-
-
-def capacity(x, dependent=False):
-    # q is polynomial; 8-node Gauss integrates each section exactly up to
-    # floating-point arithmetic. The limits are 2-x and 2.
-    x = np.asarray(x)
-    nodes, weights = np.polynomial.legendre.leggauss(8)
-    y = (2-x/2)[..., None]+(x/2)[..., None]*nodes
-    return np.sum(qdensity(x[..., None], y, dependent)*weights, axis=-1)*x/2
-
-
-def ratio(x, dependent=False):
-    x = np.asarray(x)
-    cap = capacity(x, dependent)
-    return np.divide(demand(x, dependent), cap, out=np.zeros_like(x),
-                     where=cap > 0)
-
 
 n = 500
 axis = (np.arange(n)+.5)*2/n
@@ -216,6 +188,7 @@ report = {
     "upper_envelope": "min(2s-5/16,4s/3-13/48) on [0,29/96]",
     "all_threshold_check": "The large-threshold branch 2s-11/16 is no larger than 4s/3-13/48 until s=5/8, beyond the plotted interval.",
     "figure3_evaluation": "Exact analytical formulas evaluated in floating-point for rendering; no quadrature.",
+    "figure4_evaluation": "Exact integrated section polynomials in r=1-x and explicit cube multiplication; the independent scalar same-side diagnostic retains quadrature.",
     "inset_budget_interval": [0, .02],
     "nominal_J": J, "exact_initial_segment_endpoint": S0,
     "profile_samples": len(s),

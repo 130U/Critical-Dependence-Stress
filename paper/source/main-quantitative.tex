@@ -72,6 +72,34 @@ F(s)&\le\min\left\{2s-\frac5{16},
 The last equality holds because the branches inside the maximum meet only at \(s=5/8>U\). Figure~\ref{fig:budget} plots the analytical envelopes \(\underline F\le F\le\overline F\) on \([0,U]\). The guaranteed linear segment \([0,s_{\rm lin}]\) covers one fifteenth of the tangent prediction \(J=5/32\), whereas the critical coefficient \(s^*\) lies between \(13/10\) and \(29/15\) times \(J\). Thus the initial slope is attained on a positive interval, yet the required reversal budget is at least \(30\%\) higher than its tangent prediction.
 \input{figure-budget.tex}
 
+\paragraph{Numerical approximation.}
+The computational companion also discretizes a symmetric family of local
+kernels, using pure-coordinate moves to the two hinge breakpoints and
+retaining the absolute projected-flux penalty in \eqref{eq:3.1}.
+With both thresholds centered, surface grids of 8, 12, 16, 24 and 32 points
+per coordinate place the candidate zero near \(0.23\); the individual
+estimates range from approximately \(0.229\) to \(0.233\).
+The calculation reproduces the proved initial linear segment. Independent
+normal-window checks, threshold readbacks, and solver residuals are recorded
+in the companion's numerical study. These values estimate the zero for the
+prescribed kernel family; \eqref{eq:5.2} remains the proved interval for the
+unrestricted coefficient.
+
+For finite trade sizes, a separate computation optimizes over all joint
+laws on a cubic midpoint lattice with the prescribed discrete marginals.
+Adjacent-edge flows represent the exact weighted Manhattan transport cost
+on this lattice, and enumeration of the \(A_\varepsilon\) threshold together
+with all \(B\)-threshold constraints gives the global discrete optimum.
+The study uses \(\varepsilon=0.2,0.1,0.05,0.025\), several budgets, and
+independent grid refinements. Grid resolution matters at the quadratic
+scale: at \(\varepsilon=0.1\), the scaled nominal values on 8-, 16-, and
+24-point marginal grids are approximately \(-0.0781\), \(-0.2637\), and
+\(-0.2903\), respectively, against the exact continuous value
+\(-0.31229\). At a fixed 16-point grid, the nominal quadratic signal
+disappears when \(\varepsilon=0.025\). The recorded finite-grid values
+therefore describe discretization sensitivity; a convergence study of
+\eqref{eq:3.6} requires finer grids as the trade size decreases.
+
 \subsection{5.2 A dependence family with fixed marginal laws}\label{background-dependence-changes-substitutability-even-with-identical-marginals}
 
 Section~5.1 used an independent uniform reference with background displacement twice as costly as either traded direction. We now move to the equal-effective-cost boundary and ask how changing the reference dependence affects the required background share \(a_+\) and the budget derivative \(\gamma_0Ja_+\). Retaining uniform marginals, \(\beta=1\), and \(p=1/2\), we perturb the independent density by the product of the centered losses \(x+y-2\) and \(z-1\):

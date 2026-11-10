@@ -47,13 +47,15 @@ The research moved from model-free pricing and optimal transport toward a sharpe
 ## Reproduce the figures and calculations
 
 ```bash
-git clone https://github.com/130U/mathematical-finance-project.git
-cd mathematical-finance-project/computation
+git clone https://github.com/130U/Critical-Dependence-Stress.git
+cd Critical-Dependence-Stress/computation
 python -m pip install -r requirements.txt
 python code/run_all.py
 ```
 
 The companion uses analytical formulas and synthetic grids. It regenerates **4 figures**, evaluates **1,204 profile points**, and checks exact rational and symbolic identities. The recorded run passed **60/60 scientific comparisons** and reproduced **4/4 reference PNGs** exactly. [Run record](computation/audit/RUN_ALL.json) · [Comparison record](computation/audit/OUTPUT_READBACK.json)
+
+The [numerical profile study](computation/NUMERICAL-STUDY.md) adds finite-epsilon optimizations and separate checks of solver, mesh, threshold and truncation effects.
 
 For a quick check with Python's standard library only:
 

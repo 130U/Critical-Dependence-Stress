@@ -44,5 +44,6 @@ jobs:
       - name: Validate recorded mesh and window results
         run: python code/verify_numerical_study.py
       - name: Show verification record
+        if: always()
         run: |
           python -c "from pathlib import Path; print(Path('audit/RUN_ALL.json').read_text()); print(Path('audit/OUTPUT_READBACK.json').read_text())"

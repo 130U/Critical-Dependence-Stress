@@ -5,8 +5,8 @@ title: "Critical Dependence Stress: Research and Computational Companion"
 authors:
   - family-names: Ouyang
     given-names: Letao
-repository-code: "https://github.com/130U/mathematical-finance-project"
-url: "https://github.com/130U/mathematical-finance-project"
+repository-code: "https://github.com/130U/Critical-Dependence-Stress"
+url: "https://github.com/130U/Critical-Dependence-Stress"
 version: "2026.10.26"
 date-released: 2026-10-26
 preferred-citation:
@@ -17,4 +17,4 @@ preferred-citation:
       given-names: Letao
   year: 2026
   notes: "Author manuscript"
-  url: "https://github.com/130U/mathematical-finance-project/blob/main/paper/paper.pdf"
+  url: "https://github.com/130U/Critical-Dependence-Stress/blob/main/paper/paper.pdf"

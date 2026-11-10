@@ -77,28 +77,24 @@ The computational companion also discretizes a symmetric family of local
 kernels, using pure-coordinate moves to the two hinge breakpoints and
 retaining the absolute projected-flux penalty in \eqref{eq:3.1}.
 With both thresholds centered, surface grids of 8, 12, 16, 24 and 32 points
-per coordinate place the candidate zero near \(0.23\); the individual
-estimates range from approximately \(0.229\) to \(0.233\).
-The calculation reproduces the proved initial linear segment. Independent
-normal-window checks, threshold readbacks, and solver residuals are recorded
-in the companion's numerical study. These values estimate the zero for the
-prescribed kernel family; \eqref{eq:5.2} remains the proved interval for the
-unrestricted coefficient.
+per coordinate place the zero of this family near \(0.23\); the individual
+estimates increase with the grid from \(0.2292\) to \(0.2324\).
+The calculation reproduces the proved initial linear segment, and the paired
+risk of each computed kernel, evaluated again at its own minimizing
+thresholds, vanishes to rounding error. Because the family lies inside the
+admissible class, its zero is an upper estimate of \(s^*\), subject to
+discretization error. On this evidence \(s^*\) falls in the lower third of
+the interval in \eqref{eq:5.2}, and the reversal premium over the tangent
+prediction lies between the proved \(30\%\) and about \(49\%\). The upper
+figure is numerical and is not a proof; normal-window checks and solver
+residuals are recorded in the companion's numerical study.
 
-For finite trade sizes, a separate computation optimizes over all joint
-laws on a cubic midpoint lattice with the prescribed discrete marginals.
-Adjacent-edge flows represent the exact weighted Manhattan transport cost
-on this lattice, and enumeration of the \(A_\varepsilon\) threshold together
-with all \(B\)-threshold constraints gives the global discrete optimum.
-The study uses \(\varepsilon=0.2,0.1,0.05,0.025\), several budgets, and
-independent grid refinements. Grid resolution matters at the quadratic
-scale: at \(\varepsilon=0.1\), the scaled nominal values on 8-, 16-, and
-24-point marginal grids are approximately \(-0.0781\), \(-0.2637\), and
-\(-0.2903\), respectively, against the exact continuous value
-\(-0.31229\). At a fixed 16-point grid, the nominal quadratic signal
-disappears when \(\varepsilon=0.025\). The recorded finite-grid values
-therefore describe discretization sensitivity; a convergence study of
-\eqref{eq:3.6} requires finer grids as the trade size decreases.
+For finite trade sizes, the companion solves the discretized problem
+globally on cubic midpoint lattices with up to 24 points per marginal, for
+trade sizes from \(\varepsilon=0.2\) down to \(\varepsilon=0.025\). These
+lattices do not resolve the quadratic scale as the trade size decreases, so
+the recorded values measure discretization sensitivity, and a convergence
+study of \eqref{eq:3.6} requires finer grids.
 
 \subsection{5.2 A dependence family with fixed marginal laws}\label{background-dependence-changes-substitutability-even-with-identical-marginals}
 

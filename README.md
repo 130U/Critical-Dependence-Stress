@@ -49,7 +49,7 @@ The research moved from model-free pricing and optimal transport toward a sharpe
 ```bash
 git clone https://github.com/130U/Critical-Dependence-Stress.git
 cd Critical-Dependence-Stress
-git checkout V_202611
+git checkout V_20261101
 cd computation
 python -m pip install -r requirements.txt
 python code/run_all.py

@@ -1,7 +1,7 @@
 """Exact polynomial checks of the density family and fixed-amplitude potential.
 
-These checks integrate the formulas afresh; they do not rerun the inherited
-computational certificates. SymPy is used only for finite polynomial algebra.
+These checks integrate the formulas directly. SymPy is used only for finite
+polynomial algebra.
 """
 from pathlib import Path
 import json

@@ -44,7 +44,7 @@ record = {'capacity_integrals_exact': identities,
           'coordinate_count': len(points),
           'maximum_absolute_error': errors,
           'independent_check_tolerance': float(16*np.finfo(float).eps),
-          'frozen_array_acceptance': 'Unchanged: exact shape, dtype and byte hash.',
+          'frozen_array_acceptance': 'Exact shape, dtype and byte hash.',
           'all_checks_passed': True}
 out = Path(__file__).resolve().parents[1]/'audit/FLOW-FORMULA-CHECK.json'
 out.write_text(json.dumps(record, indent=2)+'\n', encoding='utf-8')

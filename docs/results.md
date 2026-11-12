@@ -1,6 +1,6 @@
 # Results and mathematical contributions
 
-The project identifies how much dependence stress is needed to erase a diversification gain while preserving every marginal loss distribution. Its central result is a critical-budget law, together with a geometric explanation of the additional cost imposed by marginal conservation.
+The paper determines how much dependence stress it takes to erase a diversification gain when every marginal loss distribution is preserved. The central result is a critical-budget law, and with it a geometric explanation of the extra cost that marginal conservation imposes.
 
 ## A reversal budget at least 30% above the tangent prediction
 
@@ -13,17 +13,17 @@ $$
 \qquad J=\frac{5}{32}.
 $$
 
-The tangent prediction is $0.15625\gamma_0$. The rigorous critical interval is $[0.203125,\,0.302083\ldots]\gamma_0$. Thus even an attained initial sensitivity can understate the reversal budget by **at least 30%**. This is an analytical statement for the specified model.
+The tangent prediction is $0.15625\gamma_0$, and the proved critical interval is $[0.203125,\,0.302083\ldots]\gamma_0$. An initial sensitivity that is attained exactly can still understate the reversal budget by **at least 30%**. The statement is analytical and holds for the specified model.
 
 ![Proved bounds for the stress profile](../computation/source/en/figures/budget-comparison.png)
 
-The shaded region brackets the critical profile. Its lower boundary is attained by explicit kernels; its upper boundary follows from projection potentials. The two coincide on the exact initial segment
+The shaded region brackets the critical profile. Explicit kernels attain its lower boundary, and projection potentials give its upper boundary. The two coincide on the exact initial segment
 
 $$
 F(s)=2s-\frac{5}{16},\qquad 0\leq s\leq\frac{1}{96}
 $$
 
-when $\gamma_0=1$. The figure evaluates these proved envelopes. See Corollary 5.2 and Section 5.1 of the [paper](../paper/paper.pdf).
+when $\gamma_0=1$. The figure plots these proved envelopes; see Corollary 5.2 and Section 5.1 of the [paper](../paper/paper.pdf).
 
 ## The same marginals, a different allocation of stress
 
@@ -42,7 +42,7 @@ keeps all three marginals uniform. At equal effective transport costs, its optim
 | Minimum background share $a_{+,\vartheta}$ | $13/15$ = **86.67%** | $379/429$ = **88.34%** |
 | Background displacement moment $J_\vartheta a_{+,\vartheta}$ | $13/96$ = **0.13542** | $379/2880$ = **0.13160** |
 
-The background share increases while its absolute displacement moment decreases. This distinction is derived for the whole parameter interval:
+The background share goes up while its absolute displacement moment goes down, and this holds across the whole parameter interval:
 
 $$
 \frac{d a_{+,\vartheta}}{d\vartheta}
@@ -52,7 +52,7 @@ $$
 =-\frac{11}{720}.
 $$
 
-The mechanism is visible on the tail surface: changing dependence changes the capacity available to balance traded-coordinate flows. Proposition 5.3 supplies both a feasible flow and a matching dual value.
+The reason shows on the tail surface, where a change in dependence changes the capacity available for balancing traded-coordinate flows. Proposition 5.3 gives a feasible flow and a dual value that matches it.
 
 ## Theorems behind the numbers
 
@@ -63,8 +63,8 @@ The mechanism is visible on the tail surface: changing dependence changes the ca
 | Complete zero-premium classification in the exchangeable box model | $s^*=Jc_{\min}$ exactly when the background effective cost is no greater than either traded-coordinate cost. | Theorem 4.2 |
 | Boundary sensitivity through projected flow duality | The first-order coefficient of the normalized premium equals the minimum background share in an optimal flow. | Theorem 4.3 |
 
-These results turn a local sensitivity calculation into a criterion for a change in the portfolio ranking. The mathematical contribution is the connection between tail-layer geometry, exact marginal compensation, and the reversal threshold.
+Taken together, these results turn a local sensitivity calculation into a criterion for when the portfolio ranking changes. The mathematical contribution is the link between the geometry of the tail layer, exact marginal compensation and the reversal threshold.
 
 ## Reproduce the illustrations
 
-The [computational companion](../computation/README.md) regenerates all four manuscript figures, checks polynomial identities symbolically and rational constants exactly, and compares the generated arrays and profile table with the frozen reference. Its execution record distinguishes these computational checks from the analytical proofs in the paper.
+The [computational companion](../computation/README.md) regenerates all four manuscript figures, checks the polynomial identities symbolically and the rational constants exactly, and compares the generated arrays and profile table with the frozen reference. Its execution record keeps these computational checks apart from the analytical proofs in the paper.

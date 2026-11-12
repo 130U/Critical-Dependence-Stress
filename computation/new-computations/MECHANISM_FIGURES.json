@@ -21,11 +21,11 @@
   "numpy_version": "2.5.4",
   "matplotlib_version": "3.11.2",
   "sha256": {
-    "source\\en\\figures\\tail-layer-repair.pdf": "d1d8812198c14c882bfde193372f6b10dcdbcbc3695da98f204cee8f3d6df6f8",
+    "source\\en\\figures\\tail-layer-repair.pdf": "be074d01c43517d38fa7a18bb3beccfafaea27d0a080b389a5312bbb1f553572",
     "source\\en\\figures\\tail-layer-repair.png": "83d2c85deb3ee5cc670bb61d609b99323830218644d8754c73f5fb875ecca6e0",
-    "source\\en\\figures\\tail-layer-repair.svg": "711291d439b28aefd9424cbc11f56512e22707dd76cf1e961f6cdf548ea23442",
-    "source\\en\\figures\\corner-capacity.pdf": "e190f3df32722ad5c661500cc7a59b9a7369835a69093cf235d20fb19b7ebecd",
+    "source\\en\\figures\\tail-layer-repair.svg": "82888d1f414712de61387d07ae23f1a2a11ec6ef5cca35e7a7ee0f86e7283760",
+    "source\\en\\figures\\corner-capacity.pdf": "f70bd403331978d7bf830eca84435ae44ab8f41dc67bd40b6fbee1cfcd1d04f9",
     "source\\en\\figures\\corner-capacity.png": "208b2f88f3a40bd495f2c65a77262785059ddba8581d68422e05e044da8e6dbd",
-    "source\\en\\figures\\corner-capacity.svg": "372a01be37ad641b8890ead9a379e17dad426e5e8b9ec62d82896ee61363cfa9"
+    "source\\en\\figures\\corner-capacity.svg": "3c2b7a3b2c5c3c213f94f6f2e0fb868ac777ba063e75ca2690b6534754a737b5"
   }
 }

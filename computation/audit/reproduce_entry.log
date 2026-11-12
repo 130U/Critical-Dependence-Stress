@@ -10,23 +10,30 @@
     {
       "script": "code/generate_mechanism_figures.py",
       "return_code": 0,
-      "elapsed_seconds": 2.888,
+      "elapsed_seconds": 6.854,
       "log": "audit\\generate_mechanism_figures.log",
-      "source_sha256": "829743db139aeaba4e56e4ee515597a0b906740b9196add1c5dbd4195567fa0f"
+      "source_sha256": "2ec562b939098648296ca03d213d92e96041266025c2bae43eb53174092c3841"
     },
     {
       "script": "new-computations/check_parameter_family.py",
       "return_code": 0,
-      "elapsed_seconds": 1.277,
+      "elapsed_seconds": 1.218,
       "log": "audit\\check_parameter_family.log",
-      "source_sha256": "2fc889d47b18d795f85caefd09fc6b2f02a54ee0f905061e583cbda7ea1fc324"
+      "source_sha256": "9b9f62426456a96c7c7b3a952a5b83f2fc876b06c02c957c826a8931f6c09a39"
+    },
+    {
+      "script": "new-computations/check_flow_formulas.py",
+      "return_code": 0,
+      "elapsed_seconds": 0.938,
+      "log": "audit\\check_flow_formulas.log",
+      "source_sha256": "73538963e7ea2edff737a12b0aa37076ee0c4ceb42efcf33885cbc45a6bc81fd"
     },
     {
       "script": "new-computations/plot_profiles_and_flows.py",
       "return_code": 0,
-      "elapsed_seconds": 3.753,
+      "elapsed_seconds": 3.692,
       "log": "audit\\plot_profiles_and_flows.log",
-      "source_sha256": "f839ef430334b76bf6ef9d6e0d4f70d86f262ab19eeca7e1c05d375e87f91cdd"
+      "source_sha256": "533a33eb5f46110f31b8ea977ecc3d2bdb7c9b7114f462bd963fb819697b6e2b"
     }
   ],
   "missing_outputs": []

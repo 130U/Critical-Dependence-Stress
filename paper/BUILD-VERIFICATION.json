@@ -3,7 +3,7 @@
   "engine": "Tectonic 0.17.0",
   "python": "3.13.12",
   "engine_release_sha256": "f61ce51f0b0ade1015b7de7ef368541c5424e9756ecbd0d7af97d6d48030845f",
-  "pdf_sha256": "eb4eea07a5d50ccf89eb97fdcae0ff59c581fda2c7d35f37f9c1610a9549740b",
+  "pdf_sha256": "630fb73712b1de9d4c161cc6be46221e595b202854b243379deba589f346c044",
   "pages": 44,
   "bookmarks": 31,
   "internal_links": 269,
@@ -19,7 +19,7 @@
     "paper/source/figure-budget.tex": "acb41677469f4fb95a5d8b42a75e71ce664e9f03584ff0dc312679f0b9d3376f",
     "paper/source/figure-corner.tex": "1a83915252a23c65f77e38a81d08b3a84852fbe719285938acb3c78a096bc7a4",
     "paper/source/figure-tail-layer.tex": "b39f82f5b6f2ac3235a29137f73c87eda12bc5051b69219a7693232561a4963c",
-    "paper/source/main-classification-flow.tex": "5c680a597a37d76ef09bfbcfd0fc6e99848dce97d33af6b0afc758c143a724a5",
+    "paper/source/main-classification-flow.tex": "79be7f50ffeb003bfed2249b00950b5e23e7056dd814cd0c1a6d8f71a484955d",
     "paper/source/main-crossing-proof.tex": "9b13fb1ddb3b081ef5ffc7c7df9a64fc0f36b39468367cc14f28aaee86dfa3d4",
     "paper/source/main-crossing.tex": "b40839ba26652ff83fe52e5d2c1b660c2f574e4177e7eebb41580c7d1607d13a",
     "paper/source/main-introduction.tex": "6de76a53ce9cb48c99df3b44649d08b3c9f08701295b5ae9814c3d603d29f519",
@@ -42,21 +42,10 @@
   },
   "visual_review": {
     "detail_pages": [
-      1
+      16
     ],
     "contact_sheet_pages": [
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
-      10,
-      11,
-      12
+      16
     ]
   }
 }

@@ -10,30 +10,30 @@
     {
       "script": "code/generate_mechanism_figures.py",
       "return_code": 0,
-      "elapsed_seconds": 6.854,
-      "log": "audit\\generate_mechanism_figures.log",
-      "source_sha256": "2ec562b939098648296ca03d213d92e96041266025c2bae43eb53174092c3841"
+      "elapsed_seconds": 3.039,
+      "log": "audit/generate_mechanism_figures.log",
+      "source_sha256": "d01d25af3f7daf9bb3b83028786cfde538b3d4f7a595add4b287a43f13c4204f"
     },
     {
-      "script": "new-computations/check_parameter_family.py",
+      "script": "calculations/check_parameter_family.py",
       "return_code": 0,
-      "elapsed_seconds": 1.218,
-      "log": "audit\\check_parameter_family.log",
-      "source_sha256": "9b9f62426456a96c7c7b3a952a5b83f2fc876b06c02c957c826a8931f6c09a39"
+      "elapsed_seconds": 1.279,
+      "log": "audit/check_parameter_family.log",
+      "source_sha256": "69bd75ffe5265144caf072e8034d5c4ace92d701d2b6052758066e726f8a814b"
     },
     {
-      "script": "new-computations/check_flow_formulas.py",
+      "script": "calculations/check_flow_formulas.py",
       "return_code": 0,
-      "elapsed_seconds": 0.938,
-      "log": "audit\\check_flow_formulas.log",
+      "elapsed_seconds": 0.981,
+      "log": "audit/check_flow_formulas.log",
       "source_sha256": "73538963e7ea2edff737a12b0aa37076ee0c4ceb42efcf33885cbc45a6bc81fd"
     },
     {
-      "script": "new-computations/plot_profiles_and_flows.py",
+      "script": "calculations/plot_profiles_and_flows.py",
       "return_code": 0,
-      "elapsed_seconds": 3.692,
-      "log": "audit\\plot_profiles_and_flows.log",
-      "source_sha256": "533a33eb5f46110f31b8ea977ecc3d2bdb7c9b7114f462bd963fb819697b6e2b"
+      "elapsed_seconds": 3.676,
+      "log": "audit/plot_profiles_and_flows.log",
+      "source_sha256": "f925967fa086aeab9f61269c75719cfd46adb0b368f515a2c312525980a559f6"
     }
   ],
   "missing_outputs": []

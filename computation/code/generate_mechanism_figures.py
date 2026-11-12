@@ -16,7 +16,7 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "source/en/figures"
-DATA = ROOT / "new-computations"
+DATA = ROOT / "calculations"
 OUT.mkdir(parents=True, exist_ok=True)
 DATA.mkdir(parents=True, exist_ok=True)
 plt.rcParams.update({"font.family":"DejaVu Serif", "font.size":10,
@@ -113,7 +113,7 @@ files = [OUT / f"{name}.{ext}"
          for name in ("tail-layer-repair", "corner-capacity")
          for ext in ("pdf", "png", "svg")]
 report["sha256"] = {
-    str(path.relative_to(ROOT)): hashlib.sha256(path.read_bytes()).hexdigest()
+    path.relative_to(ROOT).as_posix(): hashlib.sha256(path.read_bytes()).hexdigest()
     for path in files
 }
 (DATA / "MECHANISM_FIGURES.json").write_text(

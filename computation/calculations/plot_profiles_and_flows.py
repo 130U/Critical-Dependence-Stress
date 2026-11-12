@@ -1,6 +1,6 @@
 """Figures evaluated from proved formulas, not from an optimizer of F.
 
-Run: python -X utf8 new-computations/plot_profiles_and_flows.py
+Run: python -X utf8 calculations/plot_profiles_and_flows.py
 Install the packages listed in code/requirements.txt first.
 """
 from pathlib import Path
@@ -15,7 +15,7 @@ import matplotlib.pyplot as plt
 from matplotlib.ticker import MultipleLocator
 from flow_formulas import qdensity, demand, ratio
 
-HERE = ROOT / "new-computations"
+HERE = ROOT / "calculations"
 OUT = ROOT / "source/en/figures"
 OUT.mkdir(parents=True, exist_ok=True)
 HERE.mkdir(parents=True, exist_ok=True)
@@ -198,7 +198,7 @@ report = {
 outputs = [HERE / "profile-envelopes.csv", HERE / "flow-shares-U.npz", HERE / "flow-shares-D.npz"]
 outputs += [OUT / f"{name}.{ext}" for name in ("budget-comparison", "optimal-flow-shares")
             for ext in ("pdf", "png", "svg")]
-report["sha256"] = {str(path.relative_to(ROOT)): hashlib.sha256(path.read_bytes()).hexdigest()
+report["sha256"] = {path.relative_to(ROOT).as_posix(): hashlib.sha256(path.read_bytes()).hexdigest()
                     for path in outputs}
 (HERE / "COMPUTATION_REPORT.json").write_text(json.dumps(report, indent=2)+"\n", encoding="utf-8")
 print(json.dumps({k:v for k,v in report.items() if k != "sha256"}, indent=2))

@@ -16,7 +16,7 @@ python code/run_all.py
 For the exact scalar checks using only the Python standard library:
 
 ```bash
-python new-computations/check_simple_example.py
+python calculations/check_simple_example.py
 ```
 
 The tested environment uses CPython 3.13.12, NumPy 2.5.4, Matplotlib 3.11.2 and SymPy 1.14.0. The full environment snapshot is in [requirements-lock.txt](requirements-lock.txt).
@@ -29,11 +29,11 @@ The tested environment uses CPython 3.13.12, NumPy 2.5.4, Matplotlib 3.11.2 and 
 | [Optimal flow shares](source/en/figures/optimal-flow-shares.png) | Explicit optimal displacement allocation for independent and dependent reference laws. |
 | [Tail-layer mechanism](source/en/figures/tail-layer-repair.png) | Schematic local transport and marginal compensation. |
 | [Corner geometry](source/en/figures/corner-capacity.png) | The quadratic-demand versus quartic-capacity obstruction. |
-| [Profile table](new-computations/profile-envelopes.csv) | 1,204 evaluations of the analytical envelope formulas. |
-| [Parameter-family checks](new-computations/PARAMETER_FAMILY_CHECK.json) | Exact symbolic marginal, covariance, section-moment and sensitivity identities. |
-| [Scalar checks](new-computations/SIMPLE_EXAMPLE_CHECKS.json) | Exact rational verification of the displayed constants. |
+| [Profile table](calculations/profile-envelopes.csv) | 1,204 evaluations of the analytical envelope formulas. |
+| [Parameter-family checks](calculations/PARAMETER_FAMILY_CHECK.json) | Exact symbolic marginal, covariance, section-moment and sensitivity identities. |
+| [Scalar checks](calculations/SIMPLE_EXAMPLE_CHECKS.json) | Exact rational verification of the displayed constants. |
 
-Figures are also available as PDF and SVG in `source/en/figures/`. The flow archives `new-computations/flow-shares-U.npz` and `flow-shares-D.npz` contain the 500-by-500 evaluation grids.
+Figures are also available as PDF and SVG in `source/en/figures/`. The flow archives `calculations/flow-shares-U.npz` and `flow-shares-D.npz` contain the 500-by-500 evaluation grids.
 
 ## Verification
 

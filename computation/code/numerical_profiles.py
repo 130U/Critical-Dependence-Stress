@@ -1,4 +1,4 @@
-"""Numerical experiments for the uniform benchmark; see numerical-method.md.
+"""Numerical experiments for the uniform benchmark; see NUMERICAL-STUDY.md.
 
 Finite-epsilon problems use all adjacent edges of the cubic grid, hence the
 exact Manhattan Wasserstein distance for the discrete marginal laws. The
@@ -13,7 +13,7 @@ from scipy import sparse
 from scipy.optimize import linprog, minimize_scalar
 
 HERE = Path(__file__).resolve().parent
-OUT = HERE.parent / 'new-computations'
+OUT = HERE.parent / 'calculations'
 
 def lp(c, aub, bub, aeq=None, beq=None, bounds=(0, None)):
     r = linprog(c, A_ub=aub, b_ub=bub, A_eq=aeq, b_eq=beq,

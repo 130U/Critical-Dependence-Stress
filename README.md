@@ -2,7 +2,7 @@
 
 **How much dependence stress does it take to overturn a diversification gain?**
 
-[Read the paper](paper/paper.pdf) · [Research story](docs/research-story.md) · [Results](docs/results.md) · [Reproduce](computation/README.md)
+[Read the paper](paper/paper.pdf) · [Research story](docs/research-story.md) · [Results](docs/results.md) · [Computation](computation/README.md)
 
 ![Critical Dependence Stress: when diversification changes sign](assets/banner.webp)
 
@@ -44,26 +44,11 @@ I came to this problem from model-free pricing and optimal transport, and the qu
 - [Literature map](docs/literature-map.md): the primary sources and the question that connects them.
 - [Results](docs/results.md): the theorems, the exact constants and what they mean financially.
 
-## Reproduce the figures and calculations
+## Computed evidence
 
-```bash
-git clone https://github.com/130U/Critical-Dependence-Stress.git
-cd Critical-Dependence-Stress
-git checkout V_20261101
-cd computation
-python -m pip install -r requirements.txt
-python code/run_all.py
-```
-
-The companion needs only analytical formulas and synthetic grids. It regenerates 4 figures, evaluates 1,204 profile points and checks the rational and symbolic identities exactly. The recorded run passed **60/60 scientific comparisons** and reproduced **4/4 reference PNGs** exactly. [Run record](computation/audit/RUN_ALL.json) · [Comparison record](computation/audit/OUTPUT_READBACK.json)
+The [computational companion](computation/README.md) recomputes the paper's four figures and the constants above from analytical formulas and synthetic grids, with 1,204 profile points and exact rational and symbolic checks of the identities. The recorded run passed **60/60 scientific comparisons** and reproduced **4/4 reference PNGs** exactly. [Run record](computation/audit/RUN_ALL.json) · [Comparison record](computation/audit/OUTPUT_READBACK.json)
 
 The [numerical profile study](computation/NUMERICAL-STUDY.md) adds finite-epsilon optimizations, with separate checks of solver, mesh, threshold and truncation effects.
-
-For a quick check that uses only Python's standard library:
-
-```bash
-python new-computations/check_simple_example.py
-```
 
 ## Paper and citation
 

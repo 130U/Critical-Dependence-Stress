@@ -4,7 +4,7 @@ The numerical study separates a finite-law transport problem from a discretized 
 
 The proved coefficient remains in `[13/64, 29/96]`. The limiting-kernel calculation gives a candidate near `0.23`. The finite-epsilon runs expose the mesh resolution needed to retain the quadratic nominal gain.
 
-The [minimum-cost LP records](new-computations/restricted-zero-study.json) give the following centered-family zeros at `U=3`. The final column evaluates the two threshold minima independently after solving the LP.
+The [minimum-cost LP records](calculations/restricted-zero-study.json) give the following centered-family zeros at `U=3`. The final column evaluates the two threshold minima independently after solving the LP.
 
 | Surface grid `n` | Normal grid `nu` | Candidate zero | Absolute paired-risk readback |
 |---|---|---|---|
@@ -72,7 +72,7 @@ python code/run_numerical_study.py zero
 python code/run_numerical_study.py readback
 python code/scan_thresholds.py
 python code/numerical_profiles.py zero --n 16 --nu 96 --U 3
-python code/numerical_profiles.py finite --n 24 --epsilon .1 --s 0 .1 .25 --output new-computations/finite-n24-e01.json
+python code/numerical_profiles.py finite --n 24 --epsilon .1 --s 0 .1 .25 --output calculations/finite-n24-e01.json
 python code/verify_numerical_study.py
 ```
 

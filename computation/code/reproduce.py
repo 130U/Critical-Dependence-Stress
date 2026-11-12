@@ -19,9 +19,9 @@ AUDIT = ROOT / "audit"
 AUDIT.mkdir(parents=True, exist_ok=True)
 TASKS = [
     "code/generate_mechanism_figures.py",
-    "new-computations/check_parameter_family.py",
-    "new-computations/check_flow_formulas.py",
-    "new-computations/plot_profiles_and_flows.py",
+    "calculations/check_parameter_family.py",
+    "calculations/check_flow_formulas.py",
+    "calculations/plot_profiles_and_flows.py",
 ]
 started = datetime.now(timezone.utc).isoformat()
 versions = {name: importlib.import_module(name).__version__
@@ -38,7 +38,7 @@ for relative in TASKS:
     runs.append({
         "script": relative, "return_code": result.returncode,
         "elapsed_seconds": round(time.monotonic()-start, 3),
-        "log": str(log.relative_to(ROOT)),
+        "log": log.relative_to(ROOT).as_posix(),
         "source_sha256": hashlib.sha256((ROOT / relative).read_bytes()).hexdigest(),
     })
     if result.returncode:
@@ -53,12 +53,12 @@ figures = [
     for ext in ("pdf", "png", "svg")
 ]
 data = [
-    "new-computations/MECHANISM_FIGURES.json",
-    "new-computations/PARAMETER_FAMILY_CHECK.json",
-    "new-computations/COMPUTATION_REPORT.json",
-    "new-computations/profile-envelopes.csv",
-    "new-computations/flow-shares-U.npz",
-    "new-computations/flow-shares-D.npz",
+    "calculations/MECHANISM_FIGURES.json",
+    "calculations/PARAMETER_FAMILY_CHECK.json",
+    "calculations/COMPUTATION_REPORT.json",
+    "calculations/profile-envelopes.csv",
+    "calculations/flow-shares-U.npz",
+    "calculations/flow-shares-D.npz",
 ]
 missing = [name for name in figures+data if not (ROOT / name).is_file()]
 complete = (len(runs) == len(TASKS)
@@ -91,7 +91,7 @@ report = {
         for name in figures+data if (ROOT / name).is_file()
     },
 }
-(AUDIT / "CODE_REEXECUTION.json").write_text(
+(AUDIT / "CODE_EXECUTION.json").write_text(
     json.dumps(report, indent=2)+"\n", encoding="utf-8")
 print(json.dumps({
     "all_requested_steps_passed": complete,

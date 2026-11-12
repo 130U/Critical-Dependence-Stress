@@ -1,9 +1,9 @@
 {
   "scientific_files_sha256": {
-    "new-computations/profile-envelopes.csv": "a18e5615c24c89dabf43c362490c3ddd981fe79aaf7f2804e3df479590503233"
+    "calculations/profile-envelopes.csv": "a18e5615c24c89dabf43c362490c3ddd981fe79aaf7f2804e3df479590503233"
   },
   "array_contents": {
-    "new-computations/flow-shares-U.npz": {
+    "calculations/flow-shares-U.npz": {
       "coordinate_axis": {
         "shape": [
           500
@@ -44,7 +44,7 @@
         "sha256": "df2a55d19694b0abc5080edf9d5ad7e841c3e28a3d496f85838216be8821fc25"
       }
     },
-    "new-computations/flow-shares-D.npz": {
+    "calculations/flow-shares-D.npz": {
       "coordinate_axis": {
         "shape": [
           500
@@ -87,7 +87,7 @@
     }
   },
   "exact_json_fields": {
-    "new-computations/PARAMETER_FAMILY_CHECK.json": {
+    "calculations/PARAMETER_FAMILY_CHECK.json": {
       "parameter_interval": "-1/2 < vartheta < 1/2",
       "marginal_densities": [
         "1/2",
@@ -124,7 +124,7 @@
       "two_level_shifted_cross_moment": "tau**4/96",
       "all_checks_passed": true
     },
-    "new-computations/SIMPLE_EXAMPLE_CHECKS.json": {
+    "calculations/SIMPLE_EXAMPLE_CHECKS.json": {
       "J": "5/32",
       "Q_bal": "1/192",
       "s_lin_gamma0_1": "1/96",

@@ -9,7 +9,7 @@ import time
 ROOT = Path(__file__).resolve().parents[1]
 AUDIT = ROOT / "audit"
 AUDIT.mkdir(exist_ok=True)
-steps = ["code/reproduce.py", "new-computations/check_simple_example.py",
+steps = ["code/reproduce.py", "calculations/check_simple_example.py",
          "code/verify_outputs.py"]
 record = {"started_utc": datetime.now(timezone.utc).isoformat(), "steps": []}
 for name in steps:

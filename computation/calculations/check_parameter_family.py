@@ -119,6 +119,6 @@ report = {
     "two_level_shifted_cross_moment": str(shifted_cross_moment),
     "all_checks_passed": True,
 }
-(ROOT / "new-computations/PARAMETER_FAMILY_CHECK.json").write_text(
+(ROOT / "calculations/PARAMETER_FAMILY_CHECK.json").write_text(
     json.dumps(report, indent=2)+"\n", encoding="utf-8")
 print(json.dumps(report, indent=2))

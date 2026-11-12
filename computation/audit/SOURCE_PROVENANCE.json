@@ -12,19 +12,19 @@
     },
     {
       "path": "code/generate_mechanism_figures.py",
-      "sha256": "2ec562b939098648296ca03d213d92e96041266025c2bae43eb53174092c3841"
+      "sha256": "d01d25af3f7daf9bb3b83028786cfde538b3d4f7a595add4b287a43f13c4204f"
     },
     {
       "path": "code/numerical_profiles.py",
-      "sha256": "7245764cd0d1878c08ed098300c19cf417480cd417dd56f63376496484e98275"
+      "sha256": "9aeff0255ca71a015b86af6ef8679c3f75962a0e141a2ee6dca3862ec9e0d6c1"
     },
     {
       "path": "code/reproduce.py",
-      "sha256": "79ca91f2fe08afaaaedcaef0dfbcd65f62ab84e12876f5b7ccda1f5018431374"
+      "sha256": "da35712e2f418495a4e8e122fb3b28e92fc6f3570fc8372b13abec46ec760140"
     },
     {
       "path": "code/run_all.py",
-      "sha256": "e0550f203ab571ae180defd863f48c32331430d1b068c94afab7797b0f551d5a"
+      "sha256": "e2067817e64a6e6f831a0c0f49abd6159bccec25c0219ec6fd792bef2c815ee4"
     },
     {
       "path": "code/run_numerical_study.py",
@@ -36,31 +36,31 @@
     },
     {
       "path": "code/verify_numerical_study.py",
-      "sha256": "c3644365dde6edd18ef8a16c3995fc95131a19f346af9cece7d6c24061b7dd00"
+      "sha256": "b6be2bf6f4fcabd4d43ef91b25925846f644344365af708899fd184680c54155"
     },
     {
       "path": "code/verify_outputs.py",
       "sha256": "514d57a9e25a48a11de7c8505374ca57db1de6f7a2d4da2d4a18ab5b7baa5503"
     },
     {
-      "path": "new-computations/check_flow_formulas.py",
+      "path": "calculations/check_flow_formulas.py",
       "sha256": "73538963e7ea2edff737a12b0aa37076ee0c4ceb42efcf33885cbc45a6bc81fd"
     },
     {
-      "path": "new-computations/check_parameter_family.py",
-      "sha256": "9b9f62426456a96c7c7b3a952a5b83f2fc876b06c02c957c826a8931f6c09a39"
+      "path": "calculations/check_parameter_family.py",
+      "sha256": "69bd75ffe5265144caf072e8034d5c4ace92d701d2b6052758066e726f8a814b"
     },
     {
-      "path": "new-computations/check_simple_example.py",
+      "path": "calculations/check_simple_example.py",
       "sha256": "a5bd2cac92d13e690a9619c1ccd64c27d35aaea1812c6225ee79b8e470c45d50"
     },
     {
-      "path": "new-computations/flow_formulas.py",
+      "path": "calculations/flow_formulas.py",
       "sha256": "42e1d539a26873c570487bbc453cd632b77f639dbf4d7528580a6732bd261a30"
     },
     {
-      "path": "new-computations/plot_profiles_and_flows.py",
-      "sha256": "533a33eb5f46110f31b8ea977ecc3d2bdb7c9b7114f462bd963fb819697b6e2b"
+      "path": "calculations/plot_profiles_and_flows.py",
+      "sha256": "f925967fa086aeab9f61269c75719cfd46adb0b368f515a2c312525980a559f6"
     }
   ],
   "verification": "audit/RUN_ALL.json and audit/OUTPUT_READBACK.json record execution and scientific comparisons.",

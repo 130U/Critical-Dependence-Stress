@@ -1,0 +1,76 @@
+{
+  "started_utc": "2026-11-12T12:33:22.527754+00:00",
+  "finished_utc": "2026-11-12T12:33:34.136458+00:00",
+  "python": "3.13.12",
+  "python_implementation": "CPython",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "dependencies": {
+    "numpy": "2.5.4",
+    "matplotlib": "3.11.2",
+    "sympy": "1.14.0"
+  },
+  "dependency_loading": {
+    "environment_pythonpath_supplied": false,
+    "script_injected_paths": false,
+    "note": "A normal installation uses code/requirements.txt. Workstation-specific dependency paths are omitted from this public record."
+  },
+  "runs": [
+    {
+      "script": "code/generate_mechanism_figures.py",
+      "return_code": 0,
+      "elapsed_seconds": 3.039,
+      "log": "audit/generate_mechanism_figures.log",
+      "source_sha256": "d01d25af3f7daf9bb3b83028786cfde538b3d4f7a595add4b287a43f13c4204f"
+    },
+    {
+      "script": "calculations/check_parameter_family.py",
+      "return_code": 0,
+      "elapsed_seconds": 1.279,
+      "log": "audit/check_parameter_family.log",
+      "source_sha256": "69bd75ffe5265144caf072e8034d5c4ace92d701d2b6052758066e726f8a814b"
+    },
+    {
+      "script": "calculations/check_flow_formulas.py",
+      "return_code": 0,
+      "elapsed_seconds": 0.981,
+      "log": "audit/check_flow_formulas.log",
+      "source_sha256": "73538963e7ea2edff737a12b0aa37076ee0c4ceb42efcf33885cbc45a6bc81fd"
+    },
+    {
+      "script": "calculations/plot_profiles_and_flows.py",
+      "return_code": 0,
+      "elapsed_seconds": 3.676,
+      "log": "audit/plot_profiles_and_flows.log",
+      "source_sha256": "f925967fa086aeab9f61269c75719cfd46adb0b368f515a2c312525980a559f6"
+    }
+  ],
+  "all_requested_steps_passed": true,
+  "missing_outputs": [],
+  "scope": {
+    "figures_1_2": "Schematic mechanisms with stated geometry and analytic order bounds.",
+    "figure_3": "Proved piecewise-linear upper/lower envelopes and exact initial segment; no quadrature or parameter optimization.",
+    "figure_4": "Explicit optimal boundary-flow shares for the two representative reference laws.",
+    "polynomial_checks": "Exact SymPy integration and algebra for the full dependence parameter interval, fixed-amplitude lower bound, and pure-coordinate upper bound.",
+    "not_computed": "No full F(s) solver, no finite-epsilon worst-case optimization, and no refined-bound certificate."
+  },
+  "sha256": {
+    "source/en/figures/tail-layer-repair.pdf": "62b6311eb8d2cb881ddd108179a129717810725fa05c8b67c20e23b831c486a1",
+    "source/en/figures/tail-layer-repair.png": "83d2c85deb3ee5cc670bb61d609b99323830218644d8754c73f5fb875ecca6e0",
+    "source/en/figures/tail-layer-repair.svg": "e3c974ce98c8f20838eed65bf50228a37407dd2335d4d9f7ea991ed08e75737c",
+    "source/en/figures/corner-capacity.pdf": "dedd717a34d7254deff5e76a328ff444b635883f1534fc24736d8cf5fb513274",
+    "source/en/figures/corner-capacity.png": "208b2f88f3a40bd495f2c65a77262785059ddba8581d68422e05e044da8e6dbd",
+    "source/en/figures/corner-capacity.svg": "af4fc6f74ab4305d0cfd4d38bb0fbbace814164c19ef3e58fd64950f079924ac",
+    "source/en/figures/budget-comparison.pdf": "a6cb943f96068ae5636c9b0c12021b55d86087a63affd1cafb6d849d6ace8462",
+    "source/en/figures/budget-comparison.png": "1f05258c963223f1421aff597bed8c699eff69caec1c7ec08d6d24f19a517820",
+    "source/en/figures/budget-comparison.svg": "856dd77b5363eca8a96e689b4aaf98c5e90d97d019297f0c9070aca370913433",
+    "source/en/figures/optimal-flow-shares.pdf": "61855f109479b80e868acd2240c202bf48b95213ebe738997e148526871b5d37",
+    "source/en/figures/optimal-flow-shares.png": "205e88a23bfcb0ecf5bd3e00df74aae72196356ddebbb6e601bb55125f192252",
+    "source/en/figures/optimal-flow-shares.svg": "bd72136e430c5b9d38016a37eef3123f5a64eb2fe76657dd940e6f4b9f97f7d9",
+    "calculations/MECHANISM_FIGURES.json": "116704ec3d8affdcc9e1a2a984a2a0edc07d7fbd7b97afc064fcd163437753bb",
+    "calculations/PARAMETER_FAMILY_CHECK.json": "9454d6aa4227e0efed5ee4098e4c13553677acc9866ea1ecca1f38f3ba2f97c5",
+    "calculations/COMPUTATION_REPORT.json": "25a1671249f3e7ae3aa69dff4a53625490bb71b342d3cb43600f39f3331efd03",
+    "calculations/profile-envelopes.csv": "a18e5615c24c89dabf43c362490c3ddd981fe79aaf7f2804e3df479590503233",
+    "calculations/flow-shares-U.npz": "31851dc0340aa0ae424d5ad51a94d2f87a5b2201b3552aae6cc98512d0036e61",
+    "calculations/flow-shares-D.npz": "86fea5314e9084b8240fcfb723abcd7c12b3138be94af060206d0afc04bbf5b9"
+  }
+}

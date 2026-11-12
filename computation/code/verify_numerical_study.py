@@ -6,7 +6,7 @@ import hashlib,json,platform
 import scipy,numpy
 
 ROOT=Path(__file__).resolve().parents[1]
-DATA=ROOT/'new-computations'
+DATA=ROOT/'calculations'
 
 def read(name):return json.loads((DATA/name).read_text(encoding='utf-8'))
 def lower(s):return 2*s-5/16 if s<=1/96 else s-29/96
@@ -54,6 +54,6 @@ record={
     'exact_continuous_nominal_values':{str(float(e)):nominal(e) for e in (Fraction(1,5),Fraction(1,10),Fraction(1,20),Fraction(1,40))},
     'continuous_global_certificate':False,
     'finite_epsilon_convergence_established':False,
-    'sha256':{str(p.relative_to(ROOT)).replace('\\','/'):hashlib.sha256(p.read_bytes()).hexdigest() for p in files}}
+    'sha256':{p.relative_to(ROOT).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in files}}
 (ROOT/'audit/NUMERICAL-VERIFICATION.json').write_text(json.dumps(record,indent=2)+'\n',encoding='utf-8')
 print(json.dumps({k:v for k,v in record.items() if k!='sha256'},indent=2))

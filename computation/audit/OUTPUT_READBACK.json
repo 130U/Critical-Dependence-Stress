@@ -1,245 +1,245 @@
 {
-  "checked_utc": "2026-11-12T10:22:31.410739+00:00",
+  "checked_utc": "2026-11-12T12:33:34.780586+00:00",
   "all_scientific_checks_passed": true,
   "checks": [
     {
-      "check": "new-computations/profile-envelopes.csv exact bytes",
+      "check": "calculations/profile-envelopes.csv exact bytes",
       "passed": true
     },
     {
-      "check": "new-computations/flow-shares-U.npz array names",
+      "check": "calculations/flow-shares-U.npz array names",
       "passed": true
     },
     {
-      "check": "new-computations/flow-shares-U.npz:coordinate_axis",
+      "check": "calculations/flow-shares-U.npz:coordinate_axis",
       "passed": true
     },
     {
-      "check": "new-computations/flow-shares-U.npz:domain",
+      "check": "calculations/flow-shares-U.npz:domain",
       "passed": true
     },
     {
-      "check": "new-computations/flow-shares-U.npz:a",
+      "check": "calculations/flow-shares-U.npz:a",
       "passed": true
     },
     {
-      "check": "new-computations/flow-shares-U.npz:b",
+      "check": "calculations/flow-shares-U.npz:b",
       "passed": true
     },
     {
-      "check": "new-computations/flow-shares-U.npz:background",
+      "check": "calculations/flow-shares-U.npz:background",
       "passed": true
     },
     {
-      "check": "new-computations/flow-shares-D.npz array names",
+      "check": "calculations/flow-shares-D.npz array names",
       "passed": true
     },
     {
-      "check": "new-computations/flow-shares-D.npz:coordinate_axis",
+      "check": "calculations/flow-shares-D.npz:coordinate_axis",
       "passed": true
     },
     {
-      "check": "new-computations/flow-shares-D.npz:domain",
+      "check": "calculations/flow-shares-D.npz:domain",
       "passed": true
     },
     {
-      "check": "new-computations/flow-shares-D.npz:a",
+      "check": "calculations/flow-shares-D.npz:a",
       "passed": true
     },
     {
-      "check": "new-computations/flow-shares-D.npz:b",
+      "check": "calculations/flow-shares-D.npz:b",
       "passed": true
     },
     {
-      "check": "new-computations/flow-shares-D.npz:background",
+      "check": "calculations/flow-shares-D.npz:background",
       "passed": true
     },
     {
-      "check": "new-computations/PARAMETER_FAMILY_CHECK.json:parameter_interval",
+      "check": "calculations/PARAMETER_FAMILY_CHECK.json:parameter_interval",
       "passed": true
     },
     {
-      "check": "new-computations/PARAMETER_FAMILY_CHECK.json:marginal_densities",
+      "check": "calculations/PARAMETER_FAMILY_CHECK.json:marginal_densities",
       "passed": true
     },
     {
-      "check": "new-computations/PARAMETER_FAMILY_CHECK.json:covariance",
+      "check": "calculations/PARAMETER_FAMILY_CHECK.json:covariance",
       "passed": true
     },
     {
-      "check": "new-computations/PARAMETER_FAMILY_CHECK.json:same_side_section_demand",
+      "check": "calculations/PARAMETER_FAMILY_CHECK.json:same_side_section_demand",
       "passed": true
     },
     {
-      "check": "new-computations/PARAMETER_FAMILY_CHECK.json:capacity_minus_demand_at_x_1_minus_r",
+      "check": "calculations/PARAMETER_FAMILY_CHECK.json:capacity_minus_demand_at_x_1_minus_r",
       "passed": true
     },
     {
-      "check": "new-computations/PARAMETER_FAMILY_CHECK.json:capacity_gap_over_r_endpoint_lower_bounds",
+      "check": "calculations/PARAMETER_FAMILY_CHECK.json:capacity_gap_over_r_endpoint_lower_bounds",
       "passed": true
     },
     {
-      "check": "new-computations/PARAMETER_FAMILY_CHECK.json:manuscript_uniform_capacity_gap_over_r_lower",
+      "check": "calculations/PARAMETER_FAMILY_CHECK.json:manuscript_uniform_capacity_gap_over_r_lower",
       "passed": true
     },
     {
-      "check": "new-computations/PARAMETER_FAMILY_CHECK.json:J",
+      "check": "calculations/PARAMETER_FAMILY_CHECK.json:J",
       "passed": true
     },
     {
-      "check": "new-computations/PARAMETER_FAMILY_CHECK.json:M_minus_equals_M_plus",
+      "check": "calculations/PARAMETER_FAMILY_CHECK.json:M_minus_equals_M_plus",
       "passed": true
     },
     {
-      "check": "new-computations/PARAMETER_FAMILY_CHECK.json:J_a_plus",
+      "check": "calculations/PARAMETER_FAMILY_CHECK.json:J_a_plus",
       "passed": true
     },
     {
-      "check": "new-computations/PARAMETER_FAMILY_CHECK.json:a_plus",
+      "check": "calculations/PARAMETER_FAMILY_CHECK.json:a_plus",
       "passed": true
     },
     {
-      "check": "new-computations/PARAMETER_FAMILY_CHECK.json:a_plus_derivative",
+      "check": "calculations/PARAMETER_FAMILY_CHECK.json:a_plus_derivative",
       "passed": true
     },
     {
-      "check": "new-computations/PARAMETER_FAMILY_CHECK.json:a_plus_minus_uniform",
+      "check": "calculations/PARAMETER_FAMILY_CHECK.json:a_plus_minus_uniform",
       "passed": true
     },
     {
-      "check": "new-computations/PARAMETER_FAMILY_CHECK.json:J_a_plus_minus_uniform",
+      "check": "calculations/PARAMETER_FAMILY_CHECK.json:J_a_plus_minus_uniform",
       "passed": true
     },
     {
-      "check": "new-computations/PARAMETER_FAMILY_CHECK.json:fixed_midpoint_amplitude",
+      "check": "calculations/PARAMETER_FAMILY_CHECK.json:fixed_midpoint_amplitude",
       "passed": true
     },
     {
-      "check": "new-computations/PARAMETER_FAMILY_CHECK.json:fixed_two_level_lower_bound",
+      "check": "calculations/PARAMETER_FAMILY_CHECK.json:fixed_two_level_lower_bound",
       "passed": true
     },
     {
-      "check": "new-computations/PARAMETER_FAMILY_CHECK.json:fixed_two_level_relative_premium",
+      "check": "calculations/PARAMETER_FAMILY_CHECK.json:fixed_two_level_relative_premium",
       "passed": true
     },
     {
-      "check": "new-computations/PARAMETER_FAMILY_CHECK.json:small_threshold_remainder_lower",
+      "check": "calculations/PARAMETER_FAMILY_CHECK.json:small_threshold_remainder_lower",
       "passed": true
     },
     {
-      "check": "new-computations/PARAMETER_FAMILY_CHECK.json:large_threshold_cost_constant",
+      "check": "calculations/PARAMETER_FAMILY_CHECK.json:large_threshold_cost_constant",
       "passed": true
     },
     {
-      "check": "new-computations/PARAMETER_FAMILY_CHECK.json:upper_envelope_slope",
+      "check": "calculations/PARAMETER_FAMILY_CHECK.json:upper_envelope_slope",
       "passed": true
     },
     {
-      "check": "new-computations/PARAMETER_FAMILY_CHECK.json:balanced_moment",
+      "check": "calculations/PARAMETER_FAMILY_CHECK.json:balanced_moment",
       "passed": true
     },
     {
-      "check": "new-computations/PARAMETER_FAMILY_CHECK.json:s_lin_gamma0_1",
+      "check": "calculations/PARAMETER_FAMILY_CHECK.json:s_lin_gamma0_1",
       "passed": true
     },
     {
-      "check": "new-computations/PARAMETER_FAMILY_CHECK.json:projected_imbalance",
+      "check": "calculations/PARAMETER_FAMILY_CHECK.json:projected_imbalance",
       "passed": true
     },
     {
-      "check": "new-computations/PARAMETER_FAMILY_CHECK.json:pure_coordinate_upper",
+      "check": "calculations/PARAMETER_FAMILY_CHECK.json:pure_coordinate_upper",
       "passed": true
     },
     {
-      "check": "new-computations/PARAMETER_FAMILY_CHECK.json:two_level_same_side_mass",
+      "check": "calculations/PARAMETER_FAMILY_CHECK.json:two_level_same_side_mass",
       "passed": true
     },
     {
-      "check": "new-computations/PARAMETER_FAMILY_CHECK.json:two_level_same_side_H2",
+      "check": "calculations/PARAMETER_FAMILY_CHECK.json:two_level_same_side_H2",
       "passed": true
     },
     {
-      "check": "new-computations/PARAMETER_FAMILY_CHECK.json:two_level_shifted_cross_moment",
+      "check": "calculations/PARAMETER_FAMILY_CHECK.json:two_level_shifted_cross_moment",
       "passed": true
     },
     {
-      "check": "new-computations/PARAMETER_FAMILY_CHECK.json:all_checks_passed",
+      "check": "calculations/PARAMETER_FAMILY_CHECK.json:all_checks_passed",
       "passed": true
     },
     {
-      "check": "new-computations/SIMPLE_EXAMPLE_CHECKS.json:J",
+      "check": "calculations/SIMPLE_EXAMPLE_CHECKS.json:J",
       "passed": true
     },
     {
-      "check": "new-computations/SIMPLE_EXAMPLE_CHECKS.json:Q_bal",
+      "check": "calculations/SIMPLE_EXAMPLE_CHECKS.json:Q_bal",
       "passed": true
     },
     {
-      "check": "new-computations/SIMPLE_EXAMPLE_CHECKS.json:s_lin_gamma0_1",
+      "check": "calculations/SIMPLE_EXAMPLE_CHECKS.json:s_lin_gamma0_1",
       "passed": true
     },
     {
-      "check": "new-computations/SIMPLE_EXAMPLE_CHECKS.json:projected_imbalance_L1",
+      "check": "calculations/SIMPLE_EXAMPLE_CHECKS.json:projected_imbalance_L1",
       "passed": true
     },
     {
-      "check": "new-computations/SIMPLE_EXAMPLE_CHECKS.json:chi",
+      "check": "calculations/SIMPLE_EXAMPLE_CHECKS.json:chi",
       "passed": true
     },
     {
-      "check": "new-computations/SIMPLE_EXAMPLE_CHECKS.json:critical_lower_fixed_amplitude",
+      "check": "calculations/SIMPLE_EXAMPLE_CHECKS.json:critical_lower_fixed_amplitude",
       "passed": true
     },
     {
-      "check": "new-computations/SIMPLE_EXAMPLE_CHECKS.json:critical_upper_pure_first_coordinate",
+      "check": "calculations/SIMPLE_EXAMPLE_CHECKS.json:critical_upper_pure_first_coordinate",
       "passed": true
     },
     {
-      "check": "new-computations/SIMPLE_EXAMPLE_CHECKS.json:guaranteed_relative_premium",
+      "check": "calculations/SIMPLE_EXAMPLE_CHECKS.json:guaranteed_relative_premium",
       "passed": true
     },
     {
-      "check": "new-computations/SIMPLE_EXAMPLE_CHECKS.json:small_threshold_extra",
+      "check": "calculations/SIMPLE_EXAMPLE_CHECKS.json:small_threshold_extra",
       "passed": true
     },
     {
-      "check": "new-computations/SIMPLE_EXAMPLE_CHECKS.json:large_threshold_cost_constant",
+      "check": "calculations/SIMPLE_EXAMPLE_CHECKS.json:large_threshold_cost_constant",
       "passed": true
     },
     {
-      "check": "new-computations/SIMPLE_EXAMPLE_CHECKS.json:profile_lower",
+      "check": "calculations/SIMPLE_EXAMPLE_CHECKS.json:profile_lower",
       "passed": true
     },
     {
-      "check": "new-computations/SIMPLE_EXAMPLE_CHECKS.json:profile_upper",
+      "check": "calculations/SIMPLE_EXAMPLE_CHECKS.json:profile_upper",
       "passed": true
     },
     {
-      "check": "new-computations/SIMPLE_EXAMPLE_CHECKS.json:FGM_J",
+      "check": "calculations/SIMPLE_EXAMPLE_CHECKS.json:FGM_J",
       "passed": true
     },
     {
-      "check": "new-computations/SIMPLE_EXAMPLE_CHECKS.json:FGM_M_each",
+      "check": "calculations/SIMPLE_EXAMPLE_CHECKS.json:FGM_M_each",
       "passed": true
     },
     {
-      "check": "new-computations/SIMPLE_EXAMPLE_CHECKS.json:FGM_J_a_plus",
+      "check": "calculations/SIMPLE_EXAMPLE_CHECKS.json:FGM_J_a_plus",
       "passed": true
     },
     {
-      "check": "new-computations/SIMPLE_EXAMPLE_CHECKS.json:FGM_a_plus_derivative",
+      "check": "calculations/SIMPLE_EXAMPLE_CHECKS.json:FGM_a_plus_derivative",
       "passed": true
     },
     {
-      "check": "new-computations/SIMPLE_EXAMPLE_CHECKS.json:FGM_covariance",
+      "check": "calculations/SIMPLE_EXAMPLE_CHECKS.json:FGM_covariance",
       "passed": true
     },
     {
-      "check": "new-computations/SIMPLE_EXAMPLE_CHECKS.json:FGM_Var_B",
+      "check": "calculations/SIMPLE_EXAMPLE_CHECKS.json:FGM_Var_B",
       "passed": true
     },
     {
-      "check": "new-computations/SIMPLE_EXAMPLE_CHECKS.json:all_checks_passed",
+      "check": "calculations/SIMPLE_EXAMPLE_CHECKS.json:all_checks_passed",
       "passed": true
     }
   ],

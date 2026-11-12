@@ -28,18 +28,18 @@
   "continuous_global_certificate": false,
   "finite_epsilon_convergence_established": false,
   "sha256": {
-    "new-computations/finite-epsilon-study.json": "768cc4b4fcddcd0363760dde3e134aa17996e9c78579e3dc0fdb514428e7a5e1",
-    "new-computations/finite-n24-e01.json": "a07b53e7d05981afaf18401fb372a1d00d128b36936d6b544cb16832ab9ed08d",
-    "new-computations/mesh-study.json": "0ca2cceeeec1b5024da5ff78454a75af569ea40bc00ee6e60f6db32681c0c416",
-    "new-computations/window-study.json": "f28914fd9c1cfc78bb0df8cece991b7f031126a34534b67df35b66d41a71d44c",
-    "new-computations/restricted-zero-study.json": "5be5dcb1a038b239e31cd04e4ea4d844b4312012d2736b4569d1b309fdfc405a",
-    "new-computations/threshold-scan.json": "4ad9bb65fb8a8e8f5cff7989a0f4c5aecc2fae96241eb3ffc1fc6ce3849e7c95",
-    "new-computations/threshold-readback-n16.json": "c2e0c36d59df4464fde7993b2232d09f9dbcf8b3cc1563f491ce7e16a9b33097",
-    "new-computations/threshold-readback-n24.json": "1369e3d732748f3e4afecac5b1fea6f06b35d38e5d397fa31c7dbd5cf77d274c",
-    "code/numerical_profiles.py": "7245764cd0d1878c08ed098300c19cf417480cd417dd56f63376496484e98275",
+    "calculations/finite-epsilon-study.json": "768cc4b4fcddcd0363760dde3e134aa17996e9c78579e3dc0fdb514428e7a5e1",
+    "calculations/finite-n24-e01.json": "a07b53e7d05981afaf18401fb372a1d00d128b36936d6b544cb16832ab9ed08d",
+    "calculations/mesh-study.json": "0ca2cceeeec1b5024da5ff78454a75af569ea40bc00ee6e60f6db32681c0c416",
+    "calculations/window-study.json": "f28914fd9c1cfc78bb0df8cece991b7f031126a34534b67df35b66d41a71d44c",
+    "calculations/restricted-zero-study.json": "5be5dcb1a038b239e31cd04e4ea4d844b4312012d2736b4569d1b309fdfc405a",
+    "calculations/threshold-scan.json": "4ad9bb65fb8a8e8f5cff7989a0f4c5aecc2fae96241eb3ffc1fc6ce3849e7c95",
+    "calculations/threshold-readback-n16.json": "c2e0c36d59df4464fde7993b2232d09f9dbcf8b3cc1563f491ce7e16a9b33097",
+    "calculations/threshold-readback-n24.json": "1369e3d732748f3e4afecac5b1fea6f06b35d38e5d397fa31c7dbd5cf77d274c",
+    "code/numerical_profiles.py": "9aeff0255ca71a015b86af6ef8679c3f75962a0e141a2ee6dca3862ec9e0d6c1",
     "code/run_numerical_study.py": "e90bb30b1594b5d247f49a16e24d11aa173b50b6cc7e7181d3b39871eeacae2b",
     "code/scan_thresholds.py": "ff598e74c61e81be2d8f7eb4ec2e4a75f085c8ef61cb1151a153b944a8025fd6",
     "code/check_numerical_profiles.py": "1e792f2f5f8931c6a0fc4371c672669cc2b8bf65c8c00ae4727f6e7b13d84a76",
-    "code/verify_numerical_study.py": "c3644365dde6edd18ef8a16c3995fc95131a19f346af9cece7d6c24061b7dd00"
+    "code/verify_numerical_study.py": "b6be2bf6f4fcabd4d43ef91b25925846f644344365af708899fd184680c54155"
   }
 }

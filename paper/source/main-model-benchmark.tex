@@ -34,7 +34,7 @@ D_\varepsilon(\rho)=\max_{P\in\mathcal A_\rho}\Phi_\varepsilon(P),\quad
 m_\varepsilon=-\Phi_\varepsilon(P_0).
 \tag{2.3}\label{eq:2.3}
 \end{equation}
-Proposition~\ref{prop:general-wellposedness} guarantees attainment in \eqref{eq:2.3}, allowing atoms, singular dependence, and unbounded marginal supports. Since a nondecreasing profile can vanish on an interval, we distinguish the infimal budgets for a tie and a strict reversal,
+Proposition~\ref{prop:general-wellposedness} guarantees attainment in \eqref{eq:2.3} even with atoms, singular dependence, and unbounded marginal supports. Since a nondecreasing profile can vanish on an interval, we distinguish the infimal budgets for a tie and a strict reversal,
 \begin{equation}
 \rho^-_\varepsilon=\inf\{\rho\ge0:D_\varepsilon(\rho)\ge0\},
 \qquad
@@ -80,7 +80,7 @@ B=X_1+X_2+\beta X_3,\qquad H=X_1-X_2,\qquad
 A_\varepsilon=B+\varepsilon H,\qquad
 \beta>0,\quad 0<\varepsilon<1,
 \]
-with arbitrary \(p\in(0,1)\) and \(\gamma_i>0\), so that \(b=(1,1,\beta)\) and \(h=(1,-1,0)\) in the preceding notation. All model parameters remain fixed as \(\varepsilon\downarrow0\). The first two unit positions are expressed at equal initial cost, allowing the trade to change their holdings from \((1+\varepsilon,1-\varepsilon)\) to \((1,1)\) without changing the initial outlay. The position \(\beta X_3\) represents the background book, whose holding remains unchanged during the trade.
+with arbitrary \(p\in(0,1)\) and \(\gamma_i>0\), so that \(b=(1,1,\beta)\) and \(h=(1,-1,0)\) in the preceding notation. All model parameters remain fixed as \(\varepsilon\downarrow0\). The first two unit positions are expressed at equal initial cost, so the trade changes their holdings from \((1+\varepsilon,1-\varepsilon)\) to \((1,1)\) without changing the initial outlay. The position \(\beta X_3\) represents the background book, whose holding remains unchanged during the trade.
 
 The stressed law may be any coupling in \(\Pi((P_0)_1,(P_0)_2,(P_0)_3)\); exchangeability and absolute continuity are assumptions on the reference law only. Reference symmetry makes the equal allocation stationary under \(P_0\), while equality of the first two marginals gives \(E_P[A_\varepsilon]-E_P[B]=\varepsilon(E_P[X_1]-E_P[X_2])=0\) under every candidate. Before implementation costs, the ES comparison therefore distinguishes tail risks between portfolios with the same expected loss.
 
@@ -112,7 +112,7 @@ By the coarea formula, integration in the normal coordinate \(B-v\) gives the se
 g=\sigma(\Omega)>0,\qquad J=\frac12\int_\Omega H^2\,d\sigma>0.
 \tag{2.5}\label{eq:2.5}
 \end{equation}
-Here \(g=f_B(v)\) is the loss density at the threshold, and \(d\sigma/g\) is its normalized conditional section law. Exchangeability makes the conditional mean of \(H\) zero, giving \(2J/g=\operatorname{Var}_{P_0}(H\mid B=v)\). Phrased differently, the second-order diversification gain is governed by the conditional variance of the trade payoff on \(\{B=v\}\), weighted by the threshold density \(g\).
+Here \(g=f_B(v)\) is the loss density at the threshold, and \(d\sigma/g\) is its normalized conditional section law. Exchangeability makes the conditional mean of \(H\) zero, giving \(2J/g=\operatorname{Var}_{P_0}(H\mid B=v)\). The second-order diversification gain is thus governed by the conditional variance of the trade payoff on \(\{B=v\}\), weighted by the threshold density \(g\).
 
 \resultnumber{2.2}\begin{proposition}[Nominal benchmark and exact initial efficiency]\label{prop:nominal-benchmark}
 In the exchangeable box model of Section 2.2:
@@ -219,7 +219,7 @@ The translations exchange the first-coordinate marginal intervals, fix the other
 The plan has cost \(2\gamma_1\theta\mu\delta_x\), and the sharp bound \eqref{eq:2.8} forces this to equal \(W_\gamma(P_\theta,P_0)\). Varying \(\theta\in[0,1]\) proves \eqref{eq:2.10} with \(r_\varepsilon=2\gamma_1\mu\delta_x>0\).
 \end{proof}
 
-If \(\gamma_2\ge\gamma_1\) and \(\gamma_3\ge\beta\gamma_1\), condition \eqref{eq:2.9} holds for every \(\varepsilon\in(0,1)\), suggesting the extrapolated reversal budget \(r_{0,\varepsilon}=m_\varepsilon/K_\varepsilon\). Because the disagreement regions narrow with \(\varepsilon\), this construction gives \(r_\varepsilon>0\) for each fixed trade size without controlling \(r_\varepsilon/\varepsilon^2\). Indeed, the unscaled bound \(|D_\varepsilon(\rho)|\le\varepsilon\|H\|_\infty\) makes both iterated limits in \((\rho,\varepsilon)\) vanish even though \(K_\varepsilon\to1/(p\gamma_1)>0\); Section 3 therefore tracks the profile under the joint scaling \(\rho=s\varepsilon^2\).
+If \(\gamma_2\ge\gamma_1\) and \(\gamma_3\ge\beta\gamma_1\), condition \eqref{eq:2.9} holds for every \(\varepsilon\in(0,1)\), which suggests the extrapolated reversal budget \(r_{0,\varepsilon}=m_\varepsilon/K_\varepsilon\). Because the disagreement regions narrow with \(\varepsilon\), this construction gives \(r_\varepsilon>0\) for each fixed trade size without controlling \(r_\varepsilon/\varepsilon^2\). Indeed, the unscaled bound \(|D_\varepsilon(\rho)|\le\varepsilon\|H\|_\infty\) makes both iterated limits in \((\rho,\varepsilon)\) vanish even though \(K_\varepsilon\to1/(p\gamma_1)>0\); Section 3 therefore tracks the profile under the joint scaling \(\rho=s\varepsilon^2\).
 
 \paragraph{Reference symmetry and stressed dependence}\label{prop:exchangeable-protection}\label{rem:reference-symmetry}
 Our stress class allows asymmetric dependence between the two traded positions. If every candidate law were exchangeable, the losses \(B-\varepsilon H\) and \(B+\varepsilon H\) would have the same distribution, and convexity of ES would give

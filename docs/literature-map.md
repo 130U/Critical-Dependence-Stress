@@ -1,8 +1,8 @@
 # The literature behind the question
 
-The project brings together risk aggregation, reverse stress testing, Wasserstein sensitivity, and capacity-constrained transport. The reading strategy was to identify what each framework already explains, then specify the additional object needed for a portfolio decision: **the critical dependence budget for reversing a paired ES comparison**.
+The paper draws on risk aggregation, reverse stress testing, Wasserstein sensitivity and capacity-constrained transport. I read each framework for what it already explains and then asked what further object a portfolio decision needs. That object is **the critical dependence budget for reversing a paired ES comparison**.
 
-The sources below are selected entry points. The [paper](../paper/paper.pdf) contains the full bibliography and mathematical comparisons.
+The sources below are entry points; the [paper](../paper/paper.pdf) has the full bibliography and the mathematical comparisons.
 
 | Research strand | Primary source | What it contributes to the problem |
 |---|---|---|
@@ -16,7 +16,7 @@ The sources below are selected entry points. The [paper](../paper/paper.pdf) con
 
 ## The question that connects them
 
-The resulting object is
+The object that results is
 
 $$
 F(s)=\lim_{\varepsilon\downarrow0}\varepsilon^{-2}
@@ -24,6 +24,6 @@ F(s)=\lim_{\varepsilon\downarrow0}\varepsilon^{-2}
 \left\{ES_p^P(B)-ES_p^P(B+\varepsilon H)\right\}.
 $$
 
-Its unique zero locates the leading reversal budget. Keeping the entire profile preserves the cost of full marginal restoration and the adjustment of both ES thresholds. This connects local sensitivity to a finite question in the rescaled budget: whether the initially efficient stress can continue until the nominal gain is exhausted.
+Its unique zero locates the leading reversal budget. Working with the whole profile keeps the cost of full marginal restoration and the adjustment of both ES thresholds in view. Local sensitivity then leads to a finite question in the rescaled budget: can the stress that is efficient at first continue until the nominal gain is exhausted?
 
-The proof then links this question to geometry. Coordinate projections constrain how adverse displacements can be matched; background displacement supplies an alternative channel. The zero-premium classification and projected flow duality make that mechanism explicit in the paper's exchangeable box model.
+The proof ties this question to geometry. Coordinate projections limit how adverse displacements can be matched, and background displacement is the other channel. In the paper's exchangeable box model, the zero-premium classification and projected flow duality make the mechanism explicit.

@@ -1,8 +1,8 @@
 # Computational companion
 
-Reproduce the four manuscript figures and the exact calculations behind the **30% critical-budget premium**, the **$1/96$ initial linear segment**, and the **86.67% to 88.34% background-share comparison**.
+This companion reproduces the four manuscript figures and the exact calculations behind three results: the **30% critical-budget premium**, the **$1/96$ initial linear segment** and the **86.67% to 88.34% background-share comparison**.
 
-All inputs are analytical formulas and synthetic grids. Runtime requires no external data or network access.
+All inputs are analytical formulas and synthetic grids, so a run needs no external data and no network access.
 
 ## Run
 
@@ -43,10 +43,10 @@ The runner recomputes the figures and formulas before comparing them with the fr
 
 The flow evaluator uses the exact integrated section polynomials in `r = 1-x` and forms cubes by multiplication. Symbolic integration verifies both polynomial identities; exact rational arithmetic checks the plotting coordinates. The [formula checks](audit/FLOW-FORMULA-CHECK.json) record these identities. Array acceptance requires exact byte hashes. CI exercises native and baseline NumPy CPU dispatch.
 
-The budget plot evaluates proved envelopes, rather than a numerical solution of the full profile. The accompanying source keeps the analytical and computational roles explicit. Subsequent runs overwrite generated figures, data and execution reports.
+The budget plot shows the proved envelopes. It is not a numerical solution of the full profile, and the source keeps the analytical and the computational roles apart. Later runs overwrite the generated figures, data and execution reports.
 
 ## Numerical profile study
 
-The [numerical study](NUMERICAL-STUDY.md) adds finite-epsilon transport optimizations and a discretized family of limiting kernels. It records solver gaps, mesh refinement, normal-window sensitivity and separate ES-threshold checks. The limiting calculation gives a restricted-kernel candidate near `0.23`; the unrestricted coefficient retains the proved interval above. The finite-epsilon runs retain the loss of the quadratic signal on coarse grids, including cases that have not converged.
+The [numerical study](NUMERICAL-STUDY.md) adds finite-epsilon transport optimizations and a discretized family of limiting kernels. It records solver gaps, mesh refinement, normal-window sensitivity and separate ES-threshold checks. The limiting calculation gives a restricted-kernel candidate near `0.23`; for the unrestricted coefficient the proved interval above still stands. The finite-epsilon runs are kept as recorded, including the loss of the quadratic signal on coarse grids and the cases that have not converged.
 
 Install the optional optimizer with `python -m pip install -r numerical-requirements.txt`, then run `python code/check_numerical_profiles.py` for the small independent checks. The full study and output files are described in its methods note.

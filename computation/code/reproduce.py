@@ -84,7 +84,7 @@ report = {
         "figure_3": "Proved piecewise-linear upper/lower envelopes and exact initial segment; no quadrature or parameter optimization.",
         "figure_4": "Explicit optimal boundary-flow shares for the two representative reference laws.",
         "polynomial_checks": "Exact SymPy integration and algebra for the full dependence parameter interval, fixed-amplitude lower bound, and pure-coordinate upper bound.",
-        "not_computed": "No full F(s) solver, no finite-epsilon worst-case optimization, and no inherited refined-bound certificate rerun.",
+        "not_computed": "No full F(s) solver, no finite-epsilon worst-case optimization, and no refined-bound certificate.",
     },
     "sha256": {
         name: hashlib.sha256((ROOT / name).read_bytes()).hexdigest()

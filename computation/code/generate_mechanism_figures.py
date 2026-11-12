@@ -4,18 +4,10 @@ Figure 1 illustrates a thin tail layer and cancellation of projected CDF
 errors. Figure 2 plots one corner geometry with the analytic order bounds.
 Neither figure is an empirical plot or an optimized stress distribution.
 Run from any directory with: python code/generate_mechanism_figures.py
-Use --figure-1-only to regenerate Figure 1 without changing Figure 2 or the
-historical computation report; this writes audit/FIGURE1_REGENERATION.json.
 """
 from pathlib import Path
-import argparse
-from datetime import datetime, timezone
 import json
 import hashlib
-import os
-import platform
-import sys
-import time
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
@@ -34,18 +26,6 @@ plt.rcParams.update({"font.family":"DejaVu Serif", "font.size":10,
 BLUE = "#245884"
 ORANGE = "#9a541c"
 GRAY = "#555555"
-parser = argparse.ArgumentParser(description=__doc__)
-parser.add_argument("--figure-1-only", action="store_true")
-args = parser.parse_args()
-started = datetime.now(timezone.utc).isoformat()
-timer = time.perf_counter()
-preserved = [OUT / f"{name}.{ext}"
-             for name in ("corner-capacity", "budget-comparison", "optimal-flow-shares")
-             for ext in ("pdf", "png", "svg")]
-preserved.append(DATA / "MECHANISM_FIGURES.json")
-before = {str(p.relative_to(ROOT)): hashlib.sha256(p.read_bytes()).hexdigest()
-          for p in preserved if p.exists()} if args.figure_1_only else {}
-
 
 def save(fig, name):
     for ext in ("pdf", "svg", "png"):
@@ -83,36 +63,6 @@ ax.set_title('(b) Cancellation of full marginal discrepancies',fontsize=10)
 ax.legend(frameon=False,fontsize=8,loc='lower left')
 ax.spines[['top','right']].set_visible(False)
 save(fig,'tail-layer-repair')
-
-if args.figure_1_only:
-    after = {name: hashlib.sha256((ROOT / name).read_bytes()).hexdigest()
-             for name in before}
-    if after != before:
-        raise RuntimeError("An asset outside Figure 1 changed during regeneration.")
-    report = {
-        "scope": "Figure 1 only: coordinate notation s changed to q. The schematic curves and geometry are unchanged. No optimization or mathematical computations were rerun.",
-        "started_utc": started,
-        "finished_utc": datetime.now(timezone.utc).isoformat(),
-        "elapsed_seconds": round(time.perf_counter() - timer, 3),
-        "command": [sys.executable, str(Path(__file__).resolve()), "--figure-1-only"],
-        "python": platform.python_version(),
-        "platform": platform.platform(),
-        "environment_pythonpath": os.environ.get("PYTHONPATH"),
-        "numpy_version": np.__version__,
-        "matplotlib_version": matplotlib.__version__,
-        "source_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
-        "labels": {"coordinate": "q", "cost": "gamma_i integral |Delta_i(q)| dq"},
-        "sha256": {str(p.relative_to(ROOT)): hashlib.sha256(p.read_bytes()).hexdigest()
-                   for p in (OUT / f"tail-layer-repair.{ext}" for ext in ("pdf", "png", "svg"))},
-        "preserved_sha256": after,
-        "preserved_assets_unchanged": True,
-        "historical_report": "new-computations/MECHANISM_FIGURES.json is retained unchanged and records the earlier full generation, not this run."
-    }
-    audit = ROOT / "audit"
-    audit.mkdir(parents=True, exist_ok=True)
-    (audit / "FIGURE1_REGENERATION.json").write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
-    print(json.dumps(report, indent=2))
-    raise SystemExit(0)
 
 fig,axs=plt.subplots(1,2,figsize=(7.1,2.9),gridspec_kw={'width_ratios':[1,1.15]},layout='constrained')
 ax=axs[0];delta=.35

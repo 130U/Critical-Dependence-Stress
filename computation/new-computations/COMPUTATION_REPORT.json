@@ -10,6 +10,7 @@
   "upper_envelope": "min(2s-5/16,4s/3-13/48) on [0,29/96]",
   "all_threshold_check": "The large-threshold branch 2s-11/16 is no larger than 4s/3-13/48 until s=5/8, beyond the plotted interval.",
   "figure3_evaluation": "Exact analytical formulas evaluated in floating-point for rendering; no quadrature.",
+  "figure4_evaluation": "Exact integrated section polynomials in r=1-x and explicit cube multiplication; the independent scalar same-side diagnostic retains quadrature.",
   "inset_budget_interval": [
     0,
     0.02
@@ -42,12 +43,11 @@
     "new-computations\\profile-envelopes.csv": "a18e5615c24c89dabf43c362490c3ddd981fe79aaf7f2804e3df479590503233",
     "new-computations\\flow-shares-U.npz": "31851dc0340aa0ae424d5ad51a94d2f87a5b2201b3552aae6cc98512d0036e61",
     "new-computations\\flow-shares-D.npz": "86fea5314e9084b8240fcfb723abcd7c12b3138be94af060206d0afc04bbf5b9",
-    "source\\en\\figures\\budget-comparison.pdf": "9fc13857d4bf520cfc24cda753bc134f89d9c0969b6cb4abcabd1f4fb494f011",
+    "source\\en\\figures\\budget-comparison.pdf": "8dee5a7a9c70fe3a2fc982c37e7acae359b7c3537e1db60727567a10ff9f7554",
     "source\\en\\figures\\budget-comparison.png": "1f05258c963223f1421aff597bed8c699eff69caec1c7ec08d6d24f19a517820",
-    "source\\en\\figures\\budget-comparison.svg": "0ebe525a724465fd8dc2a6782336f8f4480bc629c8103672695587f0bc179a12",
-    "source\\en\\figures\\optimal-flow-shares.pdf": "42124d3e3692688e3d912c8f84e270ae6aa4c358a20f383f7c0c95c82053e5bc",
+    "source\\en\\figures\\budget-comparison.svg": "b75bf29017c3ac725c43c09eeda11b614d747376b801f5654ceb0f69b32c6f60",
+    "source\\en\\figures\\optimal-flow-shares.pdf": "6fb6f62ddc6de51042f637f90892349974220d6b6277b74bb06bb52933ebe08d",
     "source\\en\\figures\\optimal-flow-shares.png": "205e88a23bfcb0ecf5bd3e00df74aae72196356ddebbb6e601bb55125f192252",
-    "source\\en\\figures\\optimal-flow-shares.svg": "63dbe4a5ce1f5790b495bf9db93f9ed03a6764a57a08c87ace0a170929609868"
-  },
-  "figure4_evaluation": "Exact integrated section polynomials in r=1-x and explicit cube multiplication; the independent scalar same-side diagnostic retains quadrature."
+    "source\\en\\figures\\optimal-flow-shares.svg": "5272f5d646301955dec22d8c35a7f3c624eb171bcad4e7544f11cc2a31eb2739"
+  }
 }

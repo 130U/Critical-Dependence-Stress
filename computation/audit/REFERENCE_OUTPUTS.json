@@ -1,6 +1,4 @@
 {
-  "baseline": "FINANCIAL_MATH_V68_EN.pdf",
-  "baseline_pdf_sha256": "3ec15e8b5861275c54820f167432271dddc579856be4e5061e7824b571f7a5b9",
   "scientific_files_sha256": {
     "new-computations/profile-envelopes.csv": "a18e5615c24c89dabf43c362490c3ddd981fe79aaf7f2804e3df479590503233"
   },
@@ -156,8 +154,6 @@
   },
   "flow_array_evaluation": {
     "method": "Exact integrated section polynomials in r=1-x; explicit cube multiplication.",
-    "verification": "audit/FLOW-FORMULA-CHECK.json",
-    "migration": "audit/FLOW-EVALUATION-UPDATE.json"
-  },
-  "baseline_role": "The PDF identifies the mathematical source. Flow-array hashes were updated for the exact polynomial evaluator; all other reference entries retain their original baseline."
+    "verification": "audit/FLOW-FORMULA-CHECK.json"
+  }
 }

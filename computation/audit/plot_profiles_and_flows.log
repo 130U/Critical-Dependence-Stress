@@ -10,6 +10,7 @@
   "upper_envelope": "min(2s-5/16,4s/3-13/48) on [0,29/96]",
   "all_threshold_check": "The large-threshold branch 2s-11/16 is no larger than 4s/3-13/48 until s=5/8, beyond the plotted interval.",
   "figure3_evaluation": "Exact analytical formulas evaluated in floating-point for rendering; no quadrature.",
+  "figure4_evaluation": "Exact integrated section polynomials in r=1-x and explicit cube multiplication; the independent scalar same-side diagnostic retains quadrature.",
   "inset_budget_interval": [
     0,
     0.02

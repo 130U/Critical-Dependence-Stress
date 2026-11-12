@@ -1,6 +1,6 @@
 {
-  "started_utc": "2026-10-26T17:26:40.644430+00:00",
-  "finished_utc": "2026-10-26T17:26:49.483960+00:00",
+  "started_utc": "2026-11-12T10:22:15.874959+00:00",
+  "finished_utc": "2026-11-12T10:22:30.728096+00:00",
   "python": "3.13.12",
   "python_implementation": "CPython",
   "platform": "Windows-11-10.0.26200-SP0",
@@ -10,7 +10,7 @@
     "sympy": "1.14.0"
   },
   "dependency_loading": {
-    "environment_pythonpath_supplied": true,
+    "environment_pythonpath_supplied": false,
     "script_injected_paths": false,
     "note": "A normal installation uses code/requirements.txt. Workstation-specific dependency paths are omitted from this public record."
   },
@@ -18,23 +18,30 @@
     {
       "script": "code/generate_mechanism_figures.py",
       "return_code": 0,
-      "elapsed_seconds": 2.888,
+      "elapsed_seconds": 6.854,
       "log": "audit\\generate_mechanism_figures.log",
-      "source_sha256": "829743db139aeaba4e56e4ee515597a0b906740b9196add1c5dbd4195567fa0f"
+      "source_sha256": "2ec562b939098648296ca03d213d92e96041266025c2bae43eb53174092c3841"
     },
     {
       "script": "new-computations/check_parameter_family.py",
       "return_code": 0,
-      "elapsed_seconds": 1.277,
+      "elapsed_seconds": 1.218,
       "log": "audit\\check_parameter_family.log",
-      "source_sha256": "2fc889d47b18d795f85caefd09fc6b2f02a54ee0f905061e583cbda7ea1fc324"
+      "source_sha256": "9b9f62426456a96c7c7b3a952a5b83f2fc876b06c02c957c826a8931f6c09a39"
+    },
+    {
+      "script": "new-computations/check_flow_formulas.py",
+      "return_code": 0,
+      "elapsed_seconds": 0.938,
+      "log": "audit\\check_flow_formulas.log",
+      "source_sha256": "73538963e7ea2edff737a12b0aa37076ee0c4ceb42efcf33885cbc45a6bc81fd"
     },
     {
       "script": "new-computations/plot_profiles_and_flows.py",
       "return_code": 0,
-      "elapsed_seconds": 3.753,
+      "elapsed_seconds": 3.692,
       "log": "audit\\plot_profiles_and_flows.log",
-      "source_sha256": "f839ef430334b76bf6ef9d6e0d4f70d86f262ab19eeca7e1c05d375e87f91cdd"
+      "source_sha256": "533a33eb5f46110f31b8ea977ecc3d2bdb7c9b7114f462bd963fb819697b6e2b"
     }
   ],
   "all_requested_steps_passed": true,
@@ -44,26 +51,26 @@
     "figure_3": "Proved piecewise-linear upper/lower envelopes and exact initial segment; no quadrature or parameter optimization.",
     "figure_4": "Explicit optimal boundary-flow shares for the two representative reference laws.",
     "polynomial_checks": "Exact SymPy integration and algebra for the full dependence parameter interval, fixed-amplitude lower bound, and pure-coordinate upper bound.",
-    "not_computed": "No full F(s) solver, no finite-epsilon worst-case optimization, and no inherited refined-bound certificate rerun."
+    "not_computed": "No full F(s) solver, no finite-epsilon worst-case optimization, and no refined-bound certificate."
   },
   "sha256": {
-    "source/en/figures/tail-layer-repair.pdf": "d1d8812198c14c882bfde193372f6b10dcdbcbc3695da98f204cee8f3d6df6f8",
+    "source/en/figures/tail-layer-repair.pdf": "be074d01c43517d38fa7a18bb3beccfafaea27d0a080b389a5312bbb1f553572",
     "source/en/figures/tail-layer-repair.png": "83d2c85deb3ee5cc670bb61d609b99323830218644d8754c73f5fb875ecca6e0",
-    "source/en/figures/tail-layer-repair.svg": "711291d439b28aefd9424cbc11f56512e22707dd76cf1e961f6cdf548ea23442",
-    "source/en/figures/corner-capacity.pdf": "e190f3df32722ad5c661500cc7a59b9a7369835a69093cf235d20fb19b7ebecd",
+    "source/en/figures/tail-layer-repair.svg": "82888d1f414712de61387d07ae23f1a2a11ec6ef5cca35e7a7ee0f86e7283760",
+    "source/en/figures/corner-capacity.pdf": "f70bd403331978d7bf830eca84435ae44ab8f41dc67bd40b6fbee1cfcd1d04f9",
     "source/en/figures/corner-capacity.png": "208b2f88f3a40bd495f2c65a77262785059ddba8581d68422e05e044da8e6dbd",
-    "source/en/figures/corner-capacity.svg": "372a01be37ad641b8890ead9a379e17dad426e5e8b9ec62d82896ee61363cfa9",
-    "source/en/figures/budget-comparison.pdf": "9fc13857d4bf520cfc24cda753bc134f89d9c0969b6cb4abcabd1f4fb494f011",
+    "source/en/figures/corner-capacity.svg": "3c2b7a3b2c5c3c213f94f6f2e0fb868ac777ba063e75ca2690b6534754a737b5",
+    "source/en/figures/budget-comparison.pdf": "8dee5a7a9c70fe3a2fc982c37e7acae359b7c3537e1db60727567a10ff9f7554",
     "source/en/figures/budget-comparison.png": "1f05258c963223f1421aff597bed8c699eff69caec1c7ec08d6d24f19a517820",
-    "source/en/figures/budget-comparison.svg": "0ebe525a724465fd8dc2a6782336f8f4480bc629c8103672695587f0bc179a12",
-    "source/en/figures/optimal-flow-shares.pdf": "42124d3e3692688e3d912c8f84e270ae6aa4c358a20f383f7c0c95c82053e5bc",
+    "source/en/figures/budget-comparison.svg": "b75bf29017c3ac725c43c09eeda11b614d747376b801f5654ceb0f69b32c6f60",
+    "source/en/figures/optimal-flow-shares.pdf": "6fb6f62ddc6de51042f637f90892349974220d6b6277b74bb06bb52933ebe08d",
     "source/en/figures/optimal-flow-shares.png": "205e88a23bfcb0ecf5bd3e00df74aae72196356ddebbb6e601bb55125f192252",
-    "source/en/figures/optimal-flow-shares.svg": "63dbe4a5ce1f5790b495bf9db93f9ed03a6764a57a08c87ace0a170929609868",
-    "new-computations/MECHANISM_FIGURES.json": "3411e9ad9c923783d3f5b36470353e443fbdbcc262bb2369cc45b16ff9bf099e",
+    "source/en/figures/optimal-flow-shares.svg": "5272f5d646301955dec22d8c35a7f3c624eb171bcad4e7544f11cc2a31eb2739",
+    "new-computations/MECHANISM_FIGURES.json": "c38fe55632e19d50238886b6c72f11d107ece19fc0cbb9dd48faf437c14c6410",
     "new-computations/PARAMETER_FAMILY_CHECK.json": "9454d6aa4227e0efed5ee4098e4c13553677acc9866ea1ecca1f38f3ba2f97c5",
-    "new-computations/COMPUTATION_REPORT.json": "905898a92618797dbce6ce8a1ec0e7b282e82fb290a931c0e7f11215499d8656",
+    "new-computations/COMPUTATION_REPORT.json": "89724ce0132b07571bb3444142de1265445eac4e19ff32787b1a6fc236fb9ddc",
     "new-computations/profile-envelopes.csv": "a18e5615c24c89dabf43c362490c3ddd981fe79aaf7f2804e3df479590503233",
-    "new-computations/flow-shares-U.npz": "a3c4a27f2fe1cef00bc77cc3fd4f2a3f8b387de4e0482b9985aae2600b80b3c5",
-    "new-computations/flow-shares-D.npz": "9048f413ede237ed403d46edf85330ba397895196497df428444e7bd37c38e29"
+    "new-computations/flow-shares-U.npz": "31851dc0340aa0ae424d5ad51a94d2f87a5b2201b3552aae6cc98512d0036e61",
+    "new-computations/flow-shares-D.npz": "86fea5314e9084b8240fcfb723abcd7c12b3138be94af060206d0afc04bbf5b9"
   }
 }

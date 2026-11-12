@@ -1,25 +1,25 @@
 {
-  "started_utc": "2026-10-26T17:26:40.521852+00:00",
+  "started_utc": "2026-11-12T10:22:15.765646+00:00",
   "steps": [
     {
       "script": "code/reproduce.py",
       "return_code": 0,
-      "elapsed_seconds": 9.272,
+      "elapsed_seconds": 15.194,
       "log": "audit/reproduce_entry.log"
     },
     {
       "script": "new-computations/check_simple_example.py",
       "return_code": 0,
-      "elapsed_seconds": 0.108,
+      "elapsed_seconds": 0.12,
       "log": "audit/check_simple_example_entry.log"
     },
     {
       "script": "code/verify_outputs.py",
       "return_code": 0,
-      "elapsed_seconds": 0.333,
+      "elapsed_seconds": 0.35,
       "log": "audit/verify_outputs_entry.log"
     }
   ],
   "all_passed": true,
-  "finished_utc": "2026-10-26T17:26:50.235170+00:00"
+  "finished_utc": "2026-11-12T10:22:31.430276+00:00"
 }

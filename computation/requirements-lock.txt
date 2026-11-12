@@ -1,4 +1,4 @@
-# Dependency versions present in the recorded successful submission-package rerun.
+# Dependency versions of the recorded run.
 # Tested with CPython 3.13.12 on Windows. No interpreter or wheel is bundled.
 numpy==2.5.4
 matplotlib==3.11.2

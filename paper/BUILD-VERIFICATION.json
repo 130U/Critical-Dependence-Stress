@@ -1,6 +1,5 @@
 {
   "checked_client_date": "2026-11-12",
-  "base_source_commit": "31f6577",
   "engine": "Tectonic 0.17.0",
   "python": "3.13.12",
   "engine_release_sha256": "f61ce51f0b0ade1015b7de7ef368541c5424e9756ecbd0d7af97d6d48030845f",
@@ -40,13 +39,6 @@
     "paper/source/technical-reference.tex": "8c63a00a731b208d87a08340569d4017c09895e1d6f457e74d1c6c321cd69785",
     "paper/source/technical-threshold-statement.tex": "1c16a52b68e35157c650be7e17e65654afc73283031df94677dd3ea559bd0c85",
     "paper/source/technical-variational-proof.tex": "69b4d9df40d226ec6d71915653422bc9e2eba4e920fef7b57f4e7981e5406273"
-  },
-  "baseline_rebuild": {
-    "pages": 43,
-    "text_identical_to_pre_rebuild_pdf": true,
-    "bookmarks": 31,
-    "internal_links": 269,
-    "external_links": 42
   },
   "visual_review": {
     "detail_pages": [

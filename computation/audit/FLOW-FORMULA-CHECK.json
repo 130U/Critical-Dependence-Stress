@@ -18,6 +18,6 @@
     }
   },
   "independent_check_tolerance": 3.552713678800501e-15,
-  "frozen_array_acceptance": "Unchanged: exact shape, dtype and byte hash.",
+  "frozen_array_acceptance": "Exact shape, dtype and byte hash.",
   "all_checks_passed": true
 }

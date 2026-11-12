@@ -37,7 +37,7 @@ Figures are also available as PDF and SVG in `source/en/figures/`. The flow arch
 
 ## Verification
 
-The public companion was rerun on **26 October 2026**. All three entry-point stages passed. The output comparison passed all scientific checks and matched all four reference PNGs exactly. See [execution status](audit/RUN_ALL.json), [output comparisons](audit/OUTPUT_READBACK.json), and [calculation provenance](audit/SOURCE_PROVENANCE.json).
+The public companion was run on **12 November 2026**. All three entry-point stages passed. The output comparison passed all scientific checks and matched all four reference PNGs exactly. See [execution status](audit/RUN_ALL.json), [output comparisons](audit/OUTPUT_READBACK.json), and [calculation provenance](audit/SOURCE_PROVENANCE.json).
 
 The runner recomputes the figures and formulas before comparing them with the frozen reference. It checks exact scalar expressions, numerical array contents and the profile CSV; PNG identity is recorded separately because fonts and platforms can affect rendering. The 500-by-500 midpoint sums are numerical diagnostics of analytically established flow formulas. The continuous existence, conservation, optimality and critical-budget statements are proved in the [paper](../paper/paper.pdf).
 

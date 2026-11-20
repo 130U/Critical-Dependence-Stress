@@ -1,0 +1,53 @@
+{
+  "scope": "Evaluation of proved piecewise-linear risk envelopes and explicit optimal boundary-flow fields. No full F optimization or finite-trade worst-case solver.",
+  "numpy_version": "2.5.4",
+  "matplotlib_version": "3.11.2",
+  "critical_interval_lower_exact": "13/64",
+  "critical_interval_upper_exact": "29/96",
+  "fixed_midpoint_amplitude_exact": "1/2",
+  "guaranteed_relative_premium_exact": "3/10",
+  "lower_envelope": "2s-5/16 on [0,1/96]; s-29/96 on [1/96,29/96]",
+  "upper_envelope": "min(2s-5/16,4s/3-13/48) on [0,29/96]",
+  "all_threshold_check": "The large-threshold branch 2s-11/16 is no larger than 4s/3-13/48 until s=5/8, beyond the plotted interval.",
+  "figure3_evaluation": "Exact analytical formulas evaluated in floating-point for rendering; no quadrature.",
+  "figure4_evaluation": "Exact integrated section polynomials in r=1-x and explicit cube multiplication; the independent scalar same-side diagnostic retains quadrature.",
+  "inset_budget_interval": [
+    0,
+    0.02
+  ],
+  "nominal_J": 0.15625,
+  "exact_initial_segment_endpoint": 0.010416666666666666,
+  "profile_samples": 1204,
+  "minimum_upper_minus_lower": 0.0,
+  "flow_checks": {
+    "U": {
+      "J_exact": "5/32",
+      "a_plus_exact": "13/15",
+      "same_side_mass_quadrature": 0.0026041666666666635,
+      "a_plus_section_quadrature": 0.8666666666666668,
+      "a_plus_midpoint_heatmap_diagnostic": 0.8666669647759926,
+      "heatmap_resolution_each_axis": 500,
+      "max_share_sum_excess": 0.0
+    },
+    "D": {
+      "J_exact": "143/960",
+      "a_plus_exact": "379/429",
+      "same_side_mass_quadrature": 0.0021701388888888855,
+      "a_plus_section_quadrature": 0.8834498834498836,
+      "a_plus_midpoint_heatmap_diagnostic": 0.8834505403320781,
+      "heatmap_resolution_each_axis": 500,
+      "max_share_sum_excess": 0.0
+    }
+  },
+  "sha256": {
+    "calculations/profile-envelopes.csv": "a18e5615c24c89dabf43c362490c3ddd981fe79aaf7f2804e3df479590503233",
+    "calculations/flow-shares-U.npz": "31851dc0340aa0ae424d5ad51a94d2f87a5b2201b3552aae6cc98512d0036e61",
+    "calculations/flow-shares-D.npz": "86fea5314e9084b8240fcfb723abcd7c12b3138be94af060206d0afc04bbf5b9",
+    "source/en/figures/budget-comparison.pdf": "a6cb943f96068ae5636c9b0c12021b55d86087a63affd1cafb6d849d6ace8462",
+    "source/en/figures/budget-comparison.png": "1f05258c963223f1421aff597bed8c699eff69caec1c7ec08d6d24f19a517820",
+    "source/en/figures/budget-comparison.svg": "856dd77b5363eca8a96e689b4aaf98c5e90d97d019297f0c9070aca370913433",
+    "source/en/figures/optimal-flow-shares.pdf": "61855f109479b80e868acd2240c202bf48b95213ebe738997e148526871b5d37",
+    "source/en/figures/optimal-flow-shares.png": "205e88a23bfcb0ecf5bd3e00df74aae72196356ddebbb6e601bb55125f192252",
+    "source/en/figures/optimal-flow-shares.svg": "bd72136e430c5b9d38016a37eef3123f5a64eb2fe76657dd940e6f4b9f97f7d9"
+  }
+}

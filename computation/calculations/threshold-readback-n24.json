@@ -1,0 +1,36 @@
+[
+  {
+    "n": 24,
+    "nu": 72,
+    "U": 3.0,
+    "s": 0.23,
+    "threshold_A": 0,
+    "threshold_B": 0,
+    "value": -0.0023519776863017983,
+    "lp_primal_dual_gap": 6.38378239159465e-16,
+    "lp_constraint_violation": 8.326672684688674e-17,
+    "boundary_active_mass": 0.00014467592592592592,
+    "seconds": 15.829912399989553,
+    "paired_risk_readback": -0.002351977686299911,
+    "minimizing_threshold_B": -1.850371707708594e-17,
+    "minimizing_threshold_A": -0.0,
+    "threshold_readback_difference": 1.887379141862766e-15
+  },
+  {
+    "n": 24,
+    "nu": 72,
+    "U": 3.0,
+    "s": 0.25,
+    "threshold_A": 0,
+    "threshold_B": 0,
+    "value": 0.017651167485257857,
+    "lp_primal_dual_gap": 4.996003610813204e-16,
+    "lp_constraint_violation": 1.6653345369377348e-16,
+    "boundary_active_mass": 0.0002623783741368487,
+    "seconds": 19.601915000006557,
+    "paired_risk_readback": 0.017651167485259134,
+    "minimizing_threshold_B": -8.326672684688674e-17,
+    "minimizing_threshold_A": -0.0,
+    "threshold_readback_difference": 1.27675647831893e-15
+  }
+]

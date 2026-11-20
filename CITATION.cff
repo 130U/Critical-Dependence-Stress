@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+type: software
+title: "Critical Dependence Stress for Diversification Gains under Fixed Marginals"
+version: "V_202611"
+date-released: 2026-11-19
+abstract: "How much dependence stress does it take to overturn a diversification gain? The paper, its PDF and LaTeX source, and the computation behind every reported number."
+authors:
+  - family-names: Ouyang
+    given-names: "Letao (Theodore)"
+repository-code: "https://github.com/130U/RESEARCH-Critical-Dependence-Stress-for-Diversification-Gains-under-Fixed-Marginals"
+url: "https://www.theodoreoy.com/critical-dependence-stress-for-diversification-gains-under-fixed-marginals/"
+keywords:
+  - "mathematical finance"
+  - "expected shortfall"
+  - "optimal transport"
+  - "portfolio diversification"
+  - "risk management"
+  - "Wasserstein distance"
+preferred-citation:
+  type: unpublished
+  title: "Critical Dependence Stress for Diversification Gains under Fixed Marginals"
+  authors:
+    - family-names: Ouyang
+      given-names: "Letao (Theodore)"
+  year: 2026
+  url: "https://www.theodoreoy.com/critical-dependence-stress-for-diversification-gains-under-fixed-marginals/"

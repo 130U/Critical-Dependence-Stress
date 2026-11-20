@@ -1,0 +1,68 @@
+name: Reproduce research figures
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - computation/**
+      - .github/workflows/reproduce.yml
+  pull_request:
+    paths:
+      - computation/**
+      - .github/workflows/reproduce.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  reproduce:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - cpu: native
+            disable_cpu: ''
+          - cpu: baseline
+            disable_cpu: 'X86_V3,X86_V4'
+    name: reproduce (${{ matrix.cpu }})
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: computation
+    env:
+      MPLBACKEND: Agg
+      NPY_DISABLE_CPU_FEATURES: ${{ matrix.disable_cpu }}
+    steps:
+      - name: Check out the research companion
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Set up Python 3.13
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.13'
+      - name: Install the recorded dependencies
+        run: python -m pip install -r requirements-lock.txt
+      - name: Regenerate figures and verify scientific outputs
+        run: |
+          python -c "import numpy; numpy.show_runtime()"
+          python code/run_all.py
+      - name: Recheck native dispatch on the baseline runner
+        if: matrix.cpu == 'baseline'
+        env:
+          NPY_DISABLE_CPU_FEATURES: ''
+        run: |
+          python -c "import numpy; numpy.show_runtime()"
+          python code/run_all.py
+      - name: Install numerical-study optimizer
+        run: python -m pip install -r numerical-requirements.txt
+      - name: Check transport formulation and exact initial segment
+        run: python code/check_numerical_profiles.py
+      - name: Validate recorded mesh and window results
+        run: python code/verify_numerical_study.py
+      - name: Show verification record
+        if: always()
+        run: |
+          python -c "from pathlib import Path; print(Path('audit/RUN_ALL.json').read_text()); print(Path('audit/OUTPUT_READBACK.json').read_text())"

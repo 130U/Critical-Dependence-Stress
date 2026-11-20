@@ -1,0 +1,22 @@
+{
+  "scope": "Exact scalar and polynomial checks; all-threshold and kernel-mixture arguments are in Section 5 and Appendix B of the manuscript.",
+  "J": "5/32",
+  "Q_bal": "1/192",
+  "s_lin_gamma0_1": "1/96",
+  "projected_imbalance_L1": "7/48",
+  "chi": "14/15",
+  "critical_lower_fixed_amplitude": "13/64",
+  "critical_upper_pure_first_coordinate": "29/96",
+  "guaranteed_relative_premium": "3/10",
+  "small_threshold_extra": "tau^2(6-tau^2)/64",
+  "large_threshold_cost_constant": "11/32",
+  "profile_lower": "2s-5/16 for 0<=s<=1/96; s-29/96 for 1/96<=s<=29/96",
+  "profile_upper": "min(2s-5/16, 4s/3-13/48), valid on 0<=s<=29/96",
+  "FGM_J": "(75-14theta)/480",
+  "FGM_M_each": "(3-2theta)/1152",
+  "FGM_J_a_plus": "(195-22theta)/1440",
+  "FGM_a_plus_derivative": "360/(75-14theta)^2",
+  "FGM_covariance": "2theta/9",
+  "FGM_Var_B": "1+4theta/9",
+  "all_checks_passed": true
+}
